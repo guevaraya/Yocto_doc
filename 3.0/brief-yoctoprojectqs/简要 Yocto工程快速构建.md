@@ -20,7 +20,7 @@
 
 如果你想了解更多关于 Yocto 工程的概念或背景信息，请参照 Yocto 工程的概述和基础手册。
 
-兼容 Linux 发行版
+可兼容的 Linux 发行版
 ======
 
 请确保你的[主机][5]满足一下需求：
@@ -30,6 +30,18 @@
 + tar 1.27 以上版本
 + Python 3.4.0 以上版本
 如果构建的主机不满足以上列表任一版本要求，你可采取一定措施构建系统确保可以使用 Yocto 工程。可参看 Yocto 工程参考手册的[GIT,Tar Python版本需求]章节获取更多信息。
+
+构建主机包
+======
+
+You must install essential host packages on your build host. The following command installs the host packages based on an Ubuntu distribution:
+Note
+>For host package requirements on all supported Linux distributions, see the "Required Packages for the Build Host" section in the Yocto Project Reference Manual.
+     $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+     build-essential chrpath socat cpio python python3 python3-pip python3-pexpect \
+     xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev \
+     pylint3 xterm
+            
 
 via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html
 
