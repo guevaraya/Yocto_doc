@@ -93,6 +93,9 @@ $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 
 获取更多 Yocto 工程有关仓库的选项和信息，请见 Yocto 工程开发任务手册的[“本地 Yocto 工程源码文件”][7]章节。
 
+构建你的镜像
+=====
+
 via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
