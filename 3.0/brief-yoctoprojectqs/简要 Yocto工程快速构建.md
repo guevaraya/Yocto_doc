@@ -94,7 +94,15 @@ $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 获取更多 Yocto 工程有关仓库的选项和信息，请见 Yocto 工程开发任务手册的[“本地 Yocto 工程源码文件”][7]章节。
 
 构建你的镜像
-=====
+======
+
+用下面命令构建你的镜像。构建过程是从源码创建了一个完成的 Linux 发行版，包括工具链。
+
+提示：
+>+ 如果你的构建主机存在防火墙且没有代理，你可能会遇到编译过程中无法获取源码的问题（如：获取失败或 Git 错误）。
+>+ 如果你不知道你的代理如何设置，咨询你的本地网络提供商获取这方面信息。检查浏览器的网络配置也可以试一下。实在不行，你可以在 Yocto 工程的 Wiki 的[“网络代理配置”][8]页面获取更多信息。
+
+
 
 via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html
 
@@ -105,3 +113,4 @@ via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoproje
 [5]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#hardware-build-system-term
 [6]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#required-packages-for-the-build-host
 [7]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#locating-yocto-project-source-files
+[8]: https://wiki.yoctoproject.org/wiki/Working_Behind_a_Network_Proxy
