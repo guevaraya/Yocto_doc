@@ -31,17 +31,20 @@
 + Python 3.4.0 以上版本
 如果构建的主机不满足以上列表任一版本要求，你可采取一定措施构建系统确保可以使用 Yocto 工程。可参看 Yocto 工程参考手册的[GIT,Tar Python版本需求]章节获取更多信息。
 
-构建主机包
+构建主机应用
 ======
 
 You must install essential host packages on your build host. The following command installs the host packages based on an Ubuntu distribution:
-Note
->For host package requirements on all supported Linux distributions, see the "Required Packages for the Build Host" section in the Yocto Project Reference Manual.
-     $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+你需要安装一些必要的主机应用。下面是在 Ubuntu 发行版上安装主机应用的命令：
+提示
+> 在所有兼容的 Linux 发行版上需要安装的主机应用，请见 Yocto 工程参考手册的“构建主机的必要应用”章节。
+``` 
+$ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
      build-essential chrpath socat cpio python python3 python3-pip python3-pexpect \
      xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev \
      pylint3 xterm
-            
+``` 
+
 
 via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html
 
