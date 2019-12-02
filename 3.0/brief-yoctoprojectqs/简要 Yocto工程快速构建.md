@@ -102,7 +102,66 @@ $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 >+ 如果你的构建主机存在防火墙且没有代理，你可能会遇到编译过程中无法获取源码的问题（如：获取失败或 Git 错误）。
 >+ 如果你不知道你的代理如何设置，咨询你的本地网络提供商获取这方面信息。检查浏览器的网络配置也可以试一下。实在不行，你可以在 Yocto 工程的 Wiki 的[“网络代理配置”][8]页面获取更多信息。
 
+1. _初始化构建环境_: 在 Poky 目录下, 运行环境配置脚本 [oe-init-build-env][9] 定义 Yocto 工程的构建变量。
+ ```
+$ cd ~/poky
+     $ source oe-init-build-env
+     You had no conf/local.conf file. This configuration file has therefore been
+     created for you with some default values. You may wish to edit it to, for
+     example, select a different MACHINE (target hardware). See conf/local.conf
+     for more information as common configuration options are commented.
 
+     You had no conf/bblayers.conf file. This configuration file has therefore been
+     created for you with some default values. To add additional metadata layers
+     into your configuration please add entries to conf/bblayers.conf.
+
+     The Yocto Project has extensive documentation about OE including a reference
+     manual which can be found at:
+         http://yoctoproject.org/documentation
+
+     For more information about OpenEmbedded see their website:
+         http://www.openembedded.org/
+
+
+     ### Shell environment set up for builds. ###
+
+     You can now run 'bitbake <target>'
+
+     Common targets are:
+         core-image-minimal
+         core-image-sato
+         meta-toolchain
+         meta-ide-support
+
+     You can also run generated qemu images with a command like 'runqemu qemux86'
+ ```
+ 除此之外，本例子中的这个脚本创建一个[构建目录][10]，位置在[源码目录][11]的 build 下。当脚本运行后，当前的工作目录被设置为构建目录。后面当构建完成后，构建目录包含所有构建动态创建的文件。
+ 
+ 
+2.  _检查你的本地配置文件_：构建环境配置了之后，一个位于构建目录的 conf 目录下叫 local.conf 的本地配置文件就可以生效了。对于本例，默认构建的目标机器是 qemux86, 这个适合模拟。包管理器使用 RPM 包管理器。
+
+>小贴士
+>你可以镜像显著的加速你的构建并解决获取失败问题。增加这下面几行到构建目录的 local.conf 来使用镜像下载：
+>     SSTATE_MIRRORS = "\
+>     file://.* http://sstate.yoctoproject.org/dev/PATH;downloadfilename=PATH \n \
+>     file://.* http://sstate.yoctoproject.org/2.7/PATH;downloadfilename=PATH \n \
+>     file://.* http://sstate.yoctoproject.org/3.0/PATH;downloadfilename=PATH \n \
+>     "
+                        
+> 上面的例子展示了如何为 Yocto 工程 2.7,3.0和开发域添加 sstate 路径。有关 sstate 位置的完整索引，请参照 [http://sstate.yoctoproject.org/][12]。
+
+3. _开始构建_: 用下面的命令接着为目录机器构建一个系统镜像，本例的镜像名为 core-image-sato：
+> $ bitbake core-image-sato
+关于 bitebake 命令的信息，请参考Yocto 工程概述和概要手册的 “[Bitebake][13]”章节，或查看 BiteBak 用户手册的 “[Bitebak命令][14]”章节。
+
+4. _用 QEMU 模拟你的镜像_：一旦你的镜像构建后，你需要运行 QEMU，这是一个 yocto 工程自带的快速模拟器：
+```
+     $ runqemu qemux86
+```
+如果你想学习更多关于运行 QEMU 的信息，请见Yocto 工程开发任务手册的 “[使用快速模拟器（QEMU）][15]”章节。
+
+
+5. _退出 QEMU_: 通过单击关机图标或在QEMU的文本框输入 CtrL-C 键退出 QEMU
 
 via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html
 
@@ -114,3 +173,11 @@ via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoproje
 [6]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#required-packages-for-the-build-host
 [7]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#locating-yocto-project-source-files
 [8]: https://wiki.yoctoproject.org/wiki/Working_Behind_a_Network_Proxy
+[9]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#structure-core-script
+[10]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
+[11]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#source-directory
+[12]: http://sstate.yoctoproject.org/
+[13]: http://www.yoctoproject.org/docs/3.0/overview-manual/overview-manual.html#usingpoky-components-bitbake
+[14]: http://www.yoctoproject.org/docs/3.0/bitbake-user-manual/bitbake-user-manual.html#bitbake-user-manual-command
+[15]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#dev-manual-qemu
+
