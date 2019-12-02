@@ -102,7 +102,7 @@ $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 >+ 如果你的构建主机存在防火墙且没有代理，你可能会遇到编译过程中无法获取源码的问题（如：获取失败或 Git 错误）。
 >+ 如果你不知道你的代理如何设置，咨询你的本地网络提供商获取这方面信息。检查浏览器的网络配置也可以试一下。实在不行，你可以在 Yocto 工程的 Wiki 的[“网络代理配置”][8]页面获取更多信息。
 
-1. __初始化构建环境__: 在 Poky 目录下, 运行环境配置脚本 [oe-init-build-env][9] 定义 Yocto 工程的构建变量。
+__1. 初始化构建环境：__ 在 Poky 目录下, 运行环境配置脚本 [oe-init-build-env][9] 定义 Yocto 工程的构建变量。
  ```
 $ cd ~/poky
      $ source oe-init-build-env
@@ -138,7 +138,7 @@ $ cd ~/poky
  除此之外，本例子中的这个脚本创建一个[构建目录][10]，位置在[源码目录][11]的 build 下。当脚本运行后，当前的工作目录被设置为构建目录。后面当构建完成后，构建目录包含所有构建动态创建的文件。
  
  
-2.  __检查你的本地配置文件__：构建环境配置了之后，一个位于构建目录的 conf 目录下叫 local.conf 的本地配置文件就可以生效了。对于本例，默认构建的目标机器是 qemux86, 这个适合模拟。包管理器使用 RPM 包管理器。
+__2. 检查你的本地配置文件:__ 构建环境配置了之后，一个位于构建目录的 conf 目录下叫 local.conf 的本地配置文件就可以生效了。对于本例，默认构建的目标机器是 qemux86, 这个适合模拟。包管理器使用 RPM 包管理器。
 
 >小贴士
 >你可以镜像显著的加速你的构建并解决获取失败问题。增加这下面几行到构建目录的 local.conf 来使用镜像下载：
@@ -149,18 +149,18 @@ $ cd ~/poky
 >     "                      
 > 上面的例子展示了如何为 Yocto 工程 2.7,3.0和开发域添加 sstate 路径。有关 sstate 位置的完整索引，请参照 [http://sstate.yoctoproject.org/][12]。
 
-3. __开始构建__: 用下面的命令接着为目录机器构建一个系统镜像，本例的镜像名为 core-image-sato：
+__3. 开始构建：__ 用下面的命令接着为目录机器构建一个系统镜像，本例的镜像名为 core-image-sato：
 > $ bitbake core-image-sato
 关于 bitebake 命令的信息，请参考Yocto 工程概述和概要手册的 “[Bitebake][13]”章节，或查看 BiteBak 用户手册的 “[Bitebak命令][14]”章节。
 
-4. __用 QEMU 模拟你的镜像__：一旦你的镜像构建后，你需要运行 QEMU，这是一个 yocto 工程自带的快速模拟器：
+__4. 用 QEMU 模拟你的镜像：__ 一旦你的镜像构建后，你需要运行 QEMU，这是一个 yocto 工程自带的快速模拟器：
 ```
      $ runqemu qemux86
 ```
 如果你想学习更多关于运行 QEMU 的信息，请见Yocto 工程开发任务手册的 “[使用快速模拟器（QEMU）][15]”章节。
 
 
-5. __退出 QEMU__: 通过单击关机图标或在QEMU的文本框输入 CtrL-C 键退出 QEMU
+__5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-C 键退出 QEMU
 
 via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html
 
