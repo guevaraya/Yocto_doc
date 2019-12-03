@@ -159,8 +159,61 @@ __4. 用 QEMU 模拟你的镜像：__ 一旦你的镜像构建后，你需要运
 ```
 如果你想学习更多关于运行 QEMU 的信息，请见Yocto 工程开发任务手册的 “[使用快速模拟器（QEMU）][15]”章节。
 
-
 __5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-C 键退出 QEMU
+
+为特定机器定制构建
+======
+
+目前为止，您所做的是构建了一个仅用于模拟的镜像。本段介绍如何在 Yocto 工程的开发环境中为特定的硬件定制硬件配置层。
+大体上说，层就是包含一套相关的指令集和配置信息，这个指令和配置告诉 Yocto 工程具体要做什么。将相关的元数据根据功能隔离出特定的层有助于模块化开发，并可以使层的元数据很容易的复用起来。
+> 提示
+> 为了简便，层名字均以 “meta-”开头。
+
+下面三步是介绍如何增加一个硬件层：
+1.__找到一个层：__ 已经存在很多硬件层。[Yotco 工程源码仓][16]已经有很多硬件层。这个例子增加一名叫 [meta-altera][17] 的硬件层。
+2.__克隆一个层__ 用 Git 在您的机器上制作一个本地拷贝。你可以把拷贝放到 Poky 仓的主目录里。
+```
+     $ cd ~/poky
+     $ git clone https://github.com/kraj/meta-altera.git
+     Cloning into 'meta-altera'...
+     remote: Counting objects: 25170, done.
+     remote: Compressing objects: 100% (350/350), done.
+     remote: Total 25170 (delta 645), reused 719 (delta 538), pack-reused 24219
+     Receiving objects: 100% (25170/25170), 41.02 MiB | 1.64 MiB/s, done.
+     Resolving deltas: 100% (13385/13385), done.
+     Checking connectivity... done.
+```
+现在硬件层已经和其他 Poky 参考仓一块作为构建主机的元数据，它包含了所有来自 Altera（属于英特尔）的支持硬件的元数据。3.
+3.__修改特定硬件的配置：__ 构建特定机器的[MACHINE][18]变量在 local.conf 文件中。例如，设置 MACHINE 变量为 “cyclone5”。这个配置信息就生效了：https://github.com/kraj/meta-altera/blob/master/conf/machine/cyclone5.conf。
+> 提示
+> 参照[“检查您的配置文件”][19]步骤里可以很容易的构建配置文件。
+
+4. __增加你的层到配置层文件：__ 您可以在构建中使用层之前，您需要添加您的 bblayer.conf 文件，这个在[编译路径][20]的 conf 目录下。
+
+使用 bitbake-layers add-layer  命令添加层到配置文件中：
+```
+     $ cd ~/poky/build
+     $ bitbake-layers add-layer ../meta-altera
+     NOTE: Starting bitbake server...
+     Parsing recipes: 100% |##################################################################| Time: 0:00:32
+     Parsing of 918 .bb files complete (0 cached, 918 parsed). 1401 targets, 123 skipped, 0 masked, 0 errors.
+ ```
+您可查看更多增加层的信息，请见“用 bitebake-layer 脚本添加一个层”章节。
+完成这些步骤就增加了 meta-alera 层到您的 Yocto 工程开发环境并且完成 “cyclone5”机器的构建配置。
+>提示
+>以上步骤仅用于演示目的。如果您想尝试为“cyclone5”的构建一个镜像，你可以阅读 Altera 的 README。
+
+
+
+
+
+
+
+
+
+
+
+
 
 via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html
 
@@ -179,4 +232,13 @@ via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoproje
 [13]: http://www.yoctoproject.org/docs/3.0/overview-manual/overview-manual.html#usingpoky-components-bitbake
 [14]: http://www.yoctoproject.org/docs/3.0/bitbake-user-manual/bitbake-user-manual.html#bitbake-user-manual-command
 [15]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#dev-manual-qemu
+[16]: http://git.yoctoproject.org/
+[17]: https://github.com/kraj/meta-altera
+[18]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-MACHINE
+[19]: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html#conf-file-step
+[20]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
+[21]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#adding-a-layer-using-the-bitbake-layers-script
+
+
+
 
