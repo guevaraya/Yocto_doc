@@ -14,7 +14,8 @@
 ======
 热烈欢迎！这篇简短的文档指导你通过 Yocto 工程完成一个典型镜像的构建。文档也介绍了如何为特定硬件的配置构建。你也可以用 Yocto 构建一个 叫Poky的嵌入式参考系统。
 
-小提示：
+>__提示__
+>
 >+ 本文的例子假定你本地使用的 Linux 系统是最新的 Ubuntu 发行版。如果用 Yocto 工程构建一个镜像（[主机端][2]）的机器不是原生的 Linux 系统，你可以仍旧通过 Poky容器在跨平台（CROPS）基础上完成这三步。可在 Yocto 工程的开发任务手册的[“设置使用交叉平台（CROPS）”][3]段落查看更多信息。
 >+ 不能使用[Windows子系统Linux（WSL）][4]构建主机。Yocto 工程不兼容 WSL。 
 
@@ -37,7 +38,8 @@
 You must install essential host packages on your build host. The following command installs the host packages based on an Ubuntu distribution:
 你需要安装一些必要的主机应用。下面是在 Ubuntu 发行版上安装主机应用的命令：
 
-提示
+>__提示__
+>
 > 在所有兼容的 Linux 发行版上需要安装的主机应用，请见 Yocto 工程参考手册的[“构建主机的必要应用”][6]章节。
 ``` 
 $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
@@ -97,8 +99,8 @@ $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 ======
 
 用下面命令构建你的镜像。构建过程是从源码创建了一个完成的 Linux 发行版，包括工具链。
-
-提示：
+>__提示__
+>
 >+ 如果你的构建主机存在防火墙且没有代理，你可能会遇到编译过程中无法获取源码的问题（如：获取失败或 Git 错误）。
 >+ 如果你不知道你的代理如何设置，咨询你的本地网络提供商获取这方面信息。检查浏览器的网络配置也可以试一下。实在不行，你可以在 Yocto 工程的 Wiki 的[“网络代理配置”][8]页面获取更多信息。
 
@@ -140,7 +142,8 @@ $ cd ~/poky
  
 __2. 检查你的本地配置文件:__ 构建环境配置了之后，一个位于构建目录的 conf 目录下叫 local.conf 的本地配置文件就可以生效了。对于本例，默认构建的目标机器是 qemux86, 这个适合模拟。包管理器使用 RPM 包管理器。
 
->__小贴士__
+>__提示__
+>
 >你可以用镜像显著的加速你的构建并解决获取失败问题。增加这下面几行到构建目录的 local.conf 来使用镜像下载：
 >     SSTATE_MIRRORS = "\
 >     file://.* http://sstate.yoctoproject.org/dev/PATH;downloadfilename=PATH \n \
@@ -166,7 +169,8 @@ __5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-
 
 目前为止，您所做的是构建了一个仅用于模拟的镜像。本段介绍如何在 Yocto 工程的开发环境中为特定的硬件定制硬件配置层。
 大体上说，层就是包含一套相关的指令集和配置信息，这些指令和配置告诉 Yocto 工程具体要做什么。将相关的元数据根据功能隔离出特定的层有助于模块化开发，并可以使层的元数据很容易复用。
->__提示__ 
+>__提示__
+>
 >为了简便，层名字均以 “meta-”开头。
 
 下面三步是介绍如何增加一个硬件层：
@@ -189,6 +193,7 @@ __5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-
 
 3.__修改特定硬件的配置：__ 构建特定机器的[MACHINE][18]变量在 local.conf 文件中。例如，设置 MACHINE 变量为 “cyclone5”。这个配置信息就生效了：https://github.com/kraj/meta-altera/blob/master/conf/machine/cyclone5.conf。
 >__提示__
+>
 > 参照[“检查您的配置文件”][19]步骤里可以很容易的构建配置文件。
 
 4. __增加你的层到配置层文件：__ 您可以在构建中使用层之前，您需要添加您的 bblayer.conf 文件，这个在[编译路径][20]的 conf 目录下。
