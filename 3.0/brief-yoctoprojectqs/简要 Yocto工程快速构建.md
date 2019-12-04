@@ -216,13 +216,33 @@ __5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-
 
 创建自己的通用层
 ======
+可能您有一个应用程序或者特定的一些行为需要隔离。您可以用 bitbake-layers create-layer 命令创建您的通用层。这个工具通过带有配置文件 layer.conf 的子目录自动创建层，这个 recipes-example 子目录包含 example.bb 菜谱，一个授权文件和 README。
+
+下面命令就是通过工具在 poky 目录创建一个名叫 meta-mylayer的层：
+```
+     $ cd ~/poky
+     $ bitbake-layers create-layer meta-mylayer
+     NOTE: Starting bitbake server...
+     Add your new layer with 'bitbake-layers add-layer meta-mylayer'
+ ```
+ 获取更多关于如何创建层，请见 用 Yocto 工程开发任务手册的“[bitbake-layer 脚本创建通用层][]”章节。
 
 
+下一步该做什么
+======
+Now that you have experienced using the Yocto Project, you might be asking yourself "What now?" The Yocto Project has many sources of information including the website, wiki pages, and user manuals:
 
+Website: The Yocto Project Website provides background information, the latest builds, breaking news, full development documentation, and access to a rich Yocto Project Development Community into which you can tap.
 
+Developer Screencast: The Getting Started with the Yocto Project - New Developer Screencast Tutorial provides a 30-minute video created for users unfamiliar with the Yocto Project but familiar with Linux build hosts. While this screencast is somewhat dated, the introductory and fundamental concepts are useful for the beginner.
 
+Yocto Project Overview and Concepts Manual: The Yocto Project Overview and Concepts Manual is a great place to start to learn about the Yocto Project. This manual introduces you to the Yocto Project and its development environment. The manual also provides conceptual information for various aspects of the Yocto Project.
 
+Yocto Project Wiki: The Yocto Project Wiki provides additional information on where to go next when ramping up with the Yocto Project, release information, project planning, and QA information.
 
+Yocto Project Mailing Lists: Related mailing lists provide a forum for discussion, patch submission and announcements. Several mailing lists exist and are grouped according to areas of concern. See the "Mailing lists" section in the Yocto Project Reference Manual for a complete list of Yocto Project mailing lists.
+
+Comprehensive List of Links and Other Documentation: The "Links and Related Documentation" section in the Yocto Project Reference Manual provides a comprehensive list of all related links and other user documentation.
 
 
 
@@ -250,7 +270,17 @@ via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoproje
 [19]: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html#conf-file-step
 [20]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
 [21]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#adding-a-layer-using-the-bitbake-layers-script
+[22]: http://www.yoctoproject.org/docs/3.0.1/dev-manual/dev-manual.html#creating-a-general-layer-using-the-bitbake-layers-script
+[23]: http://www.yoctoproject.org/
+[24]: http://vimeo.com/36450321
+[25]: http://www.yoctoproject.org/docs/3.0.1/overview-manual/overview-manual.html
+[26]: https://wiki.yoctoproject.org/
+[27]: http://www.yoctoproject.org/docs/3.0.1/ref-manual/ref-manual.html#resources-mailinglist
+[28]: http://www.yoctoproject.org/docs/3.0.1/ref-manual/ref-manual.html#resources-links-and-related-documentation
+[29]:
+[30]:
 
+[24]:
 
 
 
