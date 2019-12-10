@@ -22,6 +22,11 @@ Poky 是一个参考的嵌入式操作系统实例，它构建了一个包含编
 构建系统和名叫 recipes 及 layers(下文有定义) 的 Poky 编译说明文件一同下载下来。为创建您的定制嵌入式 Linux，你可用任意方式拷贝或直接使用 Poky 构建细节。
 ![Yocto 构建][3]
 
+
+层模板 - 定制化的关键
+======
+
+
 via:https://www.yoctoproject.org/software-overview/
 
 [1]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-overview.png
