@@ -8,10 +8,23 @@ Yocto 项目是一个开源协作项目，旨在帮助开发者创建一个类 L
 
 从历史经验看，大多项目都是从 [嵌入式开源项目][2] 共同成长起来的，其构建系统和元数据都是从嵌入式开源项目中衍生出来的。
 
+Yocto 项目的组装，维护和验证是其三个关键的开发要素。
+
++ 1.  一套基础使嵌入式 Linux 出色的完成工作，包括自动构建和测试工具，单板适配和许可证遵循的处理，用于定制基于 嵌入式 Linux 操作系统的组件信息。
++ 2.  一个嵌入式参考发行版（名叫 Poky）
++ 3. 开源嵌入式构建系统与 [嵌入式开源项目][2] 一起维护。
+
+
+在 Yocto 项目旗下 有很多不同的开源组件和工具。
+
+Poky 是一个参考的嵌入式操作系统实例，它构建了一个包含编译系统的嵌入式小型操作系统（包含BiteBake，构建引擎和嵌入式开源核心，构建系统的核心元数据）。
+
+构建系统和名叫 recipes 及 layers(下文有定义) 的 Poky 编译说明文件一同下载下来。为创建您的定制嵌入式 Linux，你可用任意方式拷贝或直接使用 Poky 构建细节。
+![Yocto 构建][3]
 
 via:https://www.yoctoproject.org/software-overview/
 
 [1]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-overview.png
 [2]: http://openembedded.org/
-
+[3]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-details.png
 
