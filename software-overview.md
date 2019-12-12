@@ -26,10 +26,27 @@ Poky 是一个参考的嵌入式操作系统实例，它构建了一个包含编
 层模板 - 定制化的关键
 ======
 
+Yocto 项目拥有一个为嵌入式和物联网 Linux 构建的开发模板，这使它区别于其他简单的构建系统，这被称为层模板。
+
+层模板的设计用来同时支持协作和定制开发。层库包含了告诉构建系统如何做的相关指令集。用户可协助，共享以及复用这些层。层可在任何时候包含对之前指令集和配置的修改。
+
+强大的覆盖特性允许您对之前的协作或社区提供的层进行定制，以便满足您的产品需求。
+
+使用不同的层逻辑上可在构建系统上隔离来。例如，你可以有一个板级支持包层，图形接口层，一个配置层，中间层，或一个应用层。如将您所有的构建限制到放一个层，后续的定制和复用有很大的复杂度。但是如果隔离出层来，另一方面来说简化未来的定制和复用。使用板级支持包层就使更换芯片厂商成为可能。
+
+请自行熟悉正在筹划（测试中）的 [YOCTO 项目兼容性层的索引][4]。也有 [嵌入式开源层索引][5],它包含更多层，但是没有得到广泛的验证。
+
+Yocto 项目成员组织可以提供关于特定板级支持包的信息。请访问 [Yocto 项目成员的板级支持包页面][6]获取详情。
+
+Yocto 项目维护的组件和工具
+======
 
 via:https://www.yoctoproject.org/software-overview/
 
 [1]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-overview.png
 [2]: http://openembedded.org/
 [3]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-details.png
+[4]: https://www.yoctoproject.org/software-overview/layers/
+[5]: http://layers.openembedded.org/
+[6]: https://www.yoctoproject.org/software-overview/layers/bsps/
 
