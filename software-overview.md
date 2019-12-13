@@ -41,6 +41,20 @@ Yocto 项目成员组织可以提供关于特定板级支持包的信息。请�
 Yocto 项目维护的组件和工具
 ======
 
+![Yocto 组件][7]
+
+Yocto 有一套组件和工具来维护和更新实际的项目。这些组件和工具也直接被 Yocto 项目自身使用。最后部分组件和工具被开发者用来创建他们的定制操作系统。这些组件和工具本身都是开源项目，开源元数据。他们都是独立于正式发行版和构建系统，他们大部分单独下载。
+
+[更多关于组件和工具][7]
+
+名称参考解释
+=====
++ __配置文件（Configurations）：__ 这个文件管理全局变量的定义，用户变量的定义和硬件配置信息。它会告诉构建系统需要构建目标以及支持指定平台的镜像。
++ __菜谱（Recipes）：__ 最常见的元数据。一个菜谱将包含配置列表和任务（指令），它是用来构建二进制镜像的构建包。一个菜谱描述如何获取源码以及那些补丁需要合入。菜谱也描述了库和其他菜谱依赖关系，配置信息和兼容性选项。这些都保存在层中。
+
+
+The most common form of metadata. A recipe will contain a list of settings and tasks (instructions) for building packages which are then used to build the binary image. A recipe describes where you get source code and which patches to apply. Recipes describe dependencies for libraries or for other recipes, as well as configuration and compilation options. They are stored in layers.
+
 via:https://www.yoctoproject.org/software-overview/
 
 [1]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-overview.png
@@ -49,4 +63,6 @@ via:https://www.yoctoproject.org/software-overview/
 [4]: https://www.yoctoproject.org/software-overview/layers/
 [5]: http://layers.openembedded.org/
 [6]: https://www.yoctoproject.org/software-overview/layers/bsps/
+[7]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-yocto.png
+[8]: https://www.yoctoproject.org/software-overview/project-components/
 
