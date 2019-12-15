@@ -67,6 +67,8 @@ Yocto 有一套组件和工具来维护和更新实际的项目。这些组件�
 基本的流程图- 他是如何运行的
 ====== 
 
+![流程图][9]
+
 via:https://www.yoctoproject.org/software-overview/
 
 [1]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-overview.png
@@ -77,4 +79,5 @@ via:https://www.yoctoproject.org/software-overview/
 [6]: https://www.yoctoproject.org/software-overview/layers/bsps/
 [7]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-yocto.png
 [8]: https://www.yoctoproject.org/software-overview/project-components/
+[9]: https://www.yoctoproject.org/wp-content/uploads/2017/07/yp-how-it-works-new-diagram.png
 
