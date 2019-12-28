@@ -86,6 +86,13 @@ Yocto 有一套组件和工具来维护和更新实际的项目。这些组件�
 如果想使用 Yocto 工程工具，你可下载 Poky 来定制您的发行版。请注意 Poky 不包含二进制文件-它仅是一个如何从源码构建您的 Linux 发行版的示例。
 
 [更多关于参考发行版][11]
+
+Yocto 项目特性
+======
+
+除了互联网的特性外，Yocto 项目有
+Apart from inherent capabilities, the Yocto Project has project features which are introduced in one release, and generally expanded on and completed over the course of a few releases. In-depth information about the features can be found in the "readme" files associated with releases and tools. This area provides a high-level overview of feature updates to the 3 latest releases and general project features as well.
+
 via:https://www.yoctoproject.org/software-overview/
 
 [1]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-overview.png
