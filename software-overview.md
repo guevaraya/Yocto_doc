@@ -76,9 +76,16 @@ Yocto 有一套组件和工具来维护和更新实际的项目。这些组件�
 + 整个编译过程会进行二进制包的质量和完整性检查。
 + 当创建二进制文件后，生成一个二进制包，然后用它来创建根文件镜像。
 + 最终产生文件系统镜像。
+
 当使用 Yocto 工程的时候，这个流程图根据你实际使用的组件和工具会有变化。
 
+嵌入式参考发行版（Poky）
+======
+“Poky” 是 Yocto 项目的参考发行版或参考系统集。它包含了编译系统（Bitbake和嵌入式开源核心组件）和一套用来编译发行版的数据集。
 
+如果想使用 Yocto 工程工具，你可下载 Poky 来定制您的发行版。请注意 Poky 不包含二进制文件-它仅是一个如何从源码构建您的 Linux 发行版的示例。
+
+[更多关于参考发行版][11]
 via:https://www.yoctoproject.org/software-overview/
 
 [1]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-overview.png
@@ -91,3 +98,4 @@ via:https://www.yoctoproject.org/software-overview/
 [8]: https://www.yoctoproject.org/software-overview/project-components/
 [9]: https://www.yoctoproject.org/wp-content/uploads/2017/07/yp-how-it-works-new-diagram.png
 [10]: https://www.yoctoproject.org/wp-content/uploads/2018/02/os-logos.png
+[11]: https://www.yoctoproject.org/software-overview/reference-distribution/
