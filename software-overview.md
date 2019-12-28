@@ -67,7 +67,17 @@ Yocto 有一套组件和工具来维护和更新实际的项目。这些组件�
 基本的流程图- 他是如何运行的
 ====== 
 
+
 ![流程图][9]
++ 首先，开发者指定体系架构，开源协议，补丁和配置等信息。
++ 编译系统然后从指定的地方获取和下载源码。该工程支持标准的 tar 包和 Git 仓的方式下载源码。
++ 一旦下载了源码，将其解压到本地工作区域，打上补丁同时运行常用的步骤：配置和编译。
++ 软件然后会被安装到一个临时区域，打包生成你指定的二进制包（deb，rpm 或 ipk）。
++ 整个编译过程会进行二进制包的质量和完整性检查。
++ 当创建二进制文件后，生成一个二进制包，然后用它来创建根文件镜像。
++ 最终产生文件系统镜像。
+当使用 Yocto 工程的时候，这个流程图根据你实际使用的组件和工具会有变化。
+
 
 via:https://www.yoctoproject.org/software-overview/
 
@@ -80,4 +90,4 @@ via:https://www.yoctoproject.org/software-overview/
 [7]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-yocto.png
 [8]: https://www.yoctoproject.org/software-overview/project-components/
 [9]: https://www.yoctoproject.org/wp-content/uploads/2017/07/yp-how-it-works-new-diagram.png
-
+[10]: https://www.yoctoproject.org/wp-content/uploads/2018/02/os-logos.png
