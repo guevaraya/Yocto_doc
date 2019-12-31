@@ -91,6 +91,7 @@ Yocto 项目特性
 ======
 
 除了固有的特性外，Yocto 项目有一些特性在一个或多个发布版本中扩展和体现。更进一步的功能特性在 “readme” 文件与正式版本和工具一同发布。它提供了高级的特性概述，包含最近三个版本的特性和通用特性。
+
 [高级特性列表][12]
 
 via:https://www.yoctoproject.org/software-overview/
@@ -106,4 +107,4 @@ via:https://www.yoctoproject.org/software-overview/
 [9]: https://www.yoctoproject.org/wp-content/uploads/2017/07/yp-how-it-works-new-diagram.png
 [10]: https://www.yoctoproject.org/wp-content/uploads/2018/02/os-logos.png
 [11]: https://www.yoctoproject.org/software-overview/reference-distribution/
-[12]: https://www.yoctoproject.org/software-overview/features/
+[12]: https://www.yoctoproject.org/software-overview/features
