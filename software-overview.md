@@ -107,4 +107,4 @@ via:https://www.yoctoproject.org/software-overview/
 [9]: https://www.yoctoproject.org/wp-content/uploads/2017/07/yp-how-it-works-new-diagram.png
 [10]: https://www.yoctoproject.org/wp-content/uploads/2018/02/os-logos.png
 [11]: https://www.yoctoproject.org/software-overview/reference-distribution/
-[12]: https://www.yoctoproject.org/software-overview/features
+[12]: https://github.com/guevaraya/Yocto_doc/blob/master/software-overview/features.md
