@@ -17,7 +17,11 @@
 |跨平台开发框架 CROPS| CROPS 是一个开发源代码，跨平台的开发框架，它是利用 Docker 容器来提供简易的管理，可扩展的环境，允许开发者为不同体系的系统编译镜像，如主机操作系统 Windows, Linux和 Mac|
 |可扩展 SDK| Yocto 项目的可扩展 SDK 工具可以很容易添加应用程序和库文件到镜像，也可修改现有组件的源码并在目标硬件上测试验证。相比标志 SDK 的主要的优点可改进开发团队的流程，因为它和 OpenEmbedded 编译系统是紧密集成的。|
 |Toaster| 它是 Yocto 项目下 OpenEmbedded 编译系统的一个网页接口。这些接口允许你配置和运行你的构建。相关的构建信息汇总在数据库里，你也可以用 Toaster 在多个远程服务器上配置和运行构建。Toaster 的诊断能力很强大。|
+|多配置 Multi-Config|编译系统可以用一个命令自动和高效的知道多个架构同时编译|
+|二进制编译Binary Builds|Yocto项目允许不包含源码的情况下编译出二进制文件|
+|开源许可证清单生成器|Yocto 项目跟踪所有涉及编译的开源代码的许可证，然后输出这些开源许可证的清单和参考信息|
 
+原文：https://www.yoctoproject.org/software-overview/features/
 
 [1]: https://github.com/guevaraya/Yocto_doc/blob/master/software-overview.md
 [2]: https://www.yoctoproject.org/software-overview/features/
