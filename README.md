@@ -17,7 +17,7 @@ Yocto 文档中文翻译项目
 |Yocto 项目® 入门|[文档归档][12]|
 |:--- |---: |
 |如果您还没有准备好，建议首先阅读[软件概述][4]。然后再回到此页面|
-|[![Yocto Project Quick Build][5]][9] |[![what-i-wish-id-known][6]][10] ||![what-i-wish-id-known][7][11] |
+|[![Yocto Project Quick Build][5]][9] |[![what-i-wish-id-known][6]][10] |[![what-i-wish-id-known][7]][11] |
 
 原文:https://www.yoctoproject.org/docs/
 
@@ -29,7 +29,7 @@ Yocto 文档中文翻译项目
 [6]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-2.jpg
 [7]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-3.jpg
 [8]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-4.jpg
-[9]: 3.0/brief-yoctoprojectqs/简要快速构建 Yocto 项目.md
+[9]: 3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.md
 [10]: what-i-wish-id-known/what-i-wish-id-known.md
 [11]: transitioning-to-a-custom-environment/transitioning-to-a-custom-environment.md
 [12]: https://www.yoctoproject.org/docs/archived-documents/
