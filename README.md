@@ -29,7 +29,7 @@ Yocto 文档中文翻译项目
 [6]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-2.jpg
 [7]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-3.jpg
 [8]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-4.jpg
-[9]: 3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.md
+[9]: 3.0/brief-yoctoprojectqs/简要快速构建 Yocto 项目.md
 [10]: what-i-wish-id-known/what-i-wish-id-known.md
 [11]: transitioning-to-a-custom-environment/transitioning-to-a-custom-environment.md
 [12]: https://www.yoctoproject.org/docs/archived-documents/
