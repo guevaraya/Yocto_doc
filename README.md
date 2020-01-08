@@ -15,11 +15,14 @@ Yocto 文档中文翻译项目
 可以在以上列表选择发布的文档版本。您也可在维基百科的[提示与技巧][3]页面查看最新的文档，这个文档还处于移植和开发阶段的手册。
 
 |Yocto 项目® 入门|文档归档|
+|如果您还没有准备好，建议首先阅读[软件概述][4]。然后再回到此页面|
 |:--- |---: |
-
+|![ast][5]| |
 
 原文:https://www.yoctoproject.org/docs/
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/deed.zh
 [2]: https://www.yoctoproject.org/docs/
 [3]: https://wiki.yoctoproject.org/wiki/TipsAndTricks
+[4]: software-overview/software-overview.md
+[5]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-1.jpg
