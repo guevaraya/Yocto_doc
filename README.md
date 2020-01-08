@@ -17,7 +17,7 @@ Yocto 文档中文翻译项目
 |Yocto 项目® 入门|文档归档|
 |:--- |---: |
 |如果您还没有准备好，建议首先阅读[软件概述][4]。然后再回到此页面|
-|![Yocto Project Quick Build][5]|[9] ||![what-i-wish-id-known][6]|[10] ||![what-i-wish-id-known][7]|[11] |
+|![Yocto Project Quick Build][5][9] ||![what-i-wish-id-known][6][10] ||![what-i-wish-id-known][7][11] |
 
 原文:https://www.yoctoproject.org/docs/
 
