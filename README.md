@@ -19,7 +19,7 @@ Yocto 文档中文翻译项目
 
 |[![Yocto Project Quick Build][5]][9] |[![what-i-wish-id-known][6]][10] |[![what-i-wish-id-known][7]][11] |
 |:--- |:---:|---: |
-|YOCTO PROJECT QUICK BUILD 3.0 This guide will help you create a build and run it under an enmulator as well as actual hardware |WHAT I WISH I'D KNOW |||
+|**YOCTO 项目快速构建 3.0** <br>这个文档指导你在模拟器和实际机器上如何快速编译和运行 |**应知应会** <br> 点亮您的项目明珠，作为开发者在入手前应该知道哪些东西|**定制系统开发环境** <br>如何配置系统，然后下一步深入学习入门文档和开发手册|**Yocto 项目应用和扩展程序开发组件（ESDK）3.0** <br> 对应用工程师来说，需要足够学习 Yocto 项目以便于与系统工程师有效的沟通协作|
 
 原文:https://www.yoctoproject.org/docs/
 
