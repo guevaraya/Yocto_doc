@@ -25,6 +25,10 @@ Yocto 项目® 入门 [文档归档][12]
 开发者手册
 ======
 
+|----|-|-|--|
+| [**YOCTO 项目概述和概念手册 3.0**][14] <br> 这个手册介绍 Yocto 的概念，软件概述，常见方法（BKMs）和其他一些适合新手的入门信息|[**YOCTO 项目开发任务手册 3.0**][15] <br> |[**YOCTO 项目板级支持包（BSP）开发指南 3.0**][16] <br> |
+|[**YOCTO 项目分析和跟踪手册 3.0**][14] <br>|[**YOCTO 项目 Linux 内核开发手册 3.0**][14] <br>|
+
 原文:https://www.yoctoproject.org/docs/
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/deed.zh
@@ -40,4 +44,12 @@ Yocto 项目® 入门 [文档归档][12]
 [11]: transitioning-to-a-custom-environment/transitioning-to-a-custom-environment.md
 [12]: https://www.yoctoproject.org/docs/archived-documents/
 [13]: 3.0/sdk-manual/sdk-manual.md
+[14]: 3.0/overview-manual/overview-manual.md
+[15]: 3.0/dev-manual/dev-manual.md
+[16]: 3.0/profile-manual/profile-manual.md
+[17]: 3.0/kernel-dev/kernel-dev.md
+[18]: 3.0/toaster-manual/toaster-manual.html
+[19]: 3.0/bitbake-user-manual/bitbake-user-manual.html
+[20]: 3.0/ref-manual/ref-manual.html
+[21]: 3.0/mega-manual/mega-manual.html
 
