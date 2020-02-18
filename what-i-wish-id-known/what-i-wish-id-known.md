@@ -1,11 +1,12 @@
 文档概述 : 应知应会
 ======
-在进一步阅读之前，确认你已经给查阅了 [软件概述页面][1] ，其介绍了本文里很多相关的名词解释。同时下面其中有一些信息你现在不需要关心，但是当你着手开发的时候，这些信息会成为你的枕边书。这些都是 Yocto 项目开发的已知最适合的工作方法，我们会不定期的更新。
+__在进一步阅读之前，确认你已经给查阅了 [软件概述页面][1] ，其介绍了本文里很多相关的名词解释。同时下面其中有一些信息你现在不需要关心，但是当你着手开发的时候，这些信息会成为你的枕边书。这些都是 Yocto 项目开发的已知最适合的工作方法，我们会不定期的更新。__
+
 ————————-
 
-Using the Yocto Project is fairly easy, until something goes wrong. Without an understanding of how the build process works, you’ll find yourself trying to troubleshoot “a black box”. Here are a few items that new users wished they had known before embarking on their first build with Yocto Project. Feel free to contact us with other suggestions.
+__使用 Yocto 项目非常简单，但是出现问题就不好应付了。没有理解编译过程是如何工作的，你会发现你自己在尝试排查一个“黑盒子”的故障。这边有几条给新手开始第一次用 Yocto 项目编译之前他们希望已经知道的事项。如有其他建议请随时联系我们：__
 
-1. Use Git, not the tarball download. If you use git the software will be automatically updated with bug updates because of how git works. If you download the tarball instead, you will need to be responsible for your own updates.
+1. __使用 Git，而不是 tar 包下载。__ 如果你用 git，软件根据 git 的运行情况将会自动更新修复问题。如果你下载 tar 包，你将需要自行更新。
 
 2. Get to know the layer index
 All layers can be found in the layer index. Layers which have applied for Yocto Project Compatible status (structure continuity assurance and testing) can be found in the Yocto Project Compatible index. Generally check the Compatible layer index first, and if you don’t find the necessary layer check the general layer index. The layer index is an original artifact from the Open Embedded Project. As such, that index doesn’t have the curating and testing that the Yocto Project provides on Yocto Project Compatible layer list, but the latter has fewer entries. Know that when you start searching in the layer index that not all layers have the same level of maturity, validation, or usability. Nor do searches prioritize displayed results. There is no easy way to help you through the process of choosing the best layer to suit your needs. Consequently, it is often trial and error, checking the mailing lists, or working with other developers through collaboration rooms that can help you make good choices.
@@ -93,7 +94,7 @@ Learn About Board Support Packages (BSPs): If you want to learn about BSPs, see 
 Learn About Toaster: Toaster is a web interface to the Yocto Project’s OpenEmbedded build system. If you are interested in using this type of interface to create images, see the Toaster User Manual.
 
 Have Available the Yocto Project Reference Manual: Unlike the rest of the Yocto Project manual set, this manual is comprised of material suited for reference rather than procedures. You can get build details, a closer look at how the pieces of the Yocto Project development environment work together, information on various technical details, guidance on migrating to a newer Yocto Project release, reference material on the directory structure, classes, and tasks. The Yocto Project Reference Manual also contains a fairly comprehensive glossary of variables used within the Yocto Project.
-via；https://www.yoctoproject.org/docs/what-i-wish-id-known/
+via：https://www.yoctoproject.org/docs/what-i-wish-id-known/
 
 
 [1]: https://github.com/guevaraya/Yocto_doc/blob/master/software-overview/software-overview.md
