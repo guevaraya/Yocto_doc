@@ -86,9 +86,6 @@ Look Through the Yocto Project Development Tasks Manual: This manual contains pr
 
 Look Through the Yocto Project Application Development and the Extensible Software Development Kit (eSDK) manual: This manual describes how to use both the standard SDK and the extensible SDK, which are used primarily for application development. This manual also provides example workflows that use the popular Eclipse™ development environment and that use devtool. See the “Workflow using Eclipse™” and “Using devtool in your SDK Workflow” sections for more information.
 
-[1]: https://www.yoctoproject.org/software-overview/
-[2]: 
-
 Learn About Kernel Development: If you want to see how to work with the kernel and understand Yocto Linux kernels, see the Yocto Project Linux Kernel Development Manual. This manual provides information on how to patch the kernel, modify kernel recipes, and configure the kernel.
 
 Learn About Board Support Packages (BSPs): If you want to learn about BSPs, see the Yocto Project Board Support Packages (BSP) Developer’s Guide. This manual also provides an example BSP creation workflow. See the “Developing a Board Support Package (BSP)” section.
