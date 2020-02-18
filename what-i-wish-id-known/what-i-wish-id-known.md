@@ -1,7 +1,6 @@
-文档概述 : 我希望我都知道
+文档概述 : 应知应会
 ======
-Before reading further, make sure you’ve taken a look at the Software Overview page which presents the definitions for many of the terms referenced here. Also, know that some of the information here won’t make sense now, but as you start developing, it is the information you’ll want to keep close at hand. These are best known methods for working with Yocto Project® and they are updated regularly.
-
+在进一步阅读之前，确认你已经给查阅了 [软件概述页面][1] ，其介绍了本文里很多相关的名词解释。同时下面其中有一些信息你现在不需要关心，但是当你着手开发的时候，这些信息会成为你的枕边书。这些都是 Yocto 项目开发的已知最适合的工作方法，我们会不定期的更新。
 ————————-
 
 Using the Yocto Project is fairly easy, until something goes wrong. Without an understanding of how the build process works, you’ll find yourself trying to troubleshoot “a black box”. Here are a few items that new users wished they had known before embarking on their first build with Yocto Project. Feel free to contact us with other suggestions.
@@ -87,6 +86,9 @@ Look Through the Yocto Project Development Tasks Manual: This manual contains pr
 
 Look Through the Yocto Project Application Development and the Extensible Software Development Kit (eSDK) manual: This manual describes how to use both the standard SDK and the extensible SDK, which are used primarily for application development. This manual also provides example workflows that use the popular Eclipse™ development environment and that use devtool. See the “Workflow using Eclipse™” and “Using devtool in your SDK Workflow” sections for more information.
 
+[1]: https://www.yoctoproject.org/software-overview/
+[2]: 
+
 Learn About Kernel Development: If you want to see how to work with the kernel and understand Yocto Linux kernels, see the Yocto Project Linux Kernel Development Manual. This manual provides information on how to patch the kernel, modify kernel recipes, and configure the kernel.
 
 Learn About Board Support Packages (BSPs): If you want to learn about BSPs, see the Yocto Project Board Support Packages (BSP) Developer’s Guide. This manual also provides an example BSP creation workflow. See the “Developing a Board Support Package (BSP)” section.
@@ -95,3 +97,15 @@ Learn About Toaster: Toaster is a web interface to the Yocto Project’s OpenEmb
 
 Have Available the Yocto Project Reference Manual: Unlike the rest of the Yocto Project manual set, this manual is comprised of material suited for reference rather than procedures. You can get build details, a closer look at how the pieces of the Yocto Project development environment work together, information on various technical details, guidance on migrating to a newer Yocto Project release, reference material on the directory structure, classes, and tasks. The Yocto Project Reference Manual also contains a fairly comprehensive glossary of variables used within the Yocto Project.
 via；https://www.yoctoproject.org/docs/what-i-wish-id-known/
+
+
+[1]: https://github.com/guevaraya/Yocto_doc/blob/master/software-overview/software-overview.md
+[2]: http://layers.openembedded.org/
+[3]: https://github.com/guevaraya/Yocto_doc/blob/master/software-overview/layer/index.md
+[4]: https://github.com/guevaraya/Yocto_doc/blob/master/2.4/bsp-guide/bsp-guide.md
+[5]: https://www.yoctoproject.org/wp-content/uploads/2017/07/yp-how-it-works-new-diagram.png
+[6]: http://www.yoctoproject.org/docs/current/bitbake-user-manual/bitbake-user-manual.html#generating-dependency-graphs
+[7]: https://wiki.yoctoproject.org/wiki/Cookbook:Example:Adding_packages_to_your_OS_image
+[8]:
+[10]: 
+
