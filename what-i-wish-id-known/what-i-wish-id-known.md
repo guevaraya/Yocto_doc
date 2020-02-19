@@ -8,10 +8,11 @@ __使用 Yocto 项目非常简单，但是出现问题就不好应付了。没�
 
 1. __使用 Git，而不是 tar 包下载。__ 如果你用 git，软件根据 git 的运行情况将会自动更新修复问题。如果你下载 tar 包，你将需要自行更新。
 
-2. Get to know the layer index
-All layers can be found in the layer index. Layers which have applied for Yocto Project Compatible status (structure continuity assurance and testing) can be found in the Yocto Project Compatible index. Generally check the Compatible layer index first, and if you don’t find the necessary layer check the general layer index. The layer index is an original artifact from the Open Embedded Project. As such, that index doesn’t have the curating and testing that the Yocto Project provides on Yocto Project Compatible layer list, but the latter has fewer entries. Know that when you start searching in the layer index that not all layers have the same level of maturity, validation, or usability. Nor do searches prioritize displayed results. There is no easy way to help you through the process of choosing the best layer to suit your needs. Consequently, it is often trial and error, checking the mailing lists, or working with other developers through collaboration rooms that can help you make good choices.
+2. __深入了解层索引__
+所有的层可在 [层索引][2]找到。层主要应用于反映 Yocto 项目的兼容性状态（结构延续性的保证和科测试性），可以在 Yocto 项目的兼容性索引中找到对应的层。一般首先需要检查兼容性索引，然后如果没有发现必要的层，去检查下通用层索引。层索引是来自嵌入式开源项目最基本的工件。因此，层索引没有专门的规划和测试而是 Yocto 项目直接提供的项目兼容性列表。但是后者有少量的条目。要知道你正在索引的层不是所有的层都有一样的成熟度，有效性或可用性。检索的时候也不会安装优先级显示。没有很简单的方法帮你挑选出最适合你的层。往往结果要反复试错，经过确认邮件列表，或和其他开发者一起协作才帮忙得到正确的选项。
 
-3. Use existing BSP layers from silicon vendors when possible
+
+3. __尽可能使用已知芯片的 BSP 层__
 Intel, TI, NXP and others have information on what BSP layers to use with their silicon. These layers have names such as “meta-intel” or “meta-ti”. Try not to build layers from scratch. If you do have custom silicon, use one of these layers as a guide or template and familiarize yourself with the Yocto Project Board Support Package (BSP) Developer’s Guide.
 
 4. Do not put everything into one layer
