@@ -9,11 +9,11 @@ __使用 Yocto 项目非常简单，但是出现问题就不好应付了。没�
 1. __使用 Git，而不是 tar 包下载。__ 如果你用 git，软件根据 git 的运行情况将会自动更新修复问题。如果你下载 tar 包，你将需要自行更新。
 
 2. __深入了解层索引__
-所有的层可在 [层索引][2]找到。层主要应用于反映 Yocto 项目的兼容性状态（结构延续性的保证和科测试性），可以在 Yocto 项目的兼容性索引中找到对应的层。一般首先需要检查兼容性索引，然后如果没有发现必要的层，去检查下通用层索引。层索引是来自嵌入式开源项目最基本的工件。因此，层索引没有专门的规划和测试而是 Yocto 项目直接提供的项目兼容性列表。但是后者有少量的条目。要知道你正在索引的层不是所有的层都有一样的成熟度，有效性或可用性。检索的时候也不会安装优先级显示。没有很简单的方法帮你挑选出最适合你的层。往往结果要反复试错，经过确认邮件列表，或和其他开发者一起协作才帮忙得到正确的选项。
+所有的层可在 [层索引][2]找到。层主要应用于反映 Yocto 项目的兼容性状态（结构延续性的保证和科测试性），可以在[Yocto 项目的兼容性索引][3]中找到对应的层。一般首先需要检查兼容性索引，然后如果没有发现必要的层，去检查下通用层索引。层索引是来自嵌入式开源项目最基本的工件。因此，层索引没有专门的规划和测试而是 Yocto 项目直接提供的项目兼容性列表。但是后者有少量的条目。要知道你正在索引的层不是所有的层都有一样的成熟度，有效性或可用性。检索的时候也不会安装优先级显示。没有很简单的方法帮你挑选出最适合你的层。往往结果要反复试错，经过确认邮件列表，或和其他开发者一起协作才帮忙得到正确的选项。
 
 
 3. __尽可能使用已知芯片的 BSP 层__
-Intel, TI, NXP 和其他平台都有自己芯片对应的 BSP 层（layer）信息。这些层的名字都是类似于 “meta-intel” 或 “meta-ti”。不要尝试从头开始自己构建层。如果你需要对芯片定制，用现有的这些层作为指导书或模块，并熟悉 Yocto 项目板级开发包（BSP）开发指南。
+Intel, TI, NXP 和其他平台都有自己芯片对应的 BSP 层（layer）信息。这些层的名字都是类似于 “meta-intel” 或 “meta-ti”。不要尝试从头开始自己构建层。如果你需要对芯片定制，用现有的这些层作为指导书或模块，并熟悉 [Yocto 项目板级开发包（BSP）开发指南][4]。
 
 4. __不要把所有的东西放到一个层__ 
 Use different layers to logically separate information in your build. As an example, you could have a BSP layer, a GUI layer, a distro configuration, middleware, or an application (e.g. “meta-filesystems”, “meta-python”, “meta-intel”, and so forth). Putting your entire build into one layer limits and complicates future customization and reuse. Isolating information into layers, on the other hand, helps keep simplify future customizations and reuse.
