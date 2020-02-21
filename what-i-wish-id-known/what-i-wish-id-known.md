@@ -13,9 +13,9 @@ __使用 Yocto 项目非常简单，但是出现问题就不好应付了。没�
 
 
 3. __尽可能使用已知芯片的 BSP 层__
-Intel, TI, NXP and others have information on what BSP layers to use with their silicon. These layers have names such as “meta-intel” or “meta-ti”. Try not to build layers from scratch. If you do have custom silicon, use one of these layers as a guide or template and familiarize yourself with the Yocto Project Board Support Package (BSP) Developer’s Guide.
+Intel, TI, NXP 和其他平台都有自己芯片对应的 BSP 层（layer）信息。这些层的名字都是类似于 “meta-intel” 或 “meta-ti”。不要尝试从头开始自己构建层。如果你需要对芯片定制，用现有的这些层作为指导书或模块，并熟悉 Yocto 项目板级开发包（BSP）开发指南。
 
-4. Do not put everything into one layer
+4. __不要把所有的东西放到一个层__ 
 Use different layers to logically separate information in your build. As an example, you could have a BSP layer, a GUI layer, a distro configuration, middleware, or an application (e.g. “meta-filesystems”, “meta-python”, “meta-intel”, and so forth). Putting your entire build into one layer limits and complicates future customization and reuse. Isolating information into layers, on the other hand, helps keep simplify future customizations and reuse.
 
 5. Never modify the POKY layer. Never. Ever. When you update to the next release, you’ll lose all of your work. ALL OF IT.
