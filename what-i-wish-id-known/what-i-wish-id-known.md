@@ -9,37 +9,42 @@ __使用 Yocto 项目非常简单，但是出现问题就不好应付了。没�
 1. __使用 Git，而不是 tar 包下载。__ 如果你用 git，软件根据 git 的运行情况将会自动更新修复问题。如果你下载 tar 包，你将需要自行更新。
 
 2. __深入了解层索引__
+
 所有的层可在 [层索引][2]找到。层主要应用于反映 Yocto 项目的兼容性状态（结构延续性的保证和科测试性），可以在[Yocto 项目的兼容性索引][3]中找到对应的层。一般首先需要检查兼容性索引，然后如果没有发现必要的层，去检查下通用层索引。层索引是来自嵌入式开源项目最基本的工件。因此，层索引没有专门的规划和测试而是 Yocto 项目直接提供的项目兼容性列表。但是后者有少量的条目。要知道你正在索引的层不是所有的层都有一样的成熟度，有效性或可用性。检索的时候也不会安装优先级显示。没有很简单的方法帮你挑选出最适合你的层。往往结果要反复试错，经过确认邮件列表，或和其他开发者一起协作才帮忙得到正确的选项。
 
 
 3. __尽可能使用已知芯片的 BSP 层__
+
 Intel, TI, NXP 和其他平台都有自己芯片对应的 BSP 层（layer）信息。这些层的名字都是类似于 “meta-intel” 或 “meta-ti”。不要尝试从头开始自己构建层。如果你需要对芯片定制，用现有的这些层作为指导书或模块，并熟悉 [Yocto 项目板级开发包（BSP）开发指南][4]。
 
 4. __不要把所有的东西放到一个层__ 
-Use different layers to logically separate information in your build. As an example, you could have a BSP layer, a GUI layer, a distro configuration, middleware, or an application (e.g. “meta-filesystems”, “meta-python”, “meta-intel”, and so forth). Putting your entire build into one layer limits and complicates future customization and reuse. Isolating information into layers, on the other hand, helps keep simplify future customizations and reuse.
 
-5. Never modify the POKY layer. Never. Ever. When you update to the next release, you’ll lose all of your work. ALL OF IT.
+使用不同的层在逻辑上分开编译信息。例如：你有一个 BSP 层，GUI 层，一个发行版配置，中间件，或一个应用程序（例如:"meta-filesystems","meta-python","meta-intel",等等）。把所有的编译到一个层将有很大的限制和很难对后续的定制和复用性进行兼容。在另一方面，将信息隔离多个层中帮助简化了后续定制和复用。
 
-6. Don’t be fooled by documentation searching results
-Yocto Project documentation is always being updated. Unfortunately, when you use Google to search for Yocto Project concepts or terms, Google consistently searches and retrieves older versions of Yocto Project manuals. For example, searching for a particular topic using Google could result in a “hit” on a Yocto Project manual that is several releases old. To be sure that you are using the most current Yocto Project documentation, use the Yocto Project documentation page to locate the right documentation for your software release version. If you use the search bar on the top of the Documentation Overview page, while that search isn’t optimal, it will point you to the documents where your search string can be found. That search will usually identify where most of the attention on a given term or concept is.
+5. __永远不要修改 POKY 层__ 
 
-Many developers look through the complete Yocto Project set of manuals for a concept or term by doing a search through the “Yocto Project Complete Documentation Set”. This manual is a concatenation of the core set of Yocto Project manual. Thus, a simple string search using Ctrl-F in this manual produces all the “hits” for a desired term or concept. Once you find the area in which you are interested, you can display the actual manual, if desired.
+永远不要，一旦你这么做了，当你升级基线到下一个版本，你会失去之前所有的工作。是的，所有工作。
 
-7. Understand the basic concepts of how the build system works: the workflow
-Understanding the Yocto Project workflow is important as it can help you both pinpoint where trouble is occurring and how the build is breaking. The workflow breaks down into the following steps:
-
-1) Fetch – get the sourcecode,
-2) Extract – unpack the sources
-3) Patch – apply patches for bug fixes and new capability
-4) Configure – set up your environment specifications
-5) Build – compile and link
-6) Install – copy files to target directories
-7) Package – bundle files for installation.
-During “fetch”, there may be an inability to find code. During “extract”, there is likely an invalid zip or something similar. In other words, the function of a particular part of the workflow gives you an idea of what might be going wrong.
+6. __不要被搜索文档的结果所欺骗__
+Yocto 项目文档会经常更新。不幸的是，当你用谷歌搜索 Yocto 项目概念或名词的时候，谷歌总是查找和检索 Yocto 项目的旧版本手册。比如：用谷歌在 Yocto 项目手册中搜索包含 “hit” 的指定标题的结果就是几个老版本的。确保你用最新的 Yocto 项目文档，最好在 [Yocto 项目文档页面][6]查找你软件版本对应的文档。如果你使用文档概述页面的搜索栏，这样搜索虽然不是最优的，但它会告诉你搜索的字符串在哪个文档。这样搜索会通常指出某个名词或概念的出处。
 
 
+许多开发者通过检索 “Yocto 项目全文档集” 来查找 Yocto 项目手册的术语和名词。这个文档是对 Yocto 项目手册的核心集的整合。因此，用过 Ctrl-F 在这个手册搜索出所有 “hits” 的名词或术语。一旦你找到了你想要的地方，你就可以看到你想要的手册了。
 
-8. Know that you can generate a dependency graph and learn how to do it
+7. 理解编译系统的如何工作的基本的概念：工作流
+理解 Yocto 项目工作流是很重要，它帮你查明问题发生在哪里和编译时如何崩溃的。工作流分一下几个步骤：
+
+1） Fetch - 获取源码
+2） Extract - 解压源码
+3） Patch - 为解决问题和新特性打补丁
+4） Configure - 配置您的环境的一致性
+5） Build - 编译和链接
+6） Instal - 拷贝文件到目标目录
+7） Package - 打包安装文件
+
+在 “fetch” 过程中，可能无法获取到源码。在 “extract” 中，可能存在无效的压缩包或类似的问题。另一方面，工作流的特定的功能可能会让你了解出错在哪里。
+
+8. __需要知道的是你可以产生一个依赖图并学习如何用它__
 A dependency graph shows dependencies between recipes, tasks, and targets. You can use the “-g” option with BitBake to generate this graph. When you start a build and the build breaks, you could see packages you have no clue about or have any idea why the build system has included them. The dependency graph can clarify that confustion. You can learn more about dependency graphs and how to generate them in the Generating Dependency Graphs section in the BitBake User Manual.
 
 9. Here’s how you decode “magic” folder names in tmp/work
