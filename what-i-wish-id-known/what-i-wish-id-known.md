@@ -109,7 +109,7 @@ via：https://www.yoctoproject.org/docs/what-i-wish-id-known/
 [3]: https://github.com/guevaraya/Yocto_doc/blob/master/software-overview/layer/index.md
 [4]: https://github.com/guevaraya/Yocto_doc/blob/master/2.4/bsp-guide/bsp-guide.md
 [5]: https://www.yoctoproject.org/wp-content/uploads/2017/07/yp-how-it-works-new-diagram.png
-[6]: http://www.yoctoproject.org/docs/current/bitbake-user-manual/bitbake-user-manual.html#generating-dependency-graphs
+[6]: https://github.com/guevaraya/Yocto_doc/blob/master/3.0/bitbake-user-manual/bitbake-user-manual.md#generating-dependency-graphs
 [7]: https://wiki.yoctoproject.org/wiki/Cookbook:Example:Adding_packages_to_your_OS_image
 [8]:
 [10]: 
