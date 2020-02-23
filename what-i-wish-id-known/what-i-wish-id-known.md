@@ -43,7 +43,7 @@ Yocto 项目文档会经常更新。不幸的是，当你用谷歌搜索 Yocto �
 7） Package - 打包安装文件
 
 在 “fetch” 过程中，可能无法获取到源码。在 “extract” 中，可能存在无效的压缩包或类似的问题。另一方面，工作流的特定的功能可能会让你了解出错在哪里。
-[!yp-how-it-works-new-diagram.png][5]
+![yp-how-it-works-new-diagram.png][5]
 
 8. __需要知道的是你可以产生一个依赖图并学习如何用它__
 A dependency graph shows dependencies between recipes, tasks, and targets. You can use the “-g” option with BitBake to generate this graph. When you start a build and the build breaks, you could see packages you have no clue about or have any idea why the build system has included them. The dependency graph can clarify that confustion. You can learn more about dependency graphs and how to generate them in the Generating Dependency Graphs section in the BitBake User Manual.
