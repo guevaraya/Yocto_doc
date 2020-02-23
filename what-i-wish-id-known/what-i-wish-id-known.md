@@ -6,19 +6,17 @@ __在进一步阅读之前，确认你已经给查阅了 [软件概述页面][1]
 
 __使用 Yocto 项目非常简单，但是出现问题就不好应付了。没有理解编译过程是如何工作的，你会发现你自己在尝试排查一个“黑盒子”的故障。这边有几条给新手开始第一次用 Yocto 项目编译之前他们希望已经知道的事项。如有其他建议请随时联系我们：__
 
-1. __使用 Git，而不是 tar 包下载。__ 如果你用 git，软件根据 git 的运行情况将会自动更新修复问题。如果你下载 tar 包，你将需要自行更新。
+1. __使用 Git，而不是 tar 包下载。__ 
+如果你用 git，软件根据 git 的运行情况将会自动更新修复问题。如果你下载 tar 包，你将需要自行更新。
 
 2. __深入了解层索引__
-
 所有的层可在 [层索引][2]找到。层主要应用于反映 Yocto 项目的兼容性状态（结构延续性的保证和科测试性），可以在[Yocto 项目的兼容性索引][3]中找到对应的层。一般首先需要检查兼容性索引，然后如果没有发现必要的层，去检查下通用层索引。层索引是来自嵌入式开源项目最基本的工件。因此，层索引没有专门的规划和测试而是 Yocto 项目直接提供的项目兼容性列表。但是后者有少量的条目。要知道你正在索引的层不是所有的层都有一样的成熟度，有效性或可用性。检索的时候也不会安装优先级显示。没有很简单的方法帮你挑选出最适合你的层。往往结果要反复试错，经过确认邮件列表，或和其他开发者一起协作才帮忙得到正确的选项。
 
 
 3. __尽可能使用已知芯片的 BSP 层__
-
 Intel, TI, NXP 和其他平台都有自己芯片对应的 BSP 层（layer）信息。这些层的名字都是类似于 “meta-intel” 或 “meta-ti”。不要尝试从头开始自己构建层。如果你需要对芯片定制，用现有的这些层作为指导书或模块，并熟悉 [Yocto 项目板级开发包（BSP）开发指南][4]。
 
 4. __不要把所有的东西放到一个层__ 
-
 使用不同的层在逻辑上分开编译信息。例如：你有一个 BSP 层，GUI 层，一个发行版配置，中间件，或一个应用程序（例如:"meta-filesystems","meta-python","meta-intel",等等）。把所有的编译到一个层将有很大的限制和很难对后续的定制和复用性进行兼容。在另一方面，将信息隔离多个层中帮助简化了后续定制和复用。
 
 5. __永远不要修改 POKY 层__ 
@@ -31,7 +29,7 @@ Yocto 项目文档会经常更新。不幸的是，当你用谷歌搜索 Yocto �
 
 许多开发者通过检索 “Yocto 项目全文档集” 来查找 Yocto 项目手册的术语和名词。这个文档是对 Yocto 项目手册的核心集的整合。因此，用过 Ctrl-F 在这个手册搜索出所有 “hits” 的名词或术语。一旦你找到了你想要的地方，你就可以看到你想要的手册了。
 
-7. 理解编译系统的如何工作的基本的概念：工作流
+7. __理解编译系统的如何工作的基本的概念:__ 工作流
 理解 Yocto 项目工作流是很重要，它帮你查明问题发生在哪里和编译时如何崩溃的。工作流分一下几个步骤：
 
 1） Fetch - 获取源码
@@ -46,9 +44,9 @@ Yocto 项目文档会经常更新。不幸的是，当你用谷歌搜索 Yocto �
 ![yp-how-it-works-new-diagram.png][5]
 
 8. __需要知道的是你可以产生一个依赖图并学习如何用它__
-A dependency graph shows dependencies between recipes, tasks, and targets. You can use the “-g” option with BitBake to generate this graph. When you start a build and the build breaks, you could see packages you have no clue about or have any idea why the build system has included them. The dependency graph can clarify that confustion. You can learn more about dependency graphs and how to generate them in the Generating Dependency Graphs section in the BitBake User Manual.
+一个依赖图展示了 recipe 任务 和 目标的依赖关系。你可以用 BitBake 的 “-g” 选项生成这样的图。当你开始编译是遇到崩溃，你对这软件包的一无所知或不知道为什么编译系统要包含他们。依赖图可以澄清这个困惑。你可以学习更多的依赖图以及如何在 BitBake 用户手册看到如何生成一个依赖图。
 
-9. Here’s how you decode “magic” folder names in tmp/work
+9. __下面是你如何解码 tmp/work 下的目录名 “magic” __
 The build system fetches, unpacks, preprocesses, and builds. If something goes wrong, the build system reports to you directly the path to a folder where the temporary (build/tmp) files and packages reside resulting from the build. For a detailed example of this process, see the example. Unfortunately this example is on an earlier release of Yocto Project.
 
 When you perform a build, you can use the “-u” BitBake command-line option to specify a user interface viewer into the dependency graph (e.g. knotty, ncurses, or taskexp) that helps you understand the build dependencies better.
