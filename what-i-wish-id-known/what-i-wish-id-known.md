@@ -51,8 +51,9 @@ Yocto 项目文档会经常更新。不幸的是，当你用谷歌搜索 Yocto �
 
 但你执行一个构建，你可以用 BitBake 命令的 “-u” 选项来指定用户查看依赖图的工具（例如：knotty，ncurses 或 taskexp）以帮助你更好的来理解编译依赖。
 
-10. You can build more than just images
-You can build and run a specific task for a specific package (including devshell) or even a single recipe. When developers first start using the Yocto Project, the instructions found in the Yocto Project Quick Start show how to create an image and then run or flash that image. However, you can actually build just a single recipe. Thus, if some dependency or recipe isn’t working, you can just say “bitbake foo” where “foo” is the name for a specific recipe. As you become more advanced using the Yocto Project, and if builds are failing, it can be useful to make sure the fetch itself works as desired. Here are some valuable links: “Using a Development Shell” for information on how to build and run a specific task using devshell. Also, the SDK manual shows how to build out a specific recipe.
+10. __你不仅仅可以构建镜像__
+你可以为一个特定的包（包括 devshell）甚至单个菜谱（recips）构建和运行一个特定的任务。开发人员第一次使用 Yocto 项目，Yocto 项目快速入手手册仅会展示如何创建一个镜像并运行和烧录它。实际是你可以只构建一个菜谱。因此，如果一些依赖或菜谱有问题，你可以只运行 “bitbak foo”，“foo” 就是指定菜谱（recipe）的名字。如果你已经精通使用 Yocto 项目，如果构建失败的情况下，确保它自己按照预期获取源码很有用处。这儿有一些很有价值的链接：“用一个开发壳”得到[如何用 devshell 构建和运行指定的任务][6]的信息。同时，[SDK 手册展示了如何构建出一个指定的菜谱（recipe）][7] 。
+
 
 11. An ambiguous definition: Package vs Recipe
 A recipe contains instructions the build system uses to create packages. Recipes and Packages are the difference between the front end and the result of the build process.
@@ -108,7 +109,6 @@ via：https://www.yoctoproject.org/docs/what-i-wish-id-known/
 [4]: https://github.com/guevaraya/Yocto_doc/blob/master/2.4/bsp-guide/bsp-guide.md
 [5]: https://www.yoctoproject.org/wp-content/uploads/2017/07/yp-how-it-works-new-diagram.png
 [6]: https://github.com/guevaraya/Yocto_doc/blob/master/3.0/bitbake-user-manual/bitbake-user-manual.md#generating-dependency-graphs
-[7]: https://wiki.yoctoproject.org/wiki/Cookbook:Example:Adding_packages_to_your_OS_image
-[8]:
-[10]: 
+[7]: https://github.com/guevaraya/Yocto_doc/blob/master/2.5/mega-manual/mega-manual.md#sdk-devtool-use-devtool-modify-to-modify-the-source-of-an-existing-component
+
 
