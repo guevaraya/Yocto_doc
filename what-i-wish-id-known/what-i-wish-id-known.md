@@ -92,7 +92,7 @@ __浏览 Yocto 项目开发任务手册：__
 __浏览 Yocto 项目应用和扩展软件套件手册：__ 
 这个手册描述如何使用标准 SDK 和 扩展SDK，这些 SDK 主要用于应用开发的。这个手册也提供了使用受欢迎的 Eclipse 开发环境和 devtool 的工作流程的范例。查看 “使用Eclipse 的工作流程” 和 “在您的 SDK 工作流程中使用 devtool ” 章节获取更多信息。
 
-Learn About Kernel Development: If you want to see how to work with the kernel and understand Yocto Linux kernels, see the Yocto Project Linux Kernel Development Manual. This manual provides information on how to patch the kernel, modify kernel recipes, and configure the kernel.
+__学习内核相关开发：__ 如果你想了解如何使用 内核 或 理解 Yocto 的 Linux 内核，查看 Yocto 项目的 Linux 内核开发手册。这个手册提供了如何给内核打patch，修改内核菜谱（recipe）以及配置内核。
 
 Learn About Board Support Packages (BSPs): If you want to learn about BSPs, see the Yocto Project Board Support Packages (BSP) Developer’s Guide. This manual also provides an example BSP creation workflow. See the “Developing a Board Support Package (BSP)” section.
 
