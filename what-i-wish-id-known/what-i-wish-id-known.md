@@ -84,20 +84,21 @@ Yocto 项目文档会经常更新。不幸的是，当你用谷歌搜索 Yocto �
 - 生成并理解 bitbake 的配置环境
 - 为应用程序构建一个可扩展的 SDK 
 
-15. 如果您对 Yocto 项目发自内心的有兴趣，可考虑阅读以下内容：
+15. 如果您对 Yocto 项目发自内心的热爱，可考虑阅读以下内容：
 
 __浏览 Yocto 项目开发任务手册：__ 
-这个手册包含一些有帮助作用的过程性信息，如进行配置和运行层，定制镜像，书写新菜谱（recipe），使用库文件以及使用 QEMU。这些信息是基于任务的，涵盖了 Yocto 项目的所有范围。
+这个手册包含一些很有帮助的过程性信息，如进行配置和运行层，定制镜像，书写新菜谱（recipe），使用库文件以及使用 QEMU。这些信息是基于任务的，涵盖了 Yocto 项目的所有范围。
 
-__浏览 Yocto 项目应用和扩展软件套件手册：__ 
+__浏览 Yocto 项目应用和扩展软件开发套件手册：__ 
 这个手册描述如何使用标准 SDK 和 扩展SDK，这些 SDK 主要用于应用开发的。这个手册也提供了使用受欢迎的 Eclipse 开发环境和 devtool 的工作流程的范例。查看 “使用Eclipse 的工作流程” 和 “在您的 SDK 工作流程中使用 devtool ” 章节获取更多信息。
 
-__学习内核相关开发：__ 如果你想了解如何使用 内核 或 理解 Yocto 的 Linux 内核，查看 Yocto 项目的 Linux 内核开发手册。这个手册提供了如何给内核打patch，修改内核菜谱（recipe）以及配置内核。
+__学习内核相关开发：__ 如果你想了解如何使用内核或理解 Yocto 的 Linux 内核，查看 Yocto 项目的 Linux 内核开发手册。这个手册提供了如何给内核打补丁，修改内核菜谱（recipe）以及配置内核。
 
-Learn About Board Support Packages (BSPs): If you want to learn about BSPs, see the Yocto Project Board Support Packages (BSP) Developer’s Guide. This manual also provides an example BSP creation workflow. See the “Developing a Board Support Package (BSP)” section.
+__学习关于板级支持包（BSPs）：__ 如果你想学习关于 BSP, 查看 Yocto 项目板级支持包开发指南。这个手册也提供了创建 BSP 的范例。查看 “开发板级支持包” 章节。
 
-Learn About Toaster: Toaster is a web interface to the Yocto Project’s OpenEmbedded build system. If you are interested in using this type of interface to create images, see the Toaster User Manual.
+__学习关于 Toaster：__ Toaster是 Yocto 项目嵌入式开源构建系统的一种网页接口。如果你对使用这个接口创建镜像有兴趣，查看 Toaster 用户手册。
 
+__Yocto 项目参考手册__
 Have Available the Yocto Project Reference Manual: Unlike the rest of the Yocto Project manual set, this manual is comprised of material suited for reference rather than procedures. You can get build details, a closer look at how the pieces of the Yocto Project development environment work together, information on various technical details, guidance on migrating to a newer Yocto Project release, reference material on the directory structure, classes, and tasks. The Yocto Project Reference Manual also contains a fairly comprehensive glossary of variables used within the Yocto Project.
 via：https://www.yoctoproject.org/docs/what-i-wish-id-known/
 
