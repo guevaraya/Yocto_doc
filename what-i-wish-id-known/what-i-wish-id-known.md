@@ -55,17 +55,18 @@ Yocto 项目文档会经常更新。不幸的是，当你用谷歌搜索 Yocto �
 你可以为一个特定的包（包括 devshell）甚至单个菜谱（recips）构建和运行一个特定的任务。开发人员第一次使用 Yocto 项目，Yocto 项目快速入手手册仅会展示如何创建一个镜像并运行和烧录它。实际是你可以只构建一个菜谱。因此，如果一些依赖或菜谱有问题，你可以只运行 “bitbak foo”，“foo” 就是指定菜谱（recipe）的名字。如果你已经精通使用 Yocto 项目，如果构建失败的情况下，确保它自己按照预期获取源码很有用处。这儿有一些很有价值的链接：“用一个开发壳”得到[如何用 devshell 构建和运行指定的任务][6]的信息。同时，[SDK 手册展示了如何构建出一个指定的菜谱（recipe）][7] 。
 
 
-11. 容易混淆的定义： 包（Package）和 菜谱（Recipe）
+11. __容易混淆的定义： 包（Package）和 菜谱（Recipe）__
 一个菜谱（Recipe） 包含构建系统创建包的指令集。菜谱（Recipe）和包（Package）的区别在于编译进程的前端和结果.
 
 如刚才所述，构建系统加工菜谱（recipe）然后根据菜谱（recipe）的指令创建包（Package）。生成的包（package）与正在编译的菜谱（recipe）有关，但它是编译的不同部分（package）（例如：主包，文档包，调试的符号表包，独立的工具包，等等）。构建系统将包（package）进行了分类，不需要安装的包就没有必要安装，这在编译小型设备的时候很有用，如开发嵌入式或 IOT 设备。
 
-12. 你会期望学习和了解 rootfs 里有哪些包（package）
+12. __你会期望学习和了解 rootfs 里有哪些包（package）__
 
-13. 创建自己的菜谱（recipe）
+13. __创建自己的菜谱（recipe）__
 这有很多方法创建你自己的镜像菜谱。我们建议创建你自己的镜像菜谱而不是追加一个现有的菜谱。创建一个镜像菜谱很容易。还是不要尝试追加修改一个现有的镜像菜谱。创建你自己的，创建自己的菜谱，万丈高楼平地起。
 
 14. Finally, here is a list of the basic skills you will need as a systems developer. You must be able to:
+14. 最后，这有有一个基本技能列表，你作为系统开发人员将需要基本的。你必须可以：
 
 deal with corporate proxies
 add a package to an image
