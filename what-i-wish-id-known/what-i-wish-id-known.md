@@ -65,43 +65,32 @@ Yocto 项目文档会经常更新。不幸的是，当你用谷歌搜索 Yocto �
 13. __创建自己的菜谱（recipe）__
 这有很多方法创建你自己的镜像菜谱。我们建议创建你自己的镜像菜谱而不是追加一个现有的菜谱。创建一个镜像菜谱很容易。还是不要尝试追加修改一个现有的镜像菜谱。创建你自己的，创建自己的菜谱，万丈高楼平地起。
 
-14. 最后，这有有一个基本技能列表，你作为系统开发人员将需要基本的。你必须可以：
-- 会配置公司的代理
-- 增加一个包到镜像
+14. __最后，这有有一个基本技能列表，你作为系统开发人员将需要基本的。你必须可以：__
+- 会配置网络的代理
+- 会增加一个包到镜像
 - 理解菜谱（recipe）和 包（package）的差异
-- 构建一个包（package）并知道其用处
+- 会构建一个包（package）并知道其用处
 - 找出一个菜谱（recipe）所创建的包（package）有哪些
-- 找出一个包（package）有哪些的文件
+- 找出一个包（package）包含哪些的文件
 - 找出一个镜像的文件有哪些
 - 增加一个 SSH 服务到一个镜像文件（使能转换文件到目标）
 - 知道如何剖析一个菜谱（recipe）
 - 知道如何创建和使用层（layer）
+- 查找菜谱 （layer.openembedded.org）
+- 理解硬件配置和发行版配置之间的差异
+- 查找发行版特性的范例和知道如何设置它们
+- 通过共享下载和共享状态缓存提升构建速度
+- 生成并理解依赖图
+- 生成并理解 bitbake 的配置环境
+- 为应用程序构建一个可扩展的 SDK 
 
-deal with corporate proxies
-add a package to an image
-understand the difference between a recipe and package
-build a package by itself and why that’s useful
-find out what packages are created by a recipe
-find out what files are in a package
-find out what files are in an image
-add an ssh server to an image (enable transferring of files to target)
-know the anatomy of a recipe
-know how to create and use layers
-find recipes (layers.openembedded.org)
-understand difference between machine and distro settings
-find and use the right BSP (machine) for your hardware
-find examples of distro features and know where to set them
-understanding the task pipeline and executing individual tasks
-understand devtool and how it simplifies your workflow
-improve build speeds with shared downloads and shared state cache
-generate and understand a dependency graph
-generate and understand bitbake environment
-build an Extensible SDK for applications development
-15.Depending on what you primary interests are with the Yocto Project, you could consider any of the following reading:
+15. 如果您对 Yocto 项目发自内心的有兴趣，可考虑阅读以下内容：
 
-Look Through the Yocto Project Development Tasks Manual: This manual contains procedural information grouped to help you get set up, work with layers, customize images, write new recipes, work with libraries, and use QEMU. The information is task-based and spans the breadth of the Yocto Project.
+__浏览 Yocto 项目开发任务手册：__ 
+这个手册包含一些有帮助作用的过程性信息，如进行配置和运行层，定制镜像，书写新菜谱（recipe），使用库文件以及使用 QEMU。这些信息是基于任务的，涵盖了 Yocto 项目的所有范围。
 
-Look Through the Yocto Project Application Development and the Extensible Software Development Kit (eSDK) manual: This manual describes how to use both the standard SDK and the extensible SDK, which are used primarily for application development. This manual also provides example workflows that use the popular Eclipse™ development environment and that use devtool. See the “Workflow using Eclipse™” and “Using devtool in your SDK Workflow” sections for more information.
+__浏览 Yocto 项目应用和扩展软件套件手册：__ 
+这个手册描述如何使用标准 SDK 和 扩展SDK，这些 SDK 主要用于应用开发的。这个手册也提供了使用受欢迎的 Eclipse 开发环境和 devtool 的工作流程的范例。查看 “使用Eclipse 的工作流程” 和 “在您的 SDK 工作流程中使用 devtool ” 章节获取更多信息。
 
 Learn About Kernel Development: If you want to see how to work with the kernel and understand Yocto Linux kernels, see the Yocto Project Linux Kernel Development Manual. This manual provides information on how to patch the kernel, modify kernel recipes, and configure the kernel.
 
