@@ -94,12 +94,13 @@ __浏览 Yocto 项目应用和扩展软件开发套件手册：__
 
 __学习内核相关开发：__ 如果你想了解如何使用内核或理解 Yocto 的 Linux 内核，查看 Yocto 项目的 Linux 内核开发手册。这个手册提供了如何给内核打补丁，修改内核菜谱（recipe）以及配置内核。
 
-__学习关于板级支持包（BSPs）：__ 如果你想学习关于 BSP, 查看 Yocto 项目板级支持包开发指南。这个手册也提供了创建 BSP 的范例。查看 “开发板级支持包” 章节。
+__关于学习板级支持包（BSPs）：__ 如果你想学习关于 BSP, 查看 Yocto 项目板级支持包开发指南。这个手册也提供了创建 BSP 的范例。查看 “开发板级支持包” 章节。
 
-__学习关于 Toaster：__ Toaster是 Yocto 项目嵌入式开源构建系统的一种网页接口。如果你对使用这个接口创建镜像有兴趣，查看 Toaster 用户手册。
+__关于学习 Toaster：__ Toaster是 Yocto 项目嵌入式开源构建系统的一种网页接口。如果你对使用这个接口创建镜像有兴趣，查看 Toaster 用户手册。
 
 __Yocto 项目参考手册__
-Have Available the Yocto Project Reference Manual: Unlike the rest of the Yocto Project manual set, this manual is comprised of material suited for reference rather than procedures. You can get build details, a closer look at how the pieces of the Yocto Project development environment work together, information on various technical details, guidance on migrating to a newer Yocto Project release, reference material on the directory structure, classes, and tasks. The Yocto Project Reference Manual also contains a fairly comprehensive glossary of variables used within the Yocto Project.
+Yocto 项目参考手册：不像其他 Yocto 项目手册，这个手册包含大量的适合参考的范例资料而不是过程描述。你可以获取编译细节，深入了解 Yocto 项目开发环境的要素是如何一起工作的，这个要素包含大量的技术细节，移植一个新的 Yocto 项目版本的指导，还有目录结构，类和任务的参考信息。Yocto 项目参考手册同时包含一个Yocto 项目涉及的完整的术语表。
+
 via：https://www.yoctoproject.org/docs/what-i-wish-id-known/
 
 
