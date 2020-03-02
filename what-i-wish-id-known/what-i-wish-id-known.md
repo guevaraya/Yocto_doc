@@ -103,6 +103,9 @@ Yocto 项目参考手册：不像其他 Yocto 项目手册，这个手册包含�
 
 via：https://www.yoctoproject.org/docs/what-i-wish-id-known/
 
+译者：[guevara]https://github.com/guevaraya)
+校对：[校对者ID](https://github.com/校对者ID)
+版权所有 Linux 基金会©
 
 [1]: https://github.com/guevaraya/Yocto_doc/blob/master/software-overview/software-overview.md
 [2]: http://layers.openembedded.org/
