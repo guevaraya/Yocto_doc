@@ -96,6 +96,10 @@ Yocto 项目特性
 
 via:https://www.yoctoproject.org/software-overview/
 
+译者：[guevara](https://github.com/guevaraya)
+校对：[校对者ID](https://github.com/校对者ID)
+版权所有© Linux 基金会
+
 [1]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-overview.png
 [2]: http://openembedded.org/
 [3]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-details.png
