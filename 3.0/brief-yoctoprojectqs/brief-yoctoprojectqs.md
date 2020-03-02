@@ -6,7 +6,7 @@
 
 快速构建 Yocto 项目
 ======
-所有权@ 2010-2019 Linux 基金会
+版权所有@ 2010-2019 Linux 基金会
 
 此文允许被复制，分发以及或者修改此文档，但需要遵循知识共享组织发布的共享协议[2.0 UK: England & Wales][1]条款
 
@@ -242,7 +242,9 @@ __5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-
 
 
 via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html
-
+译者：[guevara](https://github.com/guevaraya)
+校对：[校对者ID](https://github.com/校对者ID)
+版权所有© 2010-2019 Linux 基金会
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
 [2]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#hardware-build-system-term
 [3]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#setting-up-to-use-crops
