@@ -6,8 +6,6 @@
 
 Yocto 项目组织成员可提供特定 BSP 的信息。请访问 [Yocto 项目成员 BSP][5]页面获取更多详细信息。 
 
-Yocto Project member organizations can provide information about specific BSPs. Please visit the Yocto Project Member BSP page for details.
-
 
 [1]: https://github.com/guevaraya/Yocto_doc/blob/master/software-overview/software-overview.md
 [2]: https://www.yoctoproject.org/wp-content/uploads/2018/03/Yocto-Badge-Update-Participant-2018.png
