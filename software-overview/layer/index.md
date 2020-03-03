@@ -8,7 +8,7 @@
 <table>
     <thead>
         <tr>
-            <th>名称</th>
+            <th>![兼容性标志][2]</th>
             <th>值</th>
             <th>备注</th>
         </tr>
