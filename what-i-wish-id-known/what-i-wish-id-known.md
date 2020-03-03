@@ -34,11 +34,11 @@ Yocto 项目文档会经常更新。不幸的是，当你用谷歌搜索 Yocto �
 
 - 1） Fetch - 获取源码
 - 2） Extract - 解压源码
--3） Patch - 为解决问题和新特性打补丁
--4） Configure - 配置您的环境的一致性
--5） Build - 编译和链接
--6） Instal - 拷贝文件到目标目录
--7） Package - 打包安装文件
+- 3） Patch - 为解决问题和新特性打补丁
+- 4） Configure - 配置您的环境的一致性
+- 5） Build - 编译和链接
+- 6） Instal - 拷贝文件到目标目录
+- 7） Package - 打包安装文件
 
 在 “fetch” 过程中，可能无法获取到源码。在 “extract” 中，可能存在无效的压缩包或类似的问题。另一方面，工作流的特定的功能可能会让你了解出错在哪里。
 ![yp-how-it-works-new-diagram.png][5]
