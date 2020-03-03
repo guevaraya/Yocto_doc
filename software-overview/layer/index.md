@@ -4,12 +4,16 @@
 |-|-|
 | ![兼容性标志][2] | 这些层提供技术融合，硬件组件，软件组件。Yocto 项目兼容层目的是提供最低标志而强大的生态系统，“Yocto 兼容项目”作为对应的产品或软件组件应用，如 一个版本开发包（BSP），其他嵌入式开源兼容性层，以及相关的开源项目，这些项目允许产品发布者标识使用 Yocto 项目和直接贴牌。层信息介绍和嵌入式开源层可以在[软件概述页面的层段落][3]看到，通用信息也可以在这个文档找到。如果你在这找不到你想要的层，查看嵌入式开源层，它包含更多的层但是其内容有很少普遍的认证。|
 
-<style>table th:first-of-type {    width: 100px;}</style><!-- 下方是表格的 Markdown 语法 --!>
+<table><tr>
+  <td>
+122
+</td>
+  <td>
+122
+</td>
 
-
-首先 <th> 存在于 <table> 中；其次 th:first-of-type 的意思是每个 <th> 为其父级的第一个元素，这里指的就是围绕着【名称】的 <th>。同理第二、三个使用 th:nth-of-type(2)、th:nth-of-type(3) 就可以了，以此类推。 
-  上述的 th:first-of-type 等于 th:nth-of-type(1)。
-
+</tr>
+</table>
 
 Yocto Project member organizations can provide information about specific BSPs. Please visit the Yocto Project Member BSP page for details.
 
