@@ -9,6 +9,6 @@ Yocto 项目组织成员可提供特定 BSP 的信息。请访问 [Yocto 项目�
 
 [1]: https://github.com/guevaraya/Yocto_doc/blob/master/software-overview/software-overview.md
 [2]: https://www.yoctoproject.org/wp-content/uploads/2018/03/Yocto-Badge-Update-Participant-2018.png
-[3]: https://www.yoctoproject.org/software-overview/
+[3]: https://github.com/guevaraya/Yocto_doc/edit/master/software-overview
 [4]: http://layers.openembedded.org/
 [5]: https://www.yoctoproject.org/software-overview/layers/bsps/?release=All&title
