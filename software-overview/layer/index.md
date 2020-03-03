@@ -9,7 +9,7 @@
     <thead>
         <tr>
             <th>![兼容性标志][2]</th>
-            <th>img src="/i/eg_tulip.jpg"  alt="上海鲜花港 - 郁金香" /></th>
+            <th>img src="https://www.yoctoproject.org/wp-content/uploads/2018/03/Yocto-Badge-Update-Participant-2018.png"  alt="上海鲜花港 - 郁金香" /></th>
             <th>备注</th>
         </tr>
     </thead>
