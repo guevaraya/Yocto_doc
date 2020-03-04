@@ -1,7 +1,7 @@
 Yocto 项目 BSP 开发指导
 ======
 
-<p align="right">Scott Rifenbark
+<p align="right">Scott Rifenbark<br>
 Scott的文档服务公司
 </p>
 <p align="right"><a href="mailto:srifenbark@gmail.com"><font size=100>&lt;srifenbark@gmail.com&gt;</font></a></p>
