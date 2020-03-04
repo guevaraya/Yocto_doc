@@ -17,7 +17,7 @@ Scott的文档服务公司<br>
 * 报告这个文档的任何错误或问题，请发邮件到 Yocto 项目讨论组 yocto@yoctoproject.com 或 登陆 freenode 的 #yocto 频道。
 
 |Revision History|
-|-|
+|-|-|
 |Revision 0.9	24 November 2010|24 November 2010|
 
 
