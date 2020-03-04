@@ -3,7 +3,7 @@ Yocto 项目 BSP 开发指导
 
 <p align="right">Scott Rifenbark</p>
 <p align="right">Scott的文档服务公司</p>
-<p align="right"><srifenbark@gmail.com>[1][1]</p>
+<p align="right"><srifenbark@gmail.com></p>
 
 版权所有@ 2010-2017  Linux 基金会
 
