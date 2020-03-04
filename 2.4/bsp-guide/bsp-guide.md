@@ -16,7 +16,7 @@ Scott的文档服务公司<br>
 * 若需此文档相关的Yocto 项目其他的版本，去 [Yocto 项目文档页面][2]选择下拉框的 “Active Releases” 按钮，选择你想要的相关 Yocto 项目文档。
 * 报告这个文档的任何错误或问题，请发邮件到 Yocto 项目讨论组 yocto@yoctoproject.com 或 登陆 freenode 的 #yocto 频道。
 
-|Revision History||
+|**Revision History**||
 |-|-|
 |Revision 0.9	24 November 2010|24 November 2010|
 
