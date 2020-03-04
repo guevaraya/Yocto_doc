@@ -1,8 +1,9 @@
 Yocto 项目 BSP 开发指导
 ======
 
-<p align="right">Scott Rifenbark</p>
-<p align="right">Scott的文档服务公司</p>
+<p align="right">Scott Rifenbark
+Scott的文档服务公司
+</p>
 <p align="right"><a href="mailto:srifenbark@gmail.com"><font size=100>&lt;srifenbark@gmail.com&gt;</font></a></p>
 
 版权所有@ 2010-2017  Linux 基金会
