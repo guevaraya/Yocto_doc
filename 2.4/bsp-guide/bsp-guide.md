@@ -19,39 +19,39 @@ Scott的文档服务公司<br>
 |**修订历史**||
 |-|-|
 |版本 0.9	24 2010年11月|2010年11月24日|
-|Yocto 项目文档初始稿发布0.9||
+|Yocto 项目文档初始稿发布 0.9 版本||
 |版本 1.0	|2011年4月6日|
 |发布 Yocto 项目 1.0 版本|
 |版本 1.0.1|2011年6月23日|
 |发布 Yocto 项目 1.0.1 版本|
 |版本 1.1|2011年10月6日|
-|Released with the Yocto Project 1.1 Release.|
-|Revision 1.2	April 2012|
-Released with the Yocto Project 1.2 Release.
-Revision 1.3	October 2012
-Released with the Yocto Project 1.3 Release.
-Revision 1.4	April 2013
-Released with the Yocto Project 1.4 Release.
-Revision 1.5	October 2013
-Released with the Yocto Project 1.5 Release.
-Revision 1.5.1	January 2014
-Released with the Yocto Project 1.5.1 Release.
-Revision 1.6	April 2014
-Released with the Yocto Project 1.6 Release.
-Revision 1.7	October 2014
-Released with the Yocto Project 1.7 Release.
-Revision 1.8	April 2015
-Released with the Yocto Project 1.8 Release.
-Revision 2.0	October 2015
-Released with the Yocto Project 2.0 Release.
-Revision 2.1	April 2016
-Released with the Yocto Project 2.1 Release.
-Revision 2.2	October 2016
-Released with the Yocto Project 2.2 Release.
-Revision 2.3	May 2017
-Released with the Yocto Project 2.3 Release.
-Revision 2.4	October 2017
-Released with the Yocto Project 2.4 Release.
+|发布 Yocto 项目 1.1 版本|
+|版本 1.2|2012年4月|
+|发布 Yocto 项目 1.2 版本|
+|版本 1.3	|2012年10月|
+|发布 Yocto 项目 1.3 版本|
+|版本 1.4|2013年4月|
+|发布 Yocto 项目 1.4 版本|
+|版本 1.5|2013年10月|
+|发布 Yocto 项目 1.5 版本|
+|版本 1.5.1 |2014年1月|
+|发布 Yocto 项目 1.5.1 版本|
+|版本 1.6|2014年4月|
+|发布 Yocto 项目 1.6 版本|
+|版本 1.7	|2014年10月|
+|发布 Yocto 项目 1.7 版本|
+|版本 1.8|2015年4月|
+|发布 Yocto 项目 1.8 版本|
+|版本2.0|2015年10月|
+|发布 Yocto 项目 2.0 版本|
+|版本 2.1|2016年4月|
+|发布 Yocto 项目 2.1 版本|
+|版本 2.2|2016年10月|
+|发布 Yocto 项目 2.2 版本|
+|版本2.3|2017年6月|
+|发布 Yocto 项目 2.3 版本|
+|版本 2.4|2017年10月|
+|发布 Yocto 项目 2.4 版本|
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
