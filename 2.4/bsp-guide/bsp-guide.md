@@ -19,12 +19,12 @@ Scott的文档服务公司<br>
 |**修订历史**||
 |-|-|
 |版本 0.9	24 2010年11月|2010年11月24日|
-|Yocto 项目文档初始稿发布0.9|
-|Revision 1.0	6 |  April 2011|
-|Released with the Yocto Project 1.0 Release.|
-|Revision 1.0.1	23 |May 2011|
-|Released with the Yocto Project 1.0.1 Release.|
-|Revision 1.1	6 |October 2011|
+|Yocto 项目文档初始稿发布0.9||
+|版本 1.0	|2011年4月6日|
+|发布 Yocto 项目 1.0 版本|
+|版本 1.0.1|2011年6月23日|
+|发布 Yocto 项目 1.0.1 版本|
+|版本 1.1|2011年10月6日|
 |Released with the Yocto Project 1.1 Release.|
 |Revision 1.2	April 2012|
 Released with the Yocto Project 1.2 Release.
