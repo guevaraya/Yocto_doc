@@ -16,18 +16,17 @@ Scott的文档服务公司<br>
 * 若需此文档相关的 Yocto 项目其他的版本，去 [Yocto 项目文档页面][2]选择下拉框的 “Active Releases” 按钮，选择你想要的相关 Yocto 项目文档。
 * 报告这个文档的任何错误或问题，请发邮件到 Yocto 项目讨论组 yocto@yoctoproject.com 或 登陆 freenode 的 #yocto 频道。
 
-|**Revision History**||
+|**修订历史**||
 |-|-|
-|Revision 0.9	24 November 2010|24 November 2010|
-|The initial document draft released with the Yocto Project 0.9 Release.||
+|版本 0.9	24 2010年11月|2010年11月24日|
+|Yocto 项目文档初始稿发布0.9|
 |Revision 1.0	6 |  April 2011|
 |Released with the Yocto Project 1.0 Release.|
 |Revision 1.0.1	23 |May 2011|
 |Released with the Yocto Project 1.0.1 Release.|
 |Revision 1.1	6 |October 2011|
 |Released with the Yocto Project 1.1 Release.|
-
-Revision 1.2	April 2012
+|Revision 1.2	April 2012|
 Released with the Yocto Project 1.2 Release.
 Revision 1.3	October 2012
 Released with the Yocto Project 1.3 Release.
