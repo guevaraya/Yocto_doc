@@ -53,23 +53,28 @@ Scott的文档服务公司<br>
 |版本 2.4|2017年10月|
 |发布 Yocto 项目 2.4 版本|
 
+<!-- GFM-TOC -->
+* [1. Board Support Packages (BSP) - Developer's Guide](#bsp)
+* [1.1. BSP Layers](#bsp-layers)
+* [1.2. Preparing Your Build Host to Work With BSP Layers](#preparing-your-build-host-to-work-with-bsp-layers)
+* [1.3. Example Filesystem Layout](#bsp-filelayout)
+* [1.3.1. License Files](#bsp-filelayout-license)
+* [](#)
+* [](#)
+<!-- GFM-TOC -->
+
+
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
+
 
 作者：[Scott Rifenbark](mailto:srifenbark@gmail.com)
 译者：[guevara](https://github.com/guevaraya)
 校对：[校对者ID](https://github.com/校对者ID)
 版权所有© Linux 基金会
 
-[TOC]
 
-## 1 标题1
 
-### 1.1 标题1.1
-#### 1.1.1 标题1.1.1
 
-## 2 标题2
-
-###  2.1 标题2.1
 
 [1]: mailto:srifenbark@gmail.com
 [2]: http://www.yoctoproject.org/documentation
