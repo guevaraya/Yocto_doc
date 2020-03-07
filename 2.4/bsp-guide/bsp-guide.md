@@ -54,16 +54,16 @@ Scott的文档服务公司<br>
 |发布 Yocto 项目 2.4 版本|
 
 <!-- GFM-TOC -->
-*[1. Board Support Packages (BSP) - Developer's Guide](#bsp)
-   *[1.1. BSP Layers](#bsp-layers)
-   *[1.2. Preparing Your Build Host to Work With BSP Layers](#preparing-your-build-host-to-work-with-bsp-layers)
-   *[1.3. Example Filesystem Layout](#bsp-filelayout)
-      *[1.3.1. License Files](#bsp-filelayout-license)
+* [1. Board Support Packages (BSP) - Developer's Guide](#bsp)
+   * [1.1. BSP Layers](#bsp-layers)
+   * [1.2. Preparing Your Build Host to Work With BSP Layers](#preparing-your-build-host-to-work-with-bsp-layers)
+   * [1.3. Example Filesystem Layout](#bsp-filelayout)
+      * [1.3.1. License Files](#bsp-filelayout-license)
 <!-- GFM-TOC -->
 
-*[1.一级目录](#1)
-*[1.1二级目录](#1.1)
-    *[1.1.1三级目录](#1.1.1)
+* [1.一级目录](#1)
+* [1.1二级目录](#1.1)
+    * [1.1.1三级目录](#1.1.1)
 
 <h2 id='1'> 一级目录 </h2>
 
