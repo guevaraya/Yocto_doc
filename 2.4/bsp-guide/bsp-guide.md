@@ -53,6 +53,7 @@ Scott的文档服务公司<br>
 |版本 2.4|2017年10月|
 |发布 Yocto 项目 2.4 版本|
 
+**目录**
 <!-- GFM-TOC -->
 * [1. Board Support Packages (BSP) - Developer's Guide](#bsp)
   * [1.1. BSP Layers](#bsp-layers)
@@ -63,23 +64,57 @@ Scott的文档服务公司<br>
     * [1.3.3. README.sources File](bsp-filelayout-readme-sources)
     * [1.3.4. Pre-built User Binaries](bsp-filelayout-binary)
     * [1.3.5. Layer Configuration File](bsp-filelayout-layer)
-    * [1.3.6. Hardware Configuration Options]()
-    * [1.3.7. Miscellaneous BSP-Specific Recipe Files]()
-    * [1.3.8. Display Support Files]()
-    * [1.3.9. Linux Kernel Configuration]()
-  * [1.4. Developing a Board Support Package (BSP)]()
-  * [1.5. Requirements and Recommendations for Released BSPs]()
-    * [1.5.1. Released BSP Requirements]()
-    * [1.5.2. Released BSP Recommendations]()
-  * [1.6. Customizing a Recipe for a BSP]()
-  * [1.7. BSP Licensing Considerations]()
-  * [1.8. Using the Yocto Project's BSP Tools]()
-    * [1.8.1. Common Features]()
-    * [1.8.2. Creating a new BSP Layer Using the yocto-bsp Script]()
-    * [1.8.3. Managing Kernel Patches and Config Items with yocto-kernel]()
+    * [1.3.6. Hardware Configuration Options](bsp-filelayout-machine)
+    * [1.3.7. Miscellaneous BSP-Specific Recipe Files](bsp-filelayout-misc-recipes)
+    * [1.3.8. Display Support Files](bsp-filelayout-recipes-graphics)
+    * [1.3.9. Linux Kernel Configuration](bsp-filelayout-kernel)
+  * [1.4. Developing a Board Support Package (BSP)](developing-a-board-support-package-bsp)
+  * [1.5. Requirements and Recommendations for Released BSPs](requirements-and-recommendations-for-released-bsps)
+    * [1.5.1. Released BSP Requirements](released-bsp-requirements)
+    * [1.5.2. Released BSP Recommendations](released-bsp-recommendations)
+  * [1.6. Customizing a Recipe for a BSP](customizing-a-recipe-for-a-bsp)
+  * [1.7. BSP Licensing Considerations](bsp-licensing-considerations)
+  * [1.8. Using the Yocto Project's BSP Tools](using-the-yocto-projects-bsp-tools)
+    * [1.8.1. Common Features](common-features)
+    * [1.8.2. Creating a new BSP Layer Using the yocto-bsp Script](creating-a-new-bsp-layer-using-the-yocto-bsp-script)
+    * [1.8.3. Managing Kernel Patches and Config Items with yocto-kernel](managing-kernel-patches-and-config-items-with-yocto-kernel)
 <!-- GFM-TOC -->
 
 
+<a id="bsp">Chapter 1. Board Support Packages (BSP) - Developer's Guide</a>
+======
+
+**目录**
+
+1.1. BSP Layers
+1.2. Preparing Your Build Host to Work With BSP Layers
+1.3. Example Filesystem Layout
+1.3.1. License Files
+1.3.2. README File
+1.3.3. README.sources File
+1.3.4. Pre-built User Binaries
+1.3.5. Layer Configuration File
+1.3.6. Hardware Configuration Options
+1.3.7. Miscellaneous BSP-Specific Recipe Files
+1.3.8. Display Support Files
+1.3.9. Linux Kernel Configuration
+1.4. Developing a Board Support Package (BSP)
+1.5. Requirements and Recommendations for Released BSPs
+1.5.1. Released BSP Requirements
+1.5.2. Released BSP Recommendations
+1.6. Customizing a Recipe for a BSP
+1.7. BSP Licensing Considerations
+1.8. Using the Yocto Project's BSP Tools
+1.8.1. Common Features
+1.8.2. Creating a new BSP Layer Using the yocto-bsp Script
+1.8.3. Managing Kernel Patches and Config Items with yocto-kernel
+
+A Board Support Package (BSP) is a collection of information that defines how to support a particular hardware device, set of devices, or hardware platform. The BSP includes information about the hardware features present on the device and kernel configuration information along with any additional hardware drivers required. The BSP also lists any additional software components required in addition to a generic Linux software stack for both essential and optional platform features.
+
+This guide presents information about BSP Layers, defines a structure for components so that BSPs follow a commonly understood layout, discusses how to customize a recipe for a BSP, addresses BSP licensing, and provides information that shows you how to create and manage a BSP Layer using two Yocto Project BSP Tools.
+
+
+<a id="bsp-layers">1.1. BSP Layers</a>
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
