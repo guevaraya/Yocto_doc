@@ -55,29 +55,29 @@ Scott的文档服务公司<br>
 
 **目录**
 <!-- GFM-TOC -->
-* [1. Board Support Packages (BSP) - Developer's Guide](#bsp)
-  * [1.1. BSP Layers](#bsp-layers)
-  * [1.2. Preparing Your Build Host to Work With BSP Layers](#preparing-your-build-host-to-work-with-bsp-layers)
-  * [1.3. Example Filesystem Layout](#bsp-filelayout)
-    * [1.3.1. License Files](#bsp-filelayout-license)
-    * [1.3.2. README File](bsp-filelayout-readme)
-    * [1.3.3. README.sources File](bsp-filelayout-readme-sources)
-    * [1.3.4. Pre-built User Binaries](bsp-filelayout-binary)
-    * [1.3.5. Layer Configuration File](bsp-filelayout-layer)
-    * [1.3.6. Hardware Configuration Options](bsp-filelayout-machine)
-    * [1.3.7. Miscellaneous BSP-Specific Recipe Files](bsp-filelayout-misc-recipes)
-    * [1.3.8. Display Support Files](bsp-filelayout-recipes-graphics)
-    * [1.3.9. Linux Kernel Configuration](bsp-filelayout-kernel)
-  * [1.4. Developing a Board Support Package (BSP)](developing-a-board-support-package-bsp)
-  * [1.5. Requirements and Recommendations for Released BSPs](requirements-and-recommendations-for-released-bsps)
-    * [1.5.1. Released BSP Requirements](released-bsp-requirements)
-    * [1.5.2. Released BSP Recommendations](released-bsp-recommendations)
-  * [1.6. Customizing a Recipe for a BSP](customizing-a-recipe-for-a-bsp)
-  * [1.7. BSP Licensing Considerations](bsp-licensing-considerations)
-  * [1.8. Using the Yocto Project's BSP Tools](using-the-yocto-projects-bsp-tools)
-    * [1.8.1. Common Features](common-features)
-    * [1.8.2. Creating a new BSP Layer Using the yocto-bsp Script](creating-a-new-bsp-layer-using-the-yocto-bsp-script)
-    * [1.8.3. Managing Kernel Patches and Config Items with yocto-kernel](managing-kernel-patches-and-config-items-with-yocto-kernel)
+* [1. 板级开发包（BSP） - 开发指导](#bsp)
+  * [1.1. BSP 层](#bsp-layers)
+  * [1.2. 准备您用于开发 BSP 层的编译主机](#preparing-your-build-host-to-work-with-bsp-layers)
+  * [1.3. 文件系统布局示例](#bsp-filelayout)
+    * [1.3.1. 授权许可文件](#bsp-filelayout-license)
+    * [1.3.2. 自述说明文件](bsp-filelayout-readme)
+    * [1.3.3. 源码自述说明文件](bsp-filelayout-readme-sources)
+    * [1.3.4. 用户二进制预编译](bsp-filelayout-binary)
+    * [1.3.5. 层配置文件](bsp-filelayout-layer)
+    * [1.3.6. 硬件配置选项](bsp-filelayout-machine)
+    * [1.3.7. 其他特定的BSP菜谱文件](bsp-filelayout-misc-recipes)
+    * [1.3.8. 支持图形显示的相关文件](bsp-filelayout-recipes-graphics)
+    * [1.3.9. Linux 内核配置文件](bsp-filelayout-kernel)
+  * [1.4. 开发一个板级支持包（BSP）](developing-a-board-support-package-bsp)
+  * [1.5. 发布 BSP 包的要求和建议](requirements-and-recommendations-for-released-bsps)
+    * [1.5.1. 发布 BSP 包的要求](released-bsp-requirements)
+    * [1.5.2. 发布 BSP 包的建议](released-bsp-recommendations)
+  * [1.6. 为 BSP 定制一个菜谱](customizing-a-recipe-for-a-bsp)
+  * [1.7. BSP 许可的注意事项](bsp-licensing-considerations)
+  * [1.8. 使用 Yocto 项目的 BSP 工具](using-the-yocto-projects-bsp-tools)
+    * [1.8.1. 常见特性](common-features)
+    * [1.8.2. 用 yocto-bsp 脚本创建一个新的 BSP 层](creating-a-new-bsp-layer-using-the-yocto-bsp-script)
+    * [1.8.3. 管理 yocto-kernel 的内核补丁和配置项](managing-kernel-patches-and-config-items-with-yocto-kernel)
 <!-- GFM-TOC -->
 
 
@@ -86,28 +86,29 @@ Scott的文档服务公司<br>
 
 **目录**
 
-1.1. BSP Layers
-1.2. Preparing Your Build Host to Work With BSP Layers
-1.3. Example Filesystem Layout
-1.3.1. License Files
-1.3.2. README File
-1.3.3. README.sources File
-1.3.4. Pre-built User Binaries
-1.3.5. Layer Configuration File
-1.3.6. Hardware Configuration Options
-1.3.7. Miscellaneous BSP-Specific Recipe Files
-1.3.8. Display Support Files
-1.3.9. Linux Kernel Configuration
-1.4. Developing a Board Support Package (BSP)
-1.5. Requirements and Recommendations for Released BSPs
-1.5.1. Released BSP Requirements
-1.5.2. Released BSP Recommendations
-1.6. Customizing a Recipe for a BSP
-1.7. BSP Licensing Considerations
-1.8. Using the Yocto Project's BSP Tools
-1.8.1. Common Features
-1.8.2. Creating a new BSP Layer Using the yocto-bsp Script
-1.8.3. Managing Kernel Patches and Config Items with yocto-kernel
+<!-- GFM-TOC -->
+* [1.1. BSP 层](#bsp-layers)
+* [1.2. 准备您用于开发 BSP 层的编译主机](#preparing-your-build-host-to-work-with-bsp-layers)
+* [1.3. 文件系统布局示例](#bsp-filelayout)
+  * [1.3.1. 授权许可文件](#bsp-filelayout-license)
+  * [1.3.2. 自述说明文件](bsp-filelayout-readme)
+  * [1.3.3. 源码自述说明文件](bsp-filelayout-readme-sources)
+  * [1.3.4. 用户二进制预编译](bsp-filelayout-binary)
+  * [1.3.5. 层配置文件](bsp-filelayout-layer)
+  * [1.3.6. 硬件配置选项](bsp-filelayout-machine)
+  * [1.3.7. 其他特定的BSP菜谱文件](bsp-filelayout-misc-recipes)
+  * [1.3.8. 支持图形显示的相关文件](bsp-filelayout-recipes-graphics)
+  * [1.3.9. Linux 内核配置文件](bsp-filelayout-kernel)
+  * [1.4. 开发一个板级支持包（BSP）](developing-a-board-support-package-bsp)
+* [1.5. 发布 BSP 包的要求和建议](requirements-and-recommendations-for-released-bsps)
+  * [1.5.1. 发布 BSP 包的要求](released-bsp-requirements)
+  * [1.5.2. 发布 BSP 包的建议](released-bsp-recommendations)
+* [1.6. 为 BSP 定制一个菜谱](customizing-a-recipe-for-a-bsp)
+* [1.7. BSP 许可的注意事项](bsp-licensing-considerations)
+* [1.8. 使用 Yocto 项目的 BSP 工具](using-the-yocto-projects-bsp-tools)
+  * [1.8.1. 常见特性](common-features)
+  * [1.8.2. 用 yocto-bsp 脚本创建一个新的 BSP 层](creating-a-new-bsp-layer-using-the-yocto-bsp-script)
+  * [1.8.3. 管理 yocto-kernel 的内核补丁和配置项](managing-kernel-patches-and-config-items-with-yocto-kernel)
 
 A Board Support Package (BSP) is a collection of information that defines how to support a particular hardware device, set of devices, or hardware platform. The BSP includes information about the hardware features present on the device and kernel configuration information along with any additional hardware drivers required. The BSP also lists any additional software components required in addition to a generic Linux software stack for both essential and optional platform features.
 
