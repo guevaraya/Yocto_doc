@@ -13,7 +13,7 @@ Scott的文档服务公司<br>
 **手册说明**
 
 * 这个 Yocto 项目 BSP 的开发指导版本是针对 Yocto 项目正式版本 2.4 的。请确认你拿到的是正式版本对应的最新手册，并使用 [Yocto 项目文档页面][2]的手册。
-* 若需此文档相关的 Yocto 项目其他的版本，去 [Yocto 项目文档页面][2]选择下拉框的 “Active Releases” 按钮，选择你想要的相关 Yocto 项目文档。
+* 若需此文档相关的 Yocto 项目其他的版本，到 [Yocto 项目文档页面][2]点击下拉框里的 “Active Releases” 按钮，来选择你想要的相关 Yocto 项目文档。
 * 报告这个文档的任何错误或问题，请发邮件到 Yocto 项目讨论组 yocto@yoctoproject.com 或 登陆 freenode 的 #yocto 频道。
 
 |**修订历史**||
@@ -116,6 +116,16 @@ Scott的文档服务公司<br>
 
 <a id="bsp-layers">1.1. BSP Layers</a>
 =======
+
+A BSP consists of a file structure inside a base directory. Collectively, you can think of the base directory, its file structure, and the contents as a BSP Layer. Although not a strict requirement, layers in the Yocto Project use the following well-established naming convention:
+
+`
+meta-bsp_name
+`
+The string "meta-" is prepended to the machine or platform name, which is bsp_name in the above form.
+
+> Tip
+> Because the BSP layer naming convention is well-established, it is advisable to follow it when creating layers. Technically speaking, a BSP layer name does not need to start with meta-. However, you might run into situations where obscure scripts assume this convention.
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
