@@ -1,3 +1,9 @@
+[#]: translator: (guevaraya)
+[#]: reviewer: ( )
+[#]: publisher: ( )
+[#]: url: ( https://www.yoctoproject.org/docs/)
+[#]: subject: (Yocto 项目 BSP 开发指导)
+
 Yocto 项目 BSP 开发指导
 ======
 
