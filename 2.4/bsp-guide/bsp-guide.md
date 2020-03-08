@@ -112,7 +112,10 @@ Scott的文档服务公司<br>
 
 一个板级开发包（BSP）是一个信息集合，它定义了如何支持特定硬件设备，设备集或一个硬件平台。BSP 包含设备里的硬件功能信息和内核额外需要的硬件驱动的配置信息。BSP 也罗列了除过基本且可选的平台特性的 Linux 软件栈外，还有额外需要的软件组件列表。
 
-这个指导包含了 BSP 层信息，定义了一个组件的结构以便 BSP 包遵循一个通用的可理解的布局，讨论了如何为一个 BSP 定制一个配方，解释了 BSP 许可问题，提供了说明如何用 Yocto 项目的 BSP 工具创建和管理一个 BSP 层的相关信息。
+这个指导包含了 BSP 层信息，定义了一个组件的结构以便 BSP 包遵循一个通用的可理解的布局，讨论了如何为一个 BSP 定制一个配方，解释了 BSP 许可问题，提供了说明如何用 Yocto 项目的 [BSP 工具](#using-the-yocto-projects-bsp-tools)创建和管理一个 [BSP 层](#bsp-layers)的相关信息。
+
+<a id="bsp-layers">1.1. BSP Layers</a>
+=======
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
@@ -128,3 +131,4 @@ via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
 [1]: mailto:srifenbark@gmail.com
 [2]: http://www.yoctoproject.org/documentation
+https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html#bsp-layers
