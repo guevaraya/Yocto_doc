@@ -65,14 +65,14 @@ Scott的文档服务公司<br>
     * [1.3.4. 用户二进制预编译](bsp-filelayout-binary)
     * [1.3.5. 层配置文件](bsp-filelayout-layer)
     * [1.3.6. 硬件配置选项](bsp-filelayout-machine)
-    * [1.3.7. 其他特定的BSP菜谱文件](bsp-filelayout-misc-recipes)
+    * [1.3.7. 其他特定的BSP配方文件](bsp-filelayout-misc-recipes)
     * [1.3.8. 支持图形显示的相关文件](bsp-filelayout-recipes-graphics)
     * [1.3.9. Linux 内核配置文件](bsp-filelayout-kernel)
   * [1.4. 开发一个板级支持包（BSP）](developing-a-board-support-package-bsp)
   * [1.5. 发布 BSP 包的要求和建议](requirements-and-recommendations-for-released-bsps)
     * [1.5.1. 发布 BSP 包的要求](released-bsp-requirements)
     * [1.5.2. 发布 BSP 包的建议](released-bsp-recommendations)
-  * [1.6. 为 BSP 定制一个菜谱](customizing-a-recipe-for-a-bsp)
+  * [1.6. 为 BSP 定制一个配方](customizing-a-recipe-for-a-bsp)
   * [1.7. BSP 许可的注意事项](bsp-licensing-considerations)
   * [1.8. 使用 Yocto 项目的 BSP 工具](using-the-yocto-projects-bsp-tools)
     * [1.8.1. 常见特性](common-features)
@@ -96,26 +96,23 @@ Scott的文档服务公司<br>
   * [1.3.4. 用户二进制预编译](bsp-filelayout-binary)
   * [1.3.5. 层配置文件](bsp-filelayout-layer)
   * [1.3.6. 硬件配置选项](bsp-filelayout-machine)
-  * [1.3.7. 其他特定的BSP菜谱文件](bsp-filelayout-misc-recipes)
+  * [1.3.7. 其他特定的BSP配方文件](bsp-filelayout-misc-recipes)
   * [1.3.8. 支持图形显示的相关文件](bsp-filelayout-recipes-graphics)
   * [1.3.9. Linux 内核配置文件](bsp-filelayout-kernel)
   * [1.4. 开发一个板级支持包（BSP）](developing-a-board-support-package-bsp)
 * [1.5. 发布 BSP 包的要求和建议](requirements-and-recommendations-for-released-bsps)
   * [1.5.1. 发布 BSP 包的要求](released-bsp-requirements)
   * [1.5.2. 发布 BSP 包的建议](released-bsp-recommendations)
-* [1.6. 为 BSP 定制一个菜谱](customizing-a-recipe-for-a-bsp)
+* [1.6. 为 BSP 定制一个配方](customizing-a-recipe-for-a-bsp)
 * [1.7. BSP 许可的注意事项](bsp-licensing-considerations)
 * [1.8. 使用 Yocto 项目的 BSP 工具](using-the-yocto-projects-bsp-tools)
   * [1.8.1. 常见特性](common-features)
   * [1.8.2. 用 yocto-bsp 脚本创建一个新的 BSP 层](creating-a-new-bsp-layer-using-the-yocto-bsp-script)
   * [1.8.3. 管理 yocto-kernel 的内核补丁和配置项](managing-kernel-patches-and-config-items-with-yocto-kernel)
 
-A Board Support Package (BSP) is a collection of information that defines how to support a particular hardware device, set of devices, or hardware platform. The BSP includes information about the hardware features present on the device and kernel configuration information along with any additional hardware drivers required. The BSP also lists any additional software components required in addition to a generic Linux software stack for both essential and optional platform features.
+一个板级开发包（BSP）是一个信息集合，它定义了如何支持特定硬件设备，设备集或一个硬件平台。BSP 包含设备里的硬件功能信息和内核额外需要的硬件驱动的配置信息。BSP 也罗列了除过基本且可选的平台特性的 Linux 软件栈外，还有额外需要的软件组件列表。
 
-This guide presents information about BSP Layers, defines a structure for components so that BSPs follow a commonly understood layout, discusses how to customize a recipe for a BSP, addresses BSP licensing, and provides information that shows you how to create and manage a BSP Layer using two Yocto Project BSP Tools.
-
-
-<a id="bsp-layers">1.1. BSP Layers</a>
+这个指导包含了 BSP 层信息，定义了一个组件的结构以便 BSP 包遵循一个通用的可理解的布局，讨论了如何为一个 BSP 定制一个配方，解释了 BSP 许可问题，提供了说明如何用 Yocto 项目的 BSP 工具创建和管理一个 BSP 层的相关信息。
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
