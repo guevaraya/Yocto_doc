@@ -1,4 +1,4 @@
-hYocto 项目 BSP 开发指导
+Yocto 项目 BSP 开发指导
 ======
 
 <p align="right">Scott Rifenbark<br>
@@ -122,9 +122,11 @@ A BSP consists of a file structure inside a base directory. Collectively, you ca
 `
 meta-bsp_name
 `
+
 The string "meta-" is prepended to the machine or platform name, which is bsp_name in the above form.
 
 > Tip
+>
 > Because the BSP layer naming convention is well-established, it is advisable to follow it when creating layers. Technically speaking, a BSP layer name does not need to start with meta-. However, you might run into situations where obscure scripts assume this convention.
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
