@@ -123,13 +123,12 @@ Scott的文档服务公司<br>
 <a id="bsp-layers">1.1. BSP Layers</a>
 =======
 
-A BSP consists of a file structure inside a base directory. Collectively, you can think of the base directory, its file structure, and the contents as a BSP Layer. Although not a strict requirement, layers in the Yocto Project use the following well-established naming convention:
+一个 BSP 层在主目录下以文件形式组成。总体上说，你可以将主目录的文件形式和内容看作是 BSP 层。尽管这不是强制要求，但 Yocto 项目中的层用以下公认的命名约定：
 
 `
 meta-bsp_name
 `
-
-The string "meta-" is prepended to the machine or platform name, which is bsp_name in the above form.
+字符串 “meta-” 前缀到机器名或平台名上，上面的形式是 bsp-name。 
 
 > Tip
 >
