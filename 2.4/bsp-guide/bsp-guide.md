@@ -128,11 +128,19 @@ Scott的文档服务公司<br>
 `
 meta-bsp_name
 `
-字符串 “meta-” 前缀到机器名或平台名上，上面的形式是 bsp-name。 
+字符串 “meta-” 前缀到机器名或平台名上，上面的形式是 *bsp-name*。 
 
-> Tip
+> 小贴士
 >
-> Because the BSP layer naming convention is well-established, it is advisable to follow it when creating layers. Technically speaking, a BSP layer name does not need to start with meta-. However, you might run into situations where obscure scripts assume this convention.
+> 因为 BSP 层的命名约定是被广泛认可的，创建层的时候最好遵循它。从技术上讲，一个 BSP 层命名可以不需要以 *meta-* 开头，但是这样命名会让你可能遇到脚本混乱的状况。
+
+鉴于 Yocto 项目的每个正式版本都支持和提供了 BSP 包，为了有助于理解 BSP 层的概念。你可以通过网站 http://git.yoctoproject.org/cgit/cgit.cgi 看到[ Yocto 项目源码库](#yocto-project-repositories)的所有层。如果你去这个网站，你会在 “Yocto Meta data Layer” 下面的列表最后看到Yocto 项目支持的 一些 BSP 层（例如：meta-raspberrypi 和 meta-intel）。这些层自身都是一个独立仓，点击这个层可以看到更多信息，其中包含有两个链接可供选择克隆到本地系统。这是一个克隆树莓派层的例子：
+
+`
+$ git clone git://git.yoctoproject.org/meta-raspberrypi
+ `
+
+In addition to BSP layers near the bottom of that referenced Yocto Project Source Repository, the meta-yocto-bsp layer is part of the shipped poky repository. The meta-yocto-bsp layer maintains several BSPs such as the Beaglebone, EdgeRouter, and generic versions of both 32 and 64-bit IA machines.
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
@@ -148,4 +156,6 @@ via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
 [1]: mailto:srifenbark@gmail.com
 [2]: http://www.yoctoproject.org/documentation
-https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html#bsp-layers
+[3]: http://www.yoctoproject.org/docs/2.4/ref-manual/ref-manual.html#yocto-project-repositories
+
+
