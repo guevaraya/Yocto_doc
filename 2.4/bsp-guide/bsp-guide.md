@@ -140,7 +140,12 @@ meta-bsp_name
 $ git clone git://git.yoctoproject.org/meta-raspberrypi
  `
 
-In addition to BSP layers near the bottom of that referenced Yocto Project Source Repository, the meta-yocto-bsp layer is part of the shipped poky repository. The meta-yocto-bsp layer maintains several BSPs such as the Beaglebone, EdgeRouter, and generic versions of both 32 and 64-bit IA machines.
+除了在Yocto 项目引用仓列表最下面的 BSP 层之外，*meta-yocto-bsp* 层也是 poky 仓库打包的一部分。*meta-yocto-bsp* 层维护着几个 BSP 包
+，如 Beaglebone、EdgeRouter和通用版本，包含32 位和 64 位 IA 机器。
+
+想获取 BSP 开发流程的信息，请查看[“开发一个板级开发包（BSP）”](#developing-a-board-support-package-bsp)章节。想获取更多如何从 Git 仓建立一个本地源码拷贝的信息，请查看 Yocto 项目开发任务手册的 [“使用 Yocto 项目源码文件”](#working-with-yocto-project-source-files) 章节。
+
+
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
