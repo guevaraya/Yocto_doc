@@ -145,7 +145,18 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
 
 想获取 BSP 开发流程的信息，请查看[“开发一个板级开发包（BSP）”](#developing-a-board-support-package-bsp)章节。想获取更多如何从 Git 仓建立一个本地源码拷贝的信息，请查看 Yocto 项目开发任务手册的 [“使用 Yocto 项目源码文件”](#working-with-yocto-project-source-files) 章节。
 
+层的基础目录（*meta-bsp_name*）便是 BSP 层的根目录。这个根目录通过变量 [BBLAYERS](#var-BBLAYERS) 来添加到对应的配置文件，即在[构建目录](#build-directory)下的 *conf/bblayers.conf* 。它在你运行 OpenEmbedded 的编译环境配置脚本（如：[oe-init-build-env](#structure-core-script)）之后才会生效。添加此根目录让 OpenEmbedded 构建系统可识别 BSP 的定义并根据它编译镜像。这是一个例子：
 
+`
+     BBLAYERS ?= " \
+       /usr/local/src/yocto/meta \
+       /usr/local/src/yocto/meta-poky \
+       /usr/local/src/yocto/meta-yocto-bsp \
+       /usr/local/src/yocto/meta-mylayer \
+       "
+ `
+
+Some BSPs require additional layers on top of the BSP's root layer in order to be functional. For these cases, you also need to add those layers to the BBLAYERS variable in order to build the BSP. You must also specify in the "Dependencies" section of the BSP's README file any requirements for additional layers and, preferably, any build instructions that might be contained elsewhere in the README file.
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
