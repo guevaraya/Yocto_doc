@@ -125,9 +125,10 @@ Scott的文档服务公司<br>
 
 一个 BSP 层在主目录下以文件形式组成。总体上说，你可以将主目录的文件形式和内容看作是 BSP 层。尽管这不是强制要求，但 Yocto 项目中的层用以下公认的命名约定：
 
-`
+```
 meta-bsp_name
-`
+```
+
 字符串 “meta-” 前缀到机器名或平台名上，上面的形式是 *bsp-name*。 
 
 > 小贴士
@@ -136,9 +137,9 @@ meta-bsp_name
 
 鉴于 Yocto 项目的每个正式版本都支持和提供了 BSP 包，为了有助于理解 BSP 层的概念。你可以通过网站 http://git.yoctoproject.org/cgit/cgit.cgi 看到[ Yocto 项目源码库](#yocto-project-repositories)的所有层。如果你去这个网站，你会在 “Yocto Meta data Layer” 下面的列表最后看到Yocto 项目支持的 一些 BSP 层（例如：meta-raspberrypi 和 meta-intel）。这些层自身都是一个独立仓，点击这个层可以看到更多信息，其中包含有两个链接可供选择克隆到本地系统。这是一个克隆树莓派层的例子：
 
-`
+```
 $ git clone git://git.yoctoproject.org/meta-raspberrypi
- `
+```
 
 除了在Yocto 项目引用仓列表最下面的 BSP 层之外，*meta-yocto-bsp* 层也是 poky 仓库打包的一部分。*meta-yocto-bsp* 层维护着几个 BSP 包
 ，如 Beaglebone、EdgeRouter和通用版本，包含32 位和 64 位 IA 机器。
