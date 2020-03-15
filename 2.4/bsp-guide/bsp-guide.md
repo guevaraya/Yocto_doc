@@ -157,13 +157,13 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
        "
 ```
 
-Some BSPs require additional layers on top of the BSP's root layer in order to be functional. For these cases, you also need to add those layers to the BBLAYERS variable in order to build the BSP. You must also specify in the "Dependencies" section of the BSP's README file any requirements for additional layers and, preferably, any build instructions that might be contained elsewhere in the README file.
+一些额外的 BSP 层需要放到 BSP 的根目录下为实现特定的功能。这种情况下，为构建 BSP你也需要添加这些层到 BBLAYERS 变量里。你也必须要按照 BSP 的 README 文件的“依赖关系”段落里对额外层的任何要求配置，最好还包括 README 文件的其他地方的构建说明。
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
 
 作者：[Scott Rifenbark](mailto:srifenbark@gmail.com)
-译者：[guevara](https://github.com/guevaraya)
+译者：[巴龙](https://github.com/guevaraya)
 校对：[校对者ID](https://github.com/校对者ID)
 版权所有© Linux 基金会
 
