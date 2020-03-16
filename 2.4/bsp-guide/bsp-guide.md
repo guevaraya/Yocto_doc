@@ -159,10 +159,18 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
 
 一些额外的 BSP 层需要放到 BSP 的根目录下为实现特定的功能。这种情况下，为构建 BSP你也需要添加这些层到 [BBLAYERS](#var-BBLAYERS) 变量里。你也必须要按照 BSP 的 *README* 文件的“依赖关系”段落里对额外层的任何要求配置，最好还包括 *README* 文件的其他地方的构建说明。
 
-有些层以一个层的形式包含其他 BSP 层。举个这种层的例子就是 *meta-intel* 层，它作为一个层包含了其他 BSP 子层， 还有包含名为 *common/8 全是这些层的公共内容。另外一个例子就是之前提及的 *meta-yocto-bsp* 层。
+有些层以一个层的形式包含其他 BSP 层。举个这种层的例子就是 *meta-intel* 层，它作为一个层包含了其他 BSP 子层， 还包含名为 *common/* 的目录，它里面全是这些层的公共内容。另外一个例子就是之前提及的 *meta-yocto-bsp* 层。
 
 获取更多层的详细信息，查看 Yocto 项目开发手册的 [“深入理解并创建层”](#understanding-and-creating-layers) 章节。
 
+<a id="preparing-your-build-host-to-work-with-bsp-layers">1.2. 准备您用于开发 BSP 层的编译主机</a>
+
+这段介绍如何准备您的编译主机来开发 BSP 层。只要你配置好了你的主机环境，你就可以创建段落 “[使用 yocto-bsp 脚本创建一个 BSP 层](#creating-a-new-bsp-layer-using-the-yocto-bsp-script)” 描述的层了。
+
+> 提示
+> 想获取 BSP 的结构信息, 请查看 [文件系统布局的例子](#bsp-filelayout) 段落。
+
+Set Up the Build Environment: Be sure you are set up to use BitBake in a shell. See the "Setting Up the Development Host to Use the Yocto Project" section in the Yocto Project Development Tasks Manual for information on how to get a build host ready that is either a native Linux machine or a machine that uses CROPS.
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
