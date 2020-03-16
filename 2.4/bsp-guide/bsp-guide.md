@@ -164,10 +164,12 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
 获取更多层的详细信息，查看 Yocto 项目开发手册的 [“深入理解并创建层”](#understanding-and-creating-layers) 章节。
 
 <a id="preparing-your-build-host-to-work-with-bsp-layers">1.2. 准备您用于开发 BSP 层的编译主机</a>
+=======
 
 这段介绍如何准备您的编译主机来开发 BSP 层。只要你配置好了你的主机环境，你就可以创建段落 “[使用 yocto-bsp 脚本创建一个 BSP 层](#creating-a-new-bsp-layer-using-the-yocto-bsp-script)” 描述的层了。
 
 > 提示
+>
 > 想获取 BSP 的结构信息, 请查看 [文件系统布局的例子](#bsp-filelayout) 段落。
 
 Set Up the Build Environment: Be sure you are set up to use BitBake in a shell. See the "Setting Up the Development Host to Use the Yocto Project" section in the Yocto Project Development Tasks Manual for information on how to get a build host ready that is either a native Linux machine or a machine that uses CROPS.
