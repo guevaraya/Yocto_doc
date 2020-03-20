@@ -172,8 +172,8 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
 >
 > 想获取 BSP 的结构信息, 请查看 [文件系统布局的例子](#bsp-filelayout) 段落。
 
-配置构建环境：确保要在命令行下用 BitBake 设置。查看 Yocto 项目开发任务手册的 [“配置 Yocto 项目主机开发环境”](#setting-up-the-development-host-to-use-the-yocto-project) 章节可获取如何获得一个构建主机，可以是本地 Linux 机器或使用 [CROPS][3] 工具容器化的机器。
-Set Up the Build Environment: Be sure you are set up to use BitBake in a shell. See the "Setting Up the Development Host to Use the Yocto Project" section in the Yocto Project Development Tasks Manual for information on how to get a build host ready that is either a native Linux machine or a machine that uses CROPS.
+配置构建环境：确保要在命令行下用 BitBake 设置。查看 Yocto 项目开发任务手册的 [“配置 Yocto 项目主机开发环境”](#setting-up-the-development-host-to-use-the-yocto-project) 章节可获取如何得到一个构建主机的信息，可以是本地 Linux 机器或使用 [CROPS][3] 工具容器化的机器。
+
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
