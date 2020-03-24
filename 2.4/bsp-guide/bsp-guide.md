@@ -173,7 +173,7 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
 > 想获取 BSP 的结构信息, 请查看 [文件系统布局的例子](#bsp-filelayout) 段落。
 
 - **1. 配置构建环境**：确保要在命令行下用 BitBake 设置。查看 Yocto 项目开发任务手册的 [“配置 Yocto 项目主机开发环境”](#setting-up-the-development-host-to-use-the-yocto-project) 章节可获取如何得到一个构建主机的信息，可以是本地 Linux 机器或使用 [CROPS][3] 工具容器化的机器。
-- **2. 克隆 Poky 仓**：你本地需要一个 Yocto 项目的源码[拷贝目录](#source-directory)(如: 一个 poky 仓拷贝)。查看 Yocto 项目开发任务手册的[“克隆 poky 仓”](#cloning-the-poky-repository)也可能是[“从 poky 检出分支”](#checking-out-by-branch-in-poky)和 ["从 poky 检出tag"](#checkout-out-by-tag-in-poky)段落中获取如何克隆 poky 仓并检出合适的工作拷贝。
+- **2. 克隆 Poky 仓**：你本地需要一个 Yocto 项目的源码[拷贝目录](#source-directory)(如: 一个 poky 仓拷贝)。查看 Yocto 项目开发任务手册的[“克隆 poky 仓”](#cloning-the-poky-repository)也可能是[“从 poky 检出分支”](#checking-out-by-branch-in-poky)和 ["从 poky 检出tag"](#checkout-out-by-tag-in-poky)段落，来获取如何克隆 poky 仓并检出合适的工作拷贝的相关信息。
 - **3. 定制您的 BSP 层**：
   
 
