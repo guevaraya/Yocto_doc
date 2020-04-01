@@ -175,8 +175,21 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
 - **1. 配置构建环境**：确保要在命令行下用 BitBake 设置。查看 Yocto 项目开发任务手册的 [“配置 Yocto 项目主机开发环境”](#setting-up-the-development-host-to-use-the-yocto-project) 章节可获取如何得到一个构建主机的信息，可以是本地 Linux 机器或使用 [CROPS][3] 工具容器化的机器。
 - **2. 克隆 Poky 仓**：你本地需要一个 Yocto 项目的源码[拷贝目录](#source-directory)(如: 一个 poky 仓拷贝)。查看 Yocto 项目开发任务手册的[“克隆 poky 仓”](#cloning-the-poky-repository)也可能是[“从 poky 检出分支”](#checking-out-by-branch-in-poky)和 ["从 poky 检出tag"](#checkout-out-by-tag-in-poky)段落，来获取如何克隆 poky 仓并检出合适的工作拷贝的相关信息。
 - **3. 定制您的 BSP 层**：Yocto 项目支持很多 BSP 层，每个层维护一个 或多个 BSP 机型。想知道 BSP层支持机型的信息，可在官方发布的 [机型索引][4]查看。
-- **4. 举例克隆 BSP 仓 meta-intel**：
-  
+- **4. 克隆可选的 BSP 层 meta-intel**：如果你的硬件是英特尔的 CPU 和外设，你可以使用这个 BSP 层。获取 BSP 层 *meta-intel* 的更多信息，请查看层的自述文件 [README][5]
+ - a. **索引到您的源码目录**： 通常您将 配置 *meta-intel* 需要到[源码目录]（#source-directory）里。（例如：poky）
+ - b. **克隆层**：
+ ```
+      $ git clone git://git.yoctoproject.org/meta-intel.git
+     Cloning into 'meta-intel'...
+     remote: Counting objects: 14224, done.
+     remote: Compressing objects: 100% (4591/4591), done.
+     remote: Total 14224 (delta 8245), reused 13985 (delta 8006)
+     Receiving objects: 100% (14224/14224), 4.29 MiB | 2.90 MiB/s, done.
+     Resolving deltas: 100% (8245/8245), done.
+     Checking connectivity... done.
+ ```
+ - c. **检出合适的分支**：
+ 
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
@@ -193,4 +206,4 @@ via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 [2]: http://www.yoctoproject.org/documentation
 [3]: https://git.yoctoproject.org/cgit/cgit.cgi/crops/tree/README.md
 [4]: http://downloads.yoctoproject.org/releases/yocto/yocto-2.4/machines
-
+[5]: http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel/tree/README
