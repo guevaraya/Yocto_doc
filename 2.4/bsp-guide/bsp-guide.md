@@ -188,6 +188,7 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
      Resolving deltas: 100% (8245/8245), done.
      Checking connectivity... done.
  ```
+    
     - c. **检出合适的分支**：
  
 
