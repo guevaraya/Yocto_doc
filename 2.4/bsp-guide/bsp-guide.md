@@ -193,7 +193,8 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
  ```
      $ git checkout branch_name
  ```
-    如何找出 分支名并检出的例子，请查看 Yocto 项目开发手册的 [“在 Poky 中检出分支”](#checking-out-by-branch-in-poky) 段落。
+
+   如何找出分支名并检出分支的例子，请查看 Yocto 项目开发手册的 [“在 Poky 中检出分支”](#checking-out-by-branch-in-poky) 段落。
      
  
 
