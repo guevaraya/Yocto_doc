@@ -188,11 +188,11 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
      Resolving deltas: 100% (8245/8245), done.
      Checking connectivity... done.
  ```
-    
-    - c. **检出合适的分支**：检出 meta-intel 分支必须与 Yocto 项目正式的分支名匹配（例如：rocko）：
-    ```
+ 
+   - c. **检出合适的分支**：检出 meta-intel 分支必须与 Yocto 项目正式的分支名匹配（例如：rocko）：
+ ```
      $ git checkout branch_name
-    ```
+ ```
     如何找出 分支名并检出的例子，请查看 Yocto 项目开发手册的 [“在 Poky 中检出分支”](#checking-out-by-branch-in-poky) 段落。
      
  
