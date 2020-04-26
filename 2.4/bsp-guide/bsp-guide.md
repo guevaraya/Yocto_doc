@@ -194,8 +194,8 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
      $ git checkout branch_name
  ```
 
-   如何找出分支名并检出分支的例子，请查看 Yocto 项目开发手册的 [“在 Poky 中检出分支”](#checking-out-by-branch-in-poky) 段落。
-     
+        如何找出分支名并检出分支的例子，请查看 Yocto 项目开发手册的 [“在 Poky 中检出分支”](#checking-out-by-branch-in-poky) 段落。
+- 的**5. 可选择的配置一个替代的 BSP 层：如果你的硬件很接近现有的 BSP 但是不属于 BSP 层 meta-intel，你可以克隆这个 BSP 层：  
  
 
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
