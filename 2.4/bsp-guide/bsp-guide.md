@@ -190,11 +190,11 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
      ```
    - c. **检出合适的分支**：检出 meta-intel 分支必须与 Yocto 项目正式的分支名匹配（例如：rocko）：
 
- ```
+     ```
      $ git checkout branch_name
- ``` 
-
-        如何找出分支名并检出分支的例子，请查看 Yocto 项目开发手册的 [“在 Poky 中检出分支”](#checking-out-by-branch-in-poky) 段落。
+     ``` 
+      如何找出分支名并检出分支的例子，请查看 Yocto 项目开发手册的 [“在 Poky 中检出分支”](#checking-out-by-branch-in-poky) 段落。
+      
 - **5. 可选择的配置一个替代的 BSP 层**：如果你的硬件很接近已知的 BSP 层，但又不在 BSP 层 meta-intel 中，你可以克隆它：  
 这么做的目的是用来区别于 meta-intel 层名字。例如：如果你使用接近 meta-minnow 的层，克隆层过程如下：
  ```
