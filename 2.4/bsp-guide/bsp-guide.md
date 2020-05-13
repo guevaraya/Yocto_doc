@@ -176,8 +176,8 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
 - **2. 克隆 Poky 仓**：你本地需要一个 Yocto 项目的源码[拷贝目录](#source-directory)(如: 一个 poky 仓拷贝)。查看 Yocto 项目开发任务手册的[“克隆 poky 仓”](#cloning-the-poky-repository)也可能是[“从 poky 检出分支”](#checking-out-by-branch-in-poky)和 ["从 poky 检出tag"](#checkout-out-by-tag-in-poky)段落，来获取如何克隆 poky 仓并检出合适的工作拷贝的相关信息。
 - **3. 定制您的 BSP 层**：Yocto 项目支持很多 BSP 层，每个层维护一个 或多个 BSP 机型。想知道 BSP层支持机型的信息，可在官方发布的 [机型索引][4]查看。
 - **4. 克隆可选的 BSP 层 meta-intel**：如果你的硬件是英特尔的 CPU 和外设，你可以使用这个 BSP 层。获取 BSP 层 *meta-intel* 的更多信息，请查看层的自述文件 [README][5]
-    - a. **索引到您的源码目录**： 通常您需要配置 *meta-intel* 到[源码目录](#source-directory)里。（例如：poky）
-    - b. **克隆层**：
+   - a. **索引到您的源码目录**： 通常您需要配置 *meta-intel* 到[源码目录](#source-directory)里。（例如：poky）
+   - b. **克隆层**：
  ```
       $ git clone git://git.yoctoproject.org/meta-intel.git
      Cloning into 'meta-intel'...
@@ -188,8 +188,8 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
      Resolving deltas: 100% (8245/8245), done.
      Checking connectivity... done.
  ```
- 
-    - c. **检出合适的分支**：检出 meta-intel 分支必须与 Yocto 项目正式的分支名匹配（例如：rocko）：
+   - c. **检出合适的分支**：检出 meta-intel 分支必须与 Yocto 项目正式的分支名匹配（例如：rocko）：
+
  ```
      $ git checkout branch_name
  ``` 
@@ -207,7 +207,7 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
      Resolving deltas: 100% (163/163), done.
      Checking connectivity... done.
   ```
-- **6. 初始化构建环境：**在源码根目录（如：poky）运行环境配置脚本 [oe-init-build-env][6] ，用来设置编译主机的环境变量：
+- **6. 初始化构建环境**：在源码根目录（如：poky）运行环境配置脚本 [oe-init-build-env][6] ，用来设置编译主机的环境变量：
  ```
  $ source oe-init-build-env
  ```
