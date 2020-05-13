@@ -197,7 +197,7 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
       
 - **5. 可选择的配置一个替代的 BSP 层**：如果你的硬件很接近已知的 BSP 层，但又不在 BSP 层 meta-intel 中，你可以克隆它：  
 这么做的目的是用来区别于 meta-intel 层名字。例如：如果你使用接近 meta-minnow 的层，克隆层过程如下：
- ```
+    ```
      $ git clone git://git.yoctoproject.org/meta-minnow
      Cloning into 'meta-minnow'...
      remote: Counting objects: 456, done.
@@ -206,12 +206,12 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
      Receiving objects: 100% (456/456), 96.74 KiB | 0 bytes/s, done.
      Resolving deltas: 100% (163/163), done.
      Checking connectivity... done.
-  ```
+     ```
 - **6. 初始化构建环境**：在源码根目录（如：poky）运行环境配置脚本 [oe-init-build-env][6] ，用来设置编译主机的环境变量：
- ```
- $ source oe-init-build-env
- ```
- 除此之外，此脚本创建了[编译目录][7]，即本例子的 build 目录，它在[源码根目录][8]，当运行脚本后你的工作目录就被设置为 build 目录
+    ```
+    $ source oe-init-build-env
+    ```
+    除此之外，此脚本创建了[编译目录][7]，即本例子的 build 目录，它在[源码根目录][8]，当运行脚本后你的工作目录就被设置为 build 目录
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
 作者：[Scott Rifenbark](mailto:srifenbark@gmail.com)
