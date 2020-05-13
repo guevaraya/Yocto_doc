@@ -207,7 +207,12 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
      Resolving deltas: 100% (163/163), done.
      Checking connectivity... done.
   ```
-
+- **6. 初始化构建环境：
+在源码根目录（如：poky）运行环境配置脚本 [oe-init-build-env][6] ，用来设置编译主机的环境变量：
+ ```
+ $ source oe-init-build-env
+ ```
+ 除此之外，此脚本创建了[编译目录][7]，即本例子的 build 目录，它在[源码根目录][8]，当运行脚本后你的工作目录就被设置为 build 目录
 via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 
 作者：[Scott Rifenbark](mailto:srifenbark@gmail.com)
@@ -224,3 +229,6 @@ via:https://www.yoctoproject.org/docs/2.4/bsp-guide/bsp-guide.html
 [3]: https://git.yoctoproject.org/cgit/cgit.cgi/crops/tree/README.md
 [4]: http://downloads.yoctoproject.org/releases/yocto/yocto-2.4/machines
 [5]: http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel/tree/README
+[6]: http://www.yoctoproject.org/docs/2.4/ref-manual/ref-manual.html#structure-core-script
+[7]: http://www.yoctoproject.org/docs/2.4/ref-manual/ref-manual.html#build-directory
+[8]: http://www.yoctoproject.org/docs/2.4/ref-manual/ref-manual.html#source-directory
