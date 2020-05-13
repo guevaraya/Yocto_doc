@@ -178,7 +178,7 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
 - **4. 克隆可选的 BSP 层 meta-intel**：如果你的硬件是英特尔的 CPU 和外设，你可以使用这个 BSP 层。获取 BSP 层 *meta-intel* 的更多信息，请查看层的自述文件 [README][5]
    - a. **索引到您的源码目录**： 通常您需要配置 *meta-intel* 到[源码目录](#source-directory)里。（例如：poky）
    - b. **克隆层**：
- ```
+     ```
       $ git clone git://git.yoctoproject.org/meta-intel.git
      Cloning into 'meta-intel'...
      remote: Counting objects: 14224, done.
@@ -187,7 +187,7 @@ $ git clone git://git.yoctoproject.org/meta-raspberrypi
      Receiving objects: 100% (14224/14224), 4.29 MiB | 2.90 MiB/s, done.
      Resolving deltas: 100% (8245/8245), done.
      Checking connectivity... done.
- ```
+     ```
    - c. **检出合适的分支**：检出 meta-intel 分支必须与 Yocto 项目正式的分支名匹配（例如：rocko）：
 
  ```
