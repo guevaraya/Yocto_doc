@@ -65,7 +65,7 @@ Yocto 项目® 入门 [文档归档][12]
 [8]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-4.jpg
 [9]: 3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.md
 [10]: what-i-wish-id-known/what-i-wish-id-known.md
-[11]: transitioning-to-a-custom-environment/transitioning-to-a-custom-environment.md
+[11]: transitioning-to-a-custom-environment.md
 [12]: https://www.yoctoproject.org/docs/archived-documents/
 [13]: 3.0/sdk-manual/sdk-manual.md
 [14]: 3.0/overview-manual/overview-manual.md
