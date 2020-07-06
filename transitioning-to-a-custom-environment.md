@@ -30,3 +30,5 @@ Distribution settings define the packaging back-end (e.g. rpm or other) as well 
 You can add product specifications that can customize the distribution if needed in other layers. You can also add other functionality specific to the product. But to update the distribution, not individual products, you update the distribution feature through that layer.
 
 11. Congratulations! You’re well on your way. Welcome to the Yocto Project community.
+
+[1]: https://github.com/guevaraya/Yocto_doc
