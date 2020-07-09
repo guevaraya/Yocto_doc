@@ -1,5 +1,6 @@
-**[文档概要][1] : 过渡到自定义环境** 
-So you’ve finished the Quick Start Guide and glanced over the document What I wish I’d known , the latter contains important information learned from other users. You’re well prepared. But now, as you are starting your own project, isn’t exactly straightforward what to do. And, the documentation is daunting. We’ve put together a few hints to get you started.
+**[文档概要][1] : 过渡到定制环境** 
+
+你已经看过[快速入门指南][2]并浏览了[应知应会][3]，后者包含了向其他用户学习的重要信息。虽然这样准备可以了，但是当你着手你自己的项目的时候就感到手足无措。鉴于有时文档让人望而却步，我们整理一些提示为你的着手提供帮助。
 
 —————–
 
@@ -31,4 +32,7 @@ You can add product specifications that can customize the distribution if needed
 
 11. Congratulations! You’re well on your way. Welcome to the Yocto Project community.
 
+via: https://www.yoctoproject.org/docs/transitioning-to-a-custom-environment/
+
 [1]: https://github.com/guevaraya/Yocto_doc
+[2]: http://www.yoctoproject.org/docs/2.4/yocto-project-qs/yocto-project-qs.html
