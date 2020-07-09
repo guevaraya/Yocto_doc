@@ -36,3 +36,4 @@ via: https://www.yoctoproject.org/docs/transitioning-to-a-custom-environment/
 
 [1]: https://github.com/guevaraya/Yocto_doc
 [2]: http://www.yoctoproject.org/docs/2.4/yocto-project-qs/yocto-project-qs.html
+[3]: what-i-wish-id-known/what-i-wish-id-known.md
