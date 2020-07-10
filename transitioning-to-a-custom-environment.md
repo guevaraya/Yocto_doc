@@ -3,7 +3,7 @@
 你已经看过[快速入门指南][2]并浏览了[应知应会][3]，后者包含了向其他用户学习的重要信息。虽然这样准备可以了，但是当你着手你自己的项目的时候就感到手足无措。鉴于有时文档让人望而却步，我们整理一些提示为你的着手提供帮助。
 
 —————–
-
+1. 列一个你工程的清单：处理器，目标板，相关技术和功能。你可以找到支持这些清单的菜谱和其他元数据的层，然后将他们增加到你的配置里面。（参考第三条）
 1. Make a list of the processor, target board, technologies, and capabilities that will be part of your project. You will be finding layers with recipes and other metadata that support these things, and adding them to your configuration. (See #3)
 
 2. Set up your board support. Even if you’re using custom hardware, it might be easier to start with an existing target board that uses the same processor or at least the same architecture as your custom hardware. Knowing the board already has a functioning Board Support Package (BSP) within the project makes it easier for you to get comfortable with project concepts.
