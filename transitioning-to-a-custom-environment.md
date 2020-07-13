@@ -7,6 +7,7 @@
 1. Make a list of the processor, target board, technologies, and capabilities that will be part of your project. You will be finding layers with recipes and other metadata that support these things, and adding them to your configuration. (See #3)
 
 2. Set up your board support. Even if you’re using custom hardware, it might be easier to start with an existing target board that uses the same processor or at least the same architecture as your custom hardware. Knowing the board already has a functioning Board Support Package (BSP) within the project makes it easier for you to get comfortable with project concepts.
+2、配置你的开发板。即便是你用定制的硬件，你也可以很容易的入手已知的同类型处理器或至少是同样指令集的开发板。工程里已经包含的已知板级开发包让你更容易熟悉项目的概念。
 
 3. Find and acquire the best BSP for your target. Use the Yocto Project® curated layer index or even the OpenEmbedded layer index to find and acquire the best BSP for your target board. The Yocto Project layer index BSPs are regularly validated. The best place to get your first BSP is from your silicon manufacturer or board vendor – they can point you to their most qualified efforts. In general, for Intel silicon use meta-intel, for Texas Instruments use meta-ti, and so forth. Choose a BSP that has been tested with the same Yocto Project release that you’ve downloaded. Be aware that some BSPs may not be immediately supported on the very latest release, but they will be eventually.
 
