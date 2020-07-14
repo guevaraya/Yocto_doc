@@ -11,7 +11,7 @@
 2、配置你的开发板。即便是你用定制的硬件，你也可以很容易的入手已知的同类型处理器或至少是同样指令集的开发板。工程里已经包含的已知板级开发包让你更容易熟悉项目的概念。
 
 3. Find and acquire the best BSP for your target. Use the Yocto Project® curated layer index or even the OpenEmbedded layer index to find and acquire the best BSP for your target board. The Yocto Project layer index BSPs are regularly validated. The best place to get your first BSP is from your silicon manufacturer or board vendor – they can point you to their most qualified efforts. In general, for Intel silicon use meta-intel, for Texas Instruments use meta-ti, and so forth. Choose a BSP that has been tested with the same Yocto Project release that you’ve downloaded. Be aware that some BSPs may not be immediately supported on the very latest release, but they will be eventually.
-3、为目标板找到最适合的板级开发包.使用 Yocto 项目层维护的索引或 OpenEmbedded 的曾索引查找并获取最适合你的目标板的板级开发包。在Yocto 项目层索引里一般情况都能找得到。最好的是从你的半导体制造商或开发板厂商哪里获取第一手的板级开发包-他们可以告诉你他们的最佳性能。通常来说，英特尔半导体使用 meta-intel，德州仪器使用 meta-ti 以此类推。选择一个在 你从Yocto 项目下载的并已经验证过的板级开发包。请注意一些板级开发包可能不会在最新的版本里立马支持，但是他们最终还是会支持的。
+3、为目标板找到最适合的板级开发包.使用 [Yocto 项目层维护的索引][4]或 [OpenEmbedded 的层索引][5]查找并获取最适合你的目标板的板级开发包。在Yocto 项目层索引里一般情况都能找得到。最好的是从你的半导体制造商或开发板厂商哪里获取第一手的板级开发包-他们可以告诉你他们的最佳性能。通常来说，英特尔半导体使用 meta-intel，德州仪器使用 meta-ti 以此类推。选择一个在 你从Yocto 项目下载的并已经验证过的板级开发包。请注意一些板级开发包可能不会在最新的版本里立马支持，但是他们最终还是会支持的。
 
 You might want to start with the build specification that Poky provides (which is reference embedded distribution) and then add your newly chosen layers to that. Here is the information about adding layers .
 
@@ -40,3 +40,5 @@ via: https://www.yoctoproject.org/docs/transitioning-to-a-custom-environment/
 [1]: https://github.com/guevaraya/Yocto_doc
 [2]: http://www.yoctoproject.org/docs/2.4/yocto-project-qs/yocto-project-qs.html
 [3]: what-i-wish-id-known/what-i-wish-id-known.md
+[4]: https://www.yoctoproject.org/software-overview/layers/
+[5]: http://layers.openembedded.org/
