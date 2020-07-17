@@ -23,9 +23,10 @@ You might want to start with the build specification that Poky provides (which i
 5、为你创建的可定制的菜谱（recipes）和元数据（metadata）增加一个层（Layer）。使用 2.4 以上的Yocoto 发行版的 “bitbak-layer create-layer” 命令工具。如果你使用早于 2.4 的 Yocoto 发行版, 需要用 “yocto-layer create” 命令工具。“bitebak-layers” 命令工具也提供了其他有用的相关命令。[使用 bitbake-layer 命令创建一个普通层段落][7]
 
 6. Create your own layer for the BSP you’re going to use. It is not common that you would need to create an entire BSP from scratch unless you have a *really* special device. Even if you are using an existing BSP, create your own layer for the BSP. For example, given a 64-bit x86-based machine, copy the conf/intel-corei7-64 definition and give it a machine a relevant name (think board name, not product name). Make sure the layer configuration is dependent on the meta-intel layer (or at least, meta-intel remains in your bblayers.conf). Now you can put your custom BSP settings into your layer and you can re-use it for different applications.
-6、创建一个你自己将会使用的 BSP 层。这个和通常情况不一样，需要你从零开始创建一个整套 BSP 除非你已经有一个确定的真实设备。即使你正在使用已知的 BSP，也需要创建一个你自己的 BSP 层。例如，现有64位的X86机器，拷贝 conf/intel-corei7-64 的定义并命名一个机器名称（命名一个开发板名称，不是产品名）。确保层配置独立依赖 meta-intel 层（或至少 meta-intel 保留在你的 bblayers.conf)。现在你可以把您定制的 BSP 配置放到你的层里面，不同的应用程序可以重复使用它。 
+6、创建一个你自己将会使用的 BSP 层。这个和通常情况不一样，需要你从零开始创建一个整套 BSP 除非你已经有一个确定的真实设备。即使你正在使用已知的 BSP，也需要[创建一个你自己的 BSP 层][8]。例如，现有64位的X86机器，拷贝 conf/intel-corei7-64 的定义并命名一个机器名称（命名一个开发板名称，不是产品名）。确保层配置独立依赖 meta-intel 层（或至少 meta-intel 保留在你的 bblayers.conf)。现在你可以把您定制的 BSP 配置放到你的层里面，不同的应用程序可以重复使用它。 
 
 7. Write your own recipe to build additional software support that isn’t already available in the form of a recipe. Creating your own recipe is especially important for custom application software that you want to run on your device. Writing new recipes is a process of refinement. Start by getting each step of the build process working beginning with fetching all the way through packaging. Next, run the software on your target and refine further as needed. See Writing a New Recipe in the Yocto Project Development Tasks Manual for more information.
+7、编写你自己的菜谱（recipe）来构建还未支持菜谱（recipe）形式的的的软件。创建你自己的菜谱（recipe）对在设备里运行的自定义的应用程序的情况下特别有用。编写新菜谱（recipe）是一个不断改进的过程。首先通过打包获取构建过程的步骤来入手，接着，在你的设备上运行程序然后再添枝加叶。查看在 Yocto 工程下[编写新菜谱（recipe）的开发任务手册][9]获取更多信息
 
 8. Now you’re ready to create an image recipe. There are a number of ways to do this. However, it is strongly recommended that you have your own image recipe – don’t try appending to existing image recipes. Recipes for images are trivial to create andf you usually want to fully customize their contents.
 
@@ -48,3 +49,6 @@ via: https://www.yoctoproject.org/docs/transitioning-to-a-custom-environment/
 [5]: http://layers.openembedded.org/
 [6]: http://www.yoctoproject.org/docs/current/dev-manual/dev-manual.html#understanding-and-creating-layersdocumentation
 [7]: http://www.yoctoproject.org/docs/2.5/dev-manual/dev-manual.html#creating-a-general-layer-using-the-bitbake-layers-script
+[8]: http://www.yoctoproject.org/docs/current/bsp-guide/bsp-guide.html#creating-a-new-bsp-layer-using-the-yocto-bsp-script
+[9]: http://www.yoctoproject.org/docs/current/dev-manual/dev-manual.html#new-recipe-writing-a-new-recipe
+
