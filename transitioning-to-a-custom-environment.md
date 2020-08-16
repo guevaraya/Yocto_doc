@@ -32,17 +32,19 @@ You might want to start with the build specification that Poky provides (which i
 8. 现在你要准备新建镜像的菜谱(recipe)了。这儿很多创建方式。但是强烈建议你创建自己的菜谱（recipes）-而不要在现有的镜像菜谱（recipes）上追加修改。新建镜像的菜谱（recipes）问题不大，主要是你常常需要深度定制他们的内容。
 
 9. Build your image and refine it. Add what’s missing and fix anything that’s broken using your knowledge of the workflow to identify where issues might be occurring.
-9. 构建你的镜像并完善它。用你对工作流程的知识定位问题问题的出处，然后添加缺失的内容，修正受损的问题。
+9. 构建你的镜像并完善它。根据你对[工作流程][10]的理解定位问题的出处，然后添加缺失的内容，修正受损的问题。
 
 10. Consider creating your own distribution. When you get to a certain level of customization, consider creating your own distribution rather than using the default reference distribution.
 10. 伺机创建自己的发行版。当你得到一定程度的定制，需要考虑创建自己的发行版比用原生参考发行版好一点。
 
 Distribution settings define the packaging back-end (e.g. rpm or other) as well as the package feed and possibly the update solution. You would create your own distribution in a new layer inheriting from Poky but overriding what needs to change for your distribution. If you find yourself adding a lot of configuration to your local.conf file aside from paths and other typical local settings, it’s time to consider creating your own distribution.
-发行版配置定义了打包后缀（如 rpm或其他类型），打包提要以及包的升级方案。创建自己的发行版，层（layer）要从 Poky 继承以覆盖要修改的配置。如果你在 local.conf 不仅添加了路径和其他典型配置之外还有大量的配置，那就该考虑创建自己的发行版了。
+发行版配置定义了打包后缀（如 rpm或其他类型），打包提要以及包的升级方案。创建自己的发行版，层（layer）要从 Poky 继承以覆盖要修改的配置。如果你在 local.conf 不仅添加了路径和其他典型配置之外还有大量的配置，那就该考虑[创建自己的发行版][11]了。
 
-You can add product specifications that can customize the distribution if needed in other layers. You can also add other functionality specific to the product. But to update the distribution, not individual products, you update the distribution feature through that layer.
+You can add product specifications that can customize the distribution if needed in other layers. You can also add other functionality specific to the product. But to update the distribution, not individual products, you update the distribution feature through that layer
+如果需要在其他层定制发行版，你可以添加的其产品规格书。你也可以添加产品的其他特定功能。但要更新到发行版配置里，而不是单个产品里，你通过这种层更新发行版的特性。
 
 11. Congratulations! You’re well on your way. Welcome to the Yocto Project community.
+恭喜你！你已经上手了。欢迎加入 Yocto 项目社区。
 
 via: https://www.yoctoproject.org/docs/transitioning-to-a-custom-environment/
 
@@ -55,4 +57,6 @@ via: https://www.yoctoproject.org/docs/transitioning-to-a-custom-environment/
 [7]: http://www.yoctoproject.org/docs/2.5/dev-manual/dev-manual.html#creating-a-general-layer-using-the-bitbake-layers-script
 [8]: http://www.yoctoproject.org/docs/current/bsp-guide/bsp-guide.html#creating-a-new-bsp-layer-using-the-yocto-bsp-script
 [9]: http://www.yoctoproject.org/docs/current/dev-manual/dev-manual.html#new-recipe-writing-a-new-recipe
+[10]: http://www.yoctoproject.org/docs/current/sdk-manual/sdk-manual.html#using-devtool-in-your-sdk-workflow
+[11]: http://www.yoctoproject.org/docs/2.5/dev-manual/dev-manual.html#creating-your-own-distribution
 
