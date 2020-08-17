@@ -2,7 +2,7 @@ Yocto 项目应用程序开发和可扩展软件开发工具包
 ===
 
 <p align="right" >Scott Rifenbark<br>
-Scotty's Documentation Services, INC<br>
+Scotty 文档服务公司<br>
  <a href="mailto:srifenbark@gmail.com"><font size=100>&lt;srifenbark@gmail.com&gt;</font></a>
  </p>
 
