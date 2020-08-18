@@ -12,7 +12,6 @@ Scotty 文档服务公司<br>
 
 >本文要点
 >* Yocto 项目应用程序开发和可扩展软件开发工具包（eSDK）这个手册对应 Yocto 发行版版 3.0。请确保你使用的这个发行版手册是最新的，可去 [Yocto 项目文档网站页面][2]选择查看。网站上的手册会比从 Yocto 项目发行版内置的 Tar 包文件新。
->* If you located this manual through a web search, the version of the manual might not be the one you want (e.g. the search might have returned a manual much older than the Yocto Project version with which you are working). You can see all Yocto Project major releases by visiting the Releases page. If you need a version of this manual for a different Yocto Project release, visit the Yocto Project documentation page and select the manual set by using the "ACTIVE RELEASES DOCUMENTATION" or "DOCUMENTS ARCHIVE" pull-down menus.
 >* 如果通过网页搜索到本手册，手册的版本可能不是你期望的（例如：检索出来是一个比你用的更旧的 Yocto 项目版本）。你可以通过访问[正式发行版页面][3]查看所有的 Yocto 项目主要发行版。如果需要不同 Yocto 项目发行版对应的本手册版本，可访问 [Yocto 项目文档网站页面][2]，然后点击下拉框“正在发行中的文档”或“已归档文档”来选择手册。
 >* 如提交本手册不严谨或问题之处，请发邮件 yocto@yoctoproject.com 到 Yocto 项目讨论组或者登陆 freenode 的 #yocto 频道。
 
@@ -30,11 +29,11 @@ Scotty 文档服务公司<br>
 
 **目录**
 <!-- GFM-TOC -->
-* [1. Introduction](#sdk-intro)
-  * [1.1. Introduction](#sdk-manual-intro)
-    * [1.1.1. The Cross-Development Toolchain](#the-cross-development-toolchain)
+* [1. 介绍](#sdk-intro)
+  * [1.1. 介绍](#sdk-manual-intro)
+    * [1.1.1. 交叉编译工具链](#the-cross-development-toolchain)
     * [1.1.2. Sysroots](#)
-    * [1.1.3. The QEMU Emulator](#)
+    * [1.1.3. QEMU 模拟器](#)
   * [1.2. SDK Development Model](#)
 * [2. Using the Extensible SDK](#)
   * [2.1. Why use the Extensible SDK and What is in It?](#)
