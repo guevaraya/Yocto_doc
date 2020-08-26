@@ -33,7 +33,7 @@ Scotty 文档服务公司<br>
   * [1.1. 介绍](#sdk-manual-intro)
     * [1.1.1. 交叉编译工具链](#the-cross-development-toolchain)
     * [1.1.2. Sysroots](#sysroot)
-    * [1.1.3. QEMU 模拟器](#the-qemu-emulator）
+    * [1.1.3. QEMU 模拟器](#the-qemu-emulator)
   * [1.2. SDK 开发模型](#sdk-development-model)
 * [2. 使用可扩展性 SDK](#sdk-extensible)
   * [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
@@ -74,15 +74,15 @@ Scotty 文档服务公司<br>
   * [A.5. 安装可扩展 SDK 的目录结构](#)
 * [B. 定制可扩展 SDK](#)
   * [B.1. 定制可扩展 SDK](#)
-  * [B.2. Adjusting the Extensible SDK to Suit Your Build Host's Setup](#)
-  * [B.3. Changing the Extensible SDK Installer Title](#)
-  * [B.4. Providing Updates to the Extensible SDK After Installation](#)
-  * [B.5. Changing the Default SDK Installation Directory](#)
-  * [B.6. Providing Additional Installable Extensible SDK Content](#)
-  * [B.7. Minimizing the Size of the Extensible SDK Installer Download](#)
-* [C. Customizing the Standard SDK](#)
-  * [C.1. Adding Individual Packages to the Standard SDK](#)
-  * [C.2. Adding API Documentation to the Standard SDK](#)
+  * [B.2. 调整可扩展 SDK 以适配构建主机的配置](#)
+  * [B.3. 修改可扩展 SDK 安装包名称](#)
+  * [B.4. 实现可扩展 SDK 安装后的更新](#)
+  * [B.5. 修改 SDK 的默认安装路径](#)
+  * [B.6. 实现额外的安装项到可扩展 SDK](#)
+  * [B.7. 简化可扩展 SDK 安装包的下载大小](#)
+* [C. 定制标准的 SDK](#)
+  * [C.1. 添加独立的包到标准 SDK](#)
+  * [C.2. 添加 API 文档到标准 SDK](#)
   
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
