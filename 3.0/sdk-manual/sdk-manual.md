@@ -87,6 +87,7 @@ Scotty 文档服务公司<br>
 
 
 <a id="sdk-intro">第一章 介绍</a>
+===
 目录
 
   * [1.1. 介绍](#sdk-manual-intro)
@@ -96,6 +97,8 @@ Scotty 文档服务公司<br>
   * [1.2. SDK 开发模型](#sdk-development-model)
   
 <a id="sdk-manual-intro">1.1. 介绍</a>
+====
+Welcome to the Yocto Project Application Development and the Extensible Software Development Kit (eSDK) manual. This manual provides information that explains how to use both the Yocto Project extensible and standard SDKs to develop applications and images.
 
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
