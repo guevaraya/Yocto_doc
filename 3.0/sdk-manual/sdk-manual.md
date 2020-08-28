@@ -88,8 +88,8 @@ Scotty 文档服务公司<br>
 
 <a id="sdk-intro">第一章 介绍</a>
 ===
-目录
 
+目录索引
   * [1.1. 介绍](#sdk-manual-intro)
     * [1.1.1. 交叉编译工具链](#the-cross-development-toolchain)
     * [1.1.2. Sysroots](#sysroot)
@@ -98,8 +98,9 @@ Scotty 文档服务公司<br>
   
 <a id="sdk-manual-intro">1.1. 介绍</a>
 ====
-Welcome to the Yocto Project Application Development and the Extensible Software Development Kit (eSDK) manual. This manual provides information that explains how to use both the Yocto Project extensible and standard SDKs to develop applications and images.
-
+欢迎阅读 Yocto 项目应用程序开发和可扩展软件开发的 SDK手册。本手册主要涉及如何使用 Yocto 可扩展和标准 SDK 来开发应用程序和镜像的相关信息。
+> 小提示
+> Prior to the 2.0 Release of the Yocto Project, application development was primarily accomplished through the use of the Application Development Toolkit (ADT) and the availability of stand-alone cross-development toolchains and other tools. With the 2.1 Release of the Yocto Project, application development has transitioned to within a tool-rich extensible SDK and the more traditional standard SDK.
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
