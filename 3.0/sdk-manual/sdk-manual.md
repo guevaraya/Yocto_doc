@@ -84,6 +84,19 @@ Scotty 文档服务公司<br>
   * [C.1. 添加独立的包到标准 SDK](#)
   * [C.2. 添加 API 文档到标准 SDK](#)
   
+
+
+<a id="sdk-intro">第一章 介绍</a>
+目录
+
+  * [1.1. 介绍](#sdk-manual-intro)
+    * [1.1.1. 交叉编译工具链](#the-cross-development-toolchain)
+    * [1.1.2. Sysroots](#sysroot)
+    * [1.1.3. QEMU 模拟器](#the-qemu-emulator)
+  * [1.2. SDK 开发模型](#sdk-development-model)
+  
+<a id="sdk-manual-intro">1.1. 介绍</a>
+
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
