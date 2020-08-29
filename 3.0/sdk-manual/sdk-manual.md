@@ -131,12 +131,14 @@ SDK 开发环境组成如下：
 |包安装|否<sup>③</sup>|是<sup>④</sup>|
 |结构方式|安装包|共享状态|
 
-<font size=50>我是变大的字</font>
+<font size=1>我是变大的字</font>
+
 - ① 如果SDK_EXT_TYPE 等于 “full” 或者 SDK_INCLUDE_TOOLCHAIN 等于 “1”的时候（默认值），可扩展 SDK 包含交叉链和调试器。
 - ② Sysroot 是通过 devltool 来管理的。因此如果你尝试添加额外的库，会有小概率损坏 SDK 的sysroot。  
 - ③ 你可以添加运行时包管理到标准 SDK，这个默认是不支持的。
 - ④ 你必须为想要安装 “包” 的用户构建和编译共享模式变量给可扩展 SDK 的用户
-<font size=20>我是变大的字</font>
+
+<font size=2>我是变大的字</font>
 
 
 
