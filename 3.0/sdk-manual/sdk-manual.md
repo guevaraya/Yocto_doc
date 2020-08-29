@@ -121,22 +121,20 @@ SDK 开发环境组成如下：
 总得来说，可扩展和标准的 SDK 有很多共同的特性。但是可扩展 SDK 作为强大的开发工具帮助你更快速的开发应用程序。下面的表格汇总了标准 SDK 和可扩展 SDK 之间在构建上的一些区别：
 |特性<img width=100/> |标准SDK<img width=200/> |可扩展SDK <img width=300/> |
 |-|-|-|
-|交叉链|是|是①|
-|调试器|是|是①|
+|交叉链|是|是<sup>①</sup>|
+|调试器|是|是<sup>①</sup>|
 |大小|大约100Mb|1Gb以上（迷你版本工具链大约300Mb）|
 |devtol|否|是|
 |编译镜像|否|是|
 |可更新|否|是|
-|可管理的 sysroot②|否|是|
-|包安装|否③|是④|
-|结构方式|包结构|共享模式|
+|可管理的 sysroot<sup>②</sup>|否|是|
+|包安装|否<sup>③</sup>|是<sup>④</sup>|
+|结构方式|安装包|共享状态|
 
-① Extensible SDK contains the toolchain and debugger if SDK_EXT_TYPE is "full" or SDK_INCLUDE_TOOLCHAIN is "1", which is the default.
-② Sysroot is managed through the use of devtool.  Thus, it is less likely that you will corrupt your SDK sysroot when you try to add additional libraries.
-③ You can add runtime package management to the standard SDK but it is not supported by default.
-④ You must build and make the shared state available to extensible SDK users for "packages" you want to enable users to install.
-
-
+- ① 如果SDK_EXT_TYPE 等于 “full” 或者 SDK_INCLUDE_TOOLCHAIN 等于 “1”的时候（默认值），可扩展 SDK 包含交叉链和调试器。
+- ② Sysroot 是通过 devltool 来管理的。因此如果你尝试添加额外的库，会有小概率损坏 SDK 的sysroot。  
+- ③ 你可以添加运行时包管理到标准 SDK，这个默认是不支持的。
+- ④ 你必须为想要安装 “包” 的用户构建和编译共享模式变量给可扩展 SDK 的用户
 
 
 
