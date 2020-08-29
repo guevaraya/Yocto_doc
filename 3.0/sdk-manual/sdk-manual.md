@@ -99,12 +99,29 @@ Scotty 文档服务公司<br>
 <a id="sdk-manual-intro">1.1. 介绍</a>
 ====
 欢迎阅读 Yocto 项目应用程序开发和可扩展软件开发的 SDK手册。本手册主要涉及如何使用 Yocto 可扩展和标准 SDK 来开发应用程序和镜像的相关信息。
-> 小提示
-> Prior to the 2.0 Release of the Yocto Project, application development was primarily accomplished through the use of the Application Development Toolkit (ADT) and the availability of stand-alone cross-development toolchains and other tools. With the 2.1 Release of the Yocto Project, application development has transitioned to within a tool-rich extensible SDK and the more traditional standard SDK.
+> **小提示**
+> Yocto 项目 2.0 早前版本，应用程序开发主要是通过使用 ADT 套件，常见尽可能的交叉编译工具链和其他工具。yocto 项目 2.1 版本以后应用程序开发用丰富的可扩展 SDK 和 更多传统的标准 SDK 可以完成。
+所有的 SDK 的组成如下：
+* 交叉工具链：工具链包含一个编译器，调试器和许多各种各样的工具。
+* 库文件及其头文件，符号表：指定镜像（例如他们匹配的镜像）的库文件，头文件和符号表
+* 环境变量配置脚本：这个 *.sh* 脚本文件只需要运行一次，通过定义变量和做一些使用 SDK 的准备工作来配置交叉开发的环境变量。
+另外，一个可扩展 SDK 的工具允许你容易的添加一个应用程序和镜像的库文件，修改现有组件的源码，测试目标硬件的变化，并很容易的集成一个应用层序到 [OpenEmbedded 构建系统]里。
+
+你可以用一个 SDK 去独立的开发和测试代码使其运行在一些在目标机器上。这些 SDK 是完全独立的。二进制程序是链接到他们本地 libc 的拷贝，这样使其对目标系统没有依赖。为了实现这点，动态加载器的指针在安装的时候配置后地址就不能动态改变了。这就是为什么有封装 populate_sdk 和 populate_sdk_ext 的分别。
+
+SDK 的另一个特性是构造一整套的交叉工具链是为了支持任意给定的指令架构。这个特性的好处是目标硬件可以通过编译选项控制 gcc 编译。这些选项通过环境变量脚本设置并包含在变量里，例如 CC 和 LD。这样会减少工具使用的内存占用。要知道，尽管这样，每个目标仍然需要一个 sysroot 应该这些二进制是针对特定目标板的。
+
+SDK 开发环境组成如下：
+
+
+
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
 [2]: http://www.yoctoproject.org/documentation
 [3]: https://wiki.yoctoproject.org/wiki/Releases
+[4]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-system-term
+[5]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-CC
+[6]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-LD 
 
 
