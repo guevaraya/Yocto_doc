@@ -119,7 +119,7 @@ SDK 开发环境组成如下：
 * QEMU 模拟器可以允许模拟目标硬件。它不是 SDK 里的一部分。你必须单独编译和引用这个模拟器。QENU 在围绕 SDK 程序开发扮演重要的角色。
 
 总得来说，可扩展和标准的 SDK 有很多共同的特性。但是可扩展 SDK 作为强大的开发工具帮助你更快速的开发应用程序。下面的表格汇总了标准 SDK 和可扩展 SDK 之间在构建上的一些区别：
-|特性|标准SDK|可扩展SDK|
+|特性<img width=100/> |标准SDK<img width=200/> |可扩展SDK <img width=300/> |
 |-|-|-|
 |交叉链|是|是①|
 |调试器|是|是①|
@@ -130,6 +130,7 @@ SDK 开发环境组成如下：
 |可管理的 sysroot②|否|是|
 |包安装|否③|是④|
 |结构方式|包结构|共享模式|
+
 ① Extensible SDK contains the toolchain and debugger if SDK_EXT_TYPE is "full" or SDK_INCLUDE_TOOLCHAIN is "1", which is the default.
 ② Sysroot is managed through the use of devtool.  Thus, it is less likely that you will corrupt your SDK sysroot when you try to add additional libraries.
 ③ You can add runtime package management to the standard SDK but it is not supported by default.
@@ -138,16 +139,6 @@ SDK 开发环境组成如下：
 
 
 
-Feature	Standard SDK	Extensible SDK
-Toolchain	Yes	Yes*
-Debugger	Yes	Yes*
-Size	100+ MBytes	1+ GBytes (or 300+ MBytes for minimal w/toolchain)
-devtool	No	Yes
-Build Images	No	Yes
-Updateable	No	Yes
-Managed Sysroot**	No	Yes
-Installed Packages	No***	Yes****
-Construction	Packages	Shared State
 
 
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
