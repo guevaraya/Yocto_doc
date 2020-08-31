@@ -143,8 +143,13 @@ SDK 开发环境组成如下：
 <a id="the-cross-development-toolchain">1.1.1. 交叉开发工具链 </a>
 ====
 
-交叉开发工具链包含交叉编译器，交叉链接器和交叉调试器，这些用来开发目标硬件的用户应用程序。
-另外，对于可扩展 SDK，工具链也内置`devtool` 功能。这样工具链可通过运行 SDK 安装脚本来创建，或通过构建目录的 metadata 配置或目标设备的扩展来实现。交叉工具链需要对应的目标设备 sysroot才能工作 。
+[交叉开发工具链][7]包含交叉编译器，交叉链接器和交叉调试器，这些用来开发目标硬件的用户应用程序。
+另外，对于可扩展 SDK，工具链也内置`devtool` 功能。这样工具链可通过运行 SDK 安装脚本来创建，或通过[构建目录][8]的 metadata 配置或目标设备的扩展来实现。交叉工具链需要对应的目标设备 sysroot 才能工作 。
+
+ <a id="">1.1.2. Sysroots</a>
+=====
+
+The native and target sysroots contain needed headers and libraries for generating binaries that run on the target architecture. The target sysroot is based on the target root filesystem image that is built by the OpenEmbedded build system and uses the same metadata configuration used to build the cross-toolchain.
 
 
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
@@ -155,5 +160,6 @@ via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 [4]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-system-term
 [5]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-CC
 [6]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-LD 
-
+[7]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#cross-development-toolchain
+[8]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
 
