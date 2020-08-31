@@ -1,6 +1,24 @@
 Yocto 项目应用程序开发和可扩展软件开发工具包（eSDK）
 ===
 
+
+<sup>我是黑体字</sup>
+<font face="微软雅黑">我是微软雅黑</font>
+
+<font face="STCAIYUN">我是华文彩云</font>
+
+<font color=#0099ff size=7 face="黑体">color=#0099ff size=72 face="黑体"</font>
+
+<font color=#00ffff size=72>color=#00ffff</font>
+
+<font color=gray size=72>color=gray</font>
+
+<font color="#FF4500">我要变成这个颜色#FF4500</font>
+
+
+<span style="color:red;">这是比font标签更好的方式。可以试试。</span>
+
+
 <p align="right" >Scott Rifenbark<br>
 Scotty 文档服务公司<br>
  <a href="mailto:srifenbark@gmail.com"><font size=100>&lt;srifenbark@gmail.com&gt;</font></a>
@@ -131,15 +149,14 @@ SDK 开发环境组成如下：
 |包安装|否<sup>③</sup>|是<sup>④</sup>|
 |结构方式|安装包|共享状态|
 
-<font size=1>我是变大的字</font>
+<sub>
+① 如果SDK_EXT_TYPE 等于 “full” 或者 SDK_INCLUDE_TOOLCHAIN 等于 “1”的时候（默认值），可扩展 SDK 包含交叉链和调试器。
+② Sysroot 是通过 devltool 来管理的。因此如果你尝试添加额外的库，会有小概率损坏 SDK 的sysroot。  
+③ 你可以添加运行时包管理到标准 SDK，这个默认是不支持的。
+④ 你必须为想要安装 “包” 的用户构建和编译共享模式变量给可扩展 SDK 的用户
+</sub>
 
-- ① 如果SDK_EXT_TYPE 等于 “full” 或者 SDK_INCLUDE_TOOLCHAIN 等于 “1”的时候（默认值），可扩展 SDK 包含交叉链和调试器。
-- ② Sysroot 是通过 devltool 来管理的。因此如果你尝试添加额外的库，会有小概率损坏 SDK 的sysroot。  
-- ③ 你可以添加运行时包管理到标准 SDK，这个默认是不支持的。
-- ④ 你必须为想要安装 “包” 的用户构建和编译共享模式变量给可扩展 SDK 的用户
-
-<font size=2>我是变大的字</font>
-
+</sub>
 
 
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
