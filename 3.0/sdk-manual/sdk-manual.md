@@ -33,7 +33,7 @@ Scotty 文档服务公司<br>
   * [1.1. 介绍](#sdk-manual-intro)
     * [1.1.1. 交叉编译工具链](#the-cross-development-toolchain)
     * [1.1.2. Sysroots](#sysroot)
-    * [1.1.3. QEMU 模拟器](#1.1.3. QEMU 模拟器)
+    * [1.1.3. QEMU 模拟器](#the-qemu-emulator)
   * [1.2. SDK 开发模型](#sdk-development-model)
 * [2. 使用可扩展性 SDK](#sdk-extensible)
   * [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
@@ -128,4 +128,48 @@ SDK 开发环境组成如下：
 |编译镜像|否|是|
 |可更新|否|是|
 |可管理的 sysroot<sup>②</sup>|否|是|
-|包安装|否<sup>③</sup>|
+|包安装|否<sup>③</sup>|是<sup>④</sup>|
+|结构方式|安装包|共享状态|
+
+<sub>
+① 如果SDK_EXT_TYPE 等于 “full” 或者 SDK_INCLUDE_TOOLCHAIN 等于 “1”的时候（默认值），可扩展 SDK 包含交叉链和调试器。<br>
+② Sysroot 是通过 devltool 来管理的。因此如果你尝试添加额外的库，会有小概率损坏 SDK 的sysroot。<br>
+③ 你可以添加运行时包管理到标准 SDK，这个默认是不支持的。<br>
+④ 你必须为想要安装 “包” 的用户构建和编译共享模式变量给可扩展 SDK 的用户。<br>
+</sub>
+
+</sub>
+
+<a id="the-cross-development-toolchain">1.1.1. 交叉开发工具链 </a>
+====
+
+[交叉开发工具链][7]包含交叉编译器，交叉链接器和交叉调试器，这些用来开发目标硬件的用户应用程序。
+另外，对于可扩展 SDK，工具链也内置`devtool` 功能。这样工具链可通过运行 SDK 安装脚本来创建，或通过[构建目录][8]的 metadata 配置或目标设备的扩展来实现。交叉工具链需要对应的目标设备 sysroot 才能工作 。
+
+ <a id="sysroot">1.1.2. Sysroots</a>
+=====
+宿主和目标板的 sysroot 包含所依赖的头文件和库文件，最终生成二进制文件在目标架构上运行。目标板的 sysroot 通过 OpenEmbedded 构建系统编译到目标版本的根文件系统镜像里，使用的 metadata 的配置和构建交叉工具链的一样。
+
+
+<a id="#the-qemu-emulator">1.1.3. The QEMU Emulator</a>
+ 
+The QEMU emulator allows you to simulate your hardware while running your application or image. QEMU is not part of the SDK but is made available a number of different ways:
+
+If you have cloned the poky Git repository to create a Source Directory and you have sourced the environment setup script, QEMU is installed and automatically available.
+
+If you have downloaded a Yocto Project release and unpacked it to create a Source Directory and you have sourced the environment setup script, QEMU is installed and automatically available.
+
+If you have installed the cross-toolchain tarball and you have sourced the toolchain's setup environment script, QEMU is also installed and automatically available.
+
+
+via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
+
+[1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
+[2]: http://www.yoctoproject.org/documentation
+[3]: https://wiki.yoctoproject.org/wiki/Releases
+[4]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-system-term
+[5]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-CC
+[6]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-LD 
+[7]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#cross-development-toolchain
+[8]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
+
