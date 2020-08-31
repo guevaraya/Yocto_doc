@@ -33,7 +33,7 @@ Scotty 文档服务公司<br>
   * [1.1. 介绍](#sdk-manual-intro)
     * [1.1.1. 交叉编译工具链](#the-cross-development-toolchain)
     * [1.1.2. Sysroots](#sysroot)
-    * [1.1.3. QEMU 模拟器]（#1.1.3. QEMU 模拟器）
+    * [1.1.3. QEMU 模拟器](#1.1.3. QEMU 模拟器)
   * [1.2. SDK 开发模型](#sdk-development-model)
 * [2. 使用可扩展性 SDK](#sdk-extensible)
   * [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
