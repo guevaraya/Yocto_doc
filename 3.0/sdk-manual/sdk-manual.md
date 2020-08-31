@@ -140,7 +140,7 @@ SDK 开发环境组成如下：
 
 </sub>
 
-<a id="sdk-manual-intro">1.1.1. 交叉开发工具链 </a>
+<a id="the-cross-development-toolchain">1.1.1. 交叉开发工具链 </a>
 ====
 
 交叉开发工具链包含交叉编译器，交叉链接器和交叉调试器，这些用来开发目标硬件的用户应用程序。
