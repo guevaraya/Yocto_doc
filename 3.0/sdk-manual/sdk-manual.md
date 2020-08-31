@@ -140,6 +140,12 @@ SDK 开发环境组成如下：
 
 </sub>
 
+<a id="sdk-manual-intro">1.1.1. 交叉开发工具链 </a>
+====
+
+交叉开发工具链包含交叉编译器，交叉链接器和交叉调试器，这些用来开发目标硬件的用户应用程序。
+另外，对于可扩展 SDK，工具链也内置`devtool` 功能。这样工具链可通过运行 SDK 安装脚本来创建，或通过构建目录的 metadata 配置或目标设备的扩展来实现。交叉工具链需要对应的目标设备 sysroot才能工作 。
+
 
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
