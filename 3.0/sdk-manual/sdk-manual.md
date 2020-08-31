@@ -146,10 +146,20 @@ SDK 开发环境组成如下：
 [交叉开发工具链][7]包含交叉编译器，交叉链接器和交叉调试器，这些用来开发目标硬件的用户应用程序。
 另外，对于可扩展 SDK，工具链也内置`devtool` 功能。这样工具链可通过运行 SDK 安装脚本来创建，或通过[构建目录][8]的 metadata 配置或目标设备的扩展来实现。交叉工具链需要对应的目标设备 sysroot 才能工作 。
 
- <a id="">1.1.2. Sysroots</a>
+ <a id="sysroot">1.1.2. Sysroots</a>
 =====
+宿主和目标板的 sysroot 包含所依赖的头文件和库文件，最终生成二进制文件在目标架构上运行。目标板的 sysroot 通过 OpenEmbedded 构建系统编译到目标版本的根文件系统镜像里，使用的 metadata 的配置和构建交叉工具链的一样。
 
-The native and target sysroots contain needed headers and libraries for generating binaries that run on the target architecture. The target sysroot is based on the target root filesystem image that is built by the OpenEmbedded build system and uses the same metadata configuration used to build the cross-toolchain.
+
+<a id="#the-qemu-emulator">1.1.3. The QEMU Emulator</a>
+ 
+The QEMU emulator allows you to simulate your hardware while running your application or image. QEMU is not part of the SDK but is made available a number of different ways:
+
+If you have cloned the poky Git repository to create a Source Directory and you have sourced the environment setup script, QEMU is installed and automatically available.
+
+If you have downloaded a Yocto Project release and unpacked it to create a Source Directory and you have sourced the environment setup script, QEMU is installed and automatically available.
+
+If you have installed the cross-toolchain tarball and you have sourced the toolchain's setup environment script, QEMU is also installed and automatically available.
 
 
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
