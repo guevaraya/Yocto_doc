@@ -151,15 +151,12 @@ SDK 开发环境组成如下：
 宿主和目标板的 sysroot 包含所依赖的头文件和库文件，最终生成二进制文件在目标架构上运行。目标板的 sysroot 通过 OpenEmbedded 构建系统编译到目标版本的根文件系统镜像里，使用的 metadata 的配置和构建交叉工具链的一样。
 
 
-<a id="#the-qemu-emulator">1.1.3. The QEMU Emulator</a>
+<a id="#the-qemu-emulator">1.1.3. QEMU 模拟器</a>
  
-The QEMU emulator allows you to simulate your hardware while running your application or image. QEMU is not part of the SDK but is made available a number of different ways:
-
-If you have cloned the poky Git repository to create a Source Directory and you have sourced the environment setup script, QEMU is installed and automatically available.
-
-If you have downloaded a Yocto Project release and unpacked it to create a Source Directory and you have sourced the environment setup script, QEMU is installed and automatically available.
-
-If you have installed the cross-toolchain tarball and you have sourced the toolchain's setup environment script, QEMU is also installed and automatically available.
+QEMU 模拟器可以模拟在应用程序或镜像运行在你的硬件上。QEMU 不是 SDK 的一部分，但是它有几种生成方法：
+* 如果你克隆了 poky 的 GIT 仓来创建的[源码目录][9]并且你已经执行了环境变量的配置脚本，QEMU 就已经安装好并自动可用的。
+* 如果你下载的是 Yocto 项目发行版并解压创建的源码目录，你也执行了环境变量配置脚本，QEMU 就已经安装好并自动可用的。
+* 如果你已经安装了 交叉工具链的压缩包并你已经运行了工具链的环境变量的配置脚本，QEMU 也是已经安装并自动可用的。
 
 
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
@@ -172,4 +169,5 @@ via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 [6]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-LD 
 [7]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#cross-development-toolchain
 [8]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
+[9]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#source-directory
 
