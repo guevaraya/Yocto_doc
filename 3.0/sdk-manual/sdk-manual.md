@@ -152,12 +152,17 @@ SDK 开发环境组成如下：
 
 
 <a id="#the-qemu-emulator">1.1.3. QEMU 模拟器</a>
- 
+=====
 QEMU 模拟器可以模拟在应用程序或镜像运行在你的硬件上。QEMU 不是 SDK 的一部分，但是它有几种生成方法：
 * 如果你克隆了 poky 的 GIT 仓来创建的[源码目录][9]并且你已经执行了环境变量的配置脚本，QEMU 就已经安装好并自动可用的。
 * 如果你下载的是 Yocto 项目发行版并解压创建的源码目录，你也执行了环境变量配置脚本，QEMU 就已经安装好并自动可用的。
 * 如果你已经安装了 交叉工具链的压缩包并你已经运行了工具链的环境变量的配置脚本，QEMU 也是已经安装并自动可用的。
 
+<a id="#sdk-development-model">1.2. SDK 开发模型</a>
+
+Fundamentally, the SDK fits into the development process as follows:
+![1.2. SDK 开发模型][10]
+The SDK is installed on any machine and can be used to develop applications, images, and kernels. An SDK can even be used by a QA Engineer or Release Engineer. The fundamental concept is that the machine that has the SDK installed does not have to be associated with the machine that has the Yocto Project installed. A developer can independently compile and test an object on their machine and then, when the object is ready for integration into an image, they can simply make it available to the machine that has the Yocto Project. Once the object is available, the image can be rebuilt using the Yocto Project to produce the modified image.
 
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
@@ -170,4 +175,5 @@ via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 [7]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#cross-development-toolchain
 [8]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
 [9]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#source-directory
+[10]: https://www.yoctoproject.org/docs/3.0/sdk-manual/figures/sdk-environment.png
 
