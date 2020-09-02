@@ -159,10 +159,11 @@ QEMU 模拟器可以模拟在应用程序或镜像运行在你的硬件上。QEM
 * 如果你已经安装了 交叉工具链的压缩包并你已经运行了工具链的环境变量的配置脚本，QEMU 也是已经安装并自动可用的。
 
 <a id="#sdk-development-model">1.2. SDK 开发模型</a>
+=====
 
-Fundamentally, the SDK fits into the development process as follows:
+从本质上看，SDK 在开发流程中如下所示：
 ![1.2. SDK 开发模型][10]
-The SDK is installed on any machine and can be used to develop applications, images, and kernels. An SDK can even be used by a QA Engineer or Release Engineer. The fundamental concept is that the machine that has the SDK installed does not have to be associated with the machine that has the Yocto Project installed. A developer can independently compile and test an object on their machine and then, when the object is ready for integration into an image, they can simply make it available to the machine that has the Yocto Project. Once the object is available, the image can be rebuilt using the Yocto Project to produce the modified image.
+SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。SDK 甚至可被 QA 工程师或版本工程师使用。基本概念就是说已经安装 SDK 的机器就没有必要再关联已安装 Yocto 项目的机器了。一个开发者可以独立的编译和测试机器上的对象，然后当这个对象可以准备集成到镜像里的时候，可以很容易的让它在 Yocto项目的机器上直接编译。一旦这个对象可用了，直接用 Ycoto 项目编译编译修改了的镜像。
 
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
