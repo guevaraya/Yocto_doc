@@ -185,9 +185,7 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 本手册余下部分主要描述如何使用可扩展和标准的 SDK。这些信息也在附录的表格里，主要是关于如何编译，安装和修改 SDK。
 
 
-
-via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
-
+原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 译者：[guevara](https://github.com/guevaraya)
 校对：[校对者ID](https://github.com/校对者ID)
 版权所有© 2010-2019 Linux 基金会
