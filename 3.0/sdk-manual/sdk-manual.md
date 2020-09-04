@@ -166,6 +166,27 @@ QEMU 模拟器可以模拟在应用程序或镜像运行在你的硬件上。QEM
 
 SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。SDK 甚至可被 QA 工程师或版本工程师使用。基本概念就是说已经安装 SDK 的机器就没有必要再关联已安装 Yocto 项目的机器了。一个开发者可以独立的编译和测试机器上的对象，然后当这个对象可以准备集成到镜像里的时候，可以很容易的让它在 Yocto项目的机器上直接编译。一旦这个对象可用了，直接用 Ycoto 项目编译编译修改了的镜像。
 
+你最好按照下面这些步骤：
+
+1. **为你的目标硬件安装 SDK：** 关于如何安装SDK的信息，请查看[安装 SDK ][11]部分
+
+2. **下载或编译目标镜像：** Yocto 项目支持多个目标体系架构，并有多个预编译内核镜像和文件系统镜像。
+
+如果你将要开发你的
+Download or Build the Target Image: The Yocto Project supports several target architectures and has many pre-built kernel images and root filesystem images.
+
+If you are going to develop your application on hardware, go to the machines download area and choose a target machine area from which to download the kernel image and root filesystem. This download area could have several files in it that support development using actual hardware. For example, the area might contain .hddimg files that combine the kernel image with the filesystem, boot loaders, and so forth. Be sure to get the files you need for your particular development process.
+
+If you are going to develop your application and then run and test it using the QEMU emulator, go to the machines/qemu download area. From this area, go down into the directory for your target architecture (e.g. qemux86_64 for an Intel®-based 64-bit architecture). Download the kernel, root filesystem, and any other files you need for your process.
+
+Note
+To use the root filesystem in QEMU, you need to extract it. See the "Extracting the Root Filesystem" section for information on how to extract the root filesystem.
+Develop and Test your Application: At this point, you have the tools to develop your application. If you need to separately install and use the QEMU emulator, you can go to QEMU Home Page to download and learn about the emulator. See the "Using the Quick EMUlator (QEMU)" chapter in the Yocto Project Development Tasks Manual for information on using QEMU within the Yocto Project.
+
+The remainder of this manual describes how to use the extensible and standard SDKs. Information also exists in appendix form that describes how you can build, install, and modify an SDK.
+
+
+
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
@@ -178,4 +199,4 @@ via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 [8]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
 [9]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#source-directory
 [10]: https://www.yoctoproject.org/docs/3.0/sdk-manual/figures/sdk-environment.png
-
+[11]: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html#sdk-installing-the-sdk
