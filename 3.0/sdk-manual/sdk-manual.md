@@ -188,6 +188,10 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 
 via:https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
+译者：[guevara](https://github.com/guevaraya)
+校对：[校对者ID](https://github.com/校对者ID)
+版权所有© 2010-2019 Linux 基金会
+
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
 [2]: http://www.yoctoproject.org/documentation
 [3]: https://wiki.yoctoproject.org/wiki/Releases
