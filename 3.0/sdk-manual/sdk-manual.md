@@ -184,6 +184,30 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 
 本手册余下部分主要描述如何使用可扩展和标准的 SDK。这些信息也在附录的表格里，主要是关于如何编译，安装和修改 SDK。
 
+Chapter 2. Using the Extensible SDK
+=====
+
+**目录结构**
+* [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
+* [2.2. 安装可扩展 SDK](#sdk-installing-the-extensible-sdk)
+* [2.3. 运行可扩展 SDK 的环境配置脚本](#sdk-running-the-extensible-sdk-environment-setup-script)
+* [2.4.  在你的 SDK 流程中运用 devtool](#using-devtool-in-your-sdk-workflow)
+* [2.4.1. 用 devtool add 增加一个应用程序](#sdk-use-devtool-to-add-an-application)
+* [2.4.2. 用 devtool modify 修改已有的组件源码](#sdk-devtool-use-devtool-modify-to-modify-the-source-of-an-existing-component)
+* [2.4.3. 用 devtool upgrade 更新来创建一个新配方，用来兼容软件的新版本](#sdk-devtool-use-devtool-upgrade-to-create-a-version-of-the-recipe-that-supports-a-newer-version-of-the-software)
+* [2.5. 进一步理解 devtool 的创建操作](##sdk-a-closer-look-at-devtool-add)
+* [2.5.1. 名称和版本号](#sdk-name-and-version)
+* [2.5.2. 依赖检查与映射](#sdk-dependency-detection-and-mapping)
+* [2.5.3. 许可证检查](#sdk-license-detection)
+* [2.5.4. 增加只用 Makefile 编译的软件](#sdk-adding-makefile-only-software)
+* [2.5.5. 添加本机工具](#sdk-adding-native-tools)
+* [2.5.6. 添加 Node.js 模块](#sdk-adding-node-js-modules)
+* [2.6. 如何使用配方（Recipes）](#sdk-working-with-recipes)
+* [2.6.1. 查找日志和运行文件](#sdk-finding-logs-and-work-files)
+* [2.6.2. 设置配置参数](#sdk-setting-configure-arguments)
+* [2.6.3. 配方（Recipe）之间共享文件](#sdk-sharing-files-between-recipes)
+* [2.6.4. 打包](#sdk-packaging)
+
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
