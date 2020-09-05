@@ -208,6 +208,13 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 * [2.6.3. 配方（Recipe）之间共享文件](#sdk-sharing-files-between-recipes)
 * [2.6.4. 打包](#sdk-packaging)
 
+这一章介绍了可扩展 SDK 和如何安装它。具体信息包含 SDK 的组成部分，如何安装它，并概要介绍 devtool 功能展示。可扩展 SDK 使其很容易的添加一个新的应用程序和库文件到镜像，修改现有组件的源码，在目标硬件验证测试，作为附加可轻松集成到 OpenEmbedded 的编译系统上。
+
+>提示
+>
+>要比较 可扩展 SDK 和标准 SDK 的主要特性，请查看[“介绍”](#sdk-manual-intro)部分。
+
+除过了通过 devtool 使用其功能外，你可以直接使用工具链，例如从 Makefile 到 Autotools。请查看[“直接使用 SDK 工具链”][]章节获取更多信息。
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
