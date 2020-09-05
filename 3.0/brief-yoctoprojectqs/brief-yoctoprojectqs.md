@@ -216,7 +216,7 @@ __5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-
 
 创建自己的通用层
 ======
-可能您有一个应用程序或者特定的一些行为需要隔离。您可以用 bitbake-layers create-layer 命令创建您的通用层。这个工具通过带有配置文件 layer.conf 的子目录自动创建层，这个 recipes-example 子目录包含 example.bb 菜谱，一个授权文件和 README。
+可能您有一个应用程序或者特定的一些行为需要隔离。您可以用 bitbake-layers create-layer 命令创建您的通用层。这个工具通过带有配置文件 layer.conf 的子目录自动创建层，这个 recipes-example 子目录包含 example.bb 配方，一个授权文件和 README。
 
 下面命令就是通过工具在 poky 目录创建一个名叫 meta-mylayer的层：
 ```
