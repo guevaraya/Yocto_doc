@@ -35,7 +35,7 @@ Scotty 文档服务公司<br>
     * [1.1.2. Sysroots](#sysroot)
     * [1.1.3. QEMU 模拟器](#the-qemu-emulator)
   * [1.2. SDK 开发模型](#sdk-development-model)
-* [2. 使用可扩展性 SDK](#sdk-extensible)
+* [2. 使用可扩展 SDK](#第二章-使用可扩展-sdk)
   * [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
   * [2.2. 安装可扩展 SDK](#sdk-installing-the-extensible-sdk)
   * [2.3. 运行可扩展 SDK 的环境配置脚本](#sdk-running-the-extensible-sdk-environment-setup-script)
