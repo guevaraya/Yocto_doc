@@ -37,7 +37,7 @@ Scotty 文档服务公司<br>
   * [1.2. SDK 开发模型](#sdk-development-model)
 * [2. 使用可扩展 SDK](#第二章-使用可扩展-sdk)
   * [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
-  * [2.2. 安装可扩展 SDK](#2.2. 安装可扩展 SDK)
+  * [2.2. 安装可扩展 SDK](#22-安装可扩展-sdk)
   * [2.3. 运行可扩展 SDK 的环境配置脚本](#sdk-running-the-extensible-sdk-environment-setup-script)
   * [2.4.  在你的 SDK 流程中运用 devtool](#using-devtool-in-your-sdk-workflow)
     * [2.4.1. 用 devtool add 增加一个应用程序](#sdk-use-devtool-to-add-an-application)
@@ -189,7 +189,7 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 
 **目录结构**
 * [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
-* [2.2. 安装可扩展 SDK](#2.2. 安装可扩展 SDK)
+* [2.2. 安装可扩展 SDK](#22-安装可扩展-sdk)
 * [2.3. 运行可扩展 SDK 的环境配置脚本](#sdk-running-the-extensible-sdk-environment-setup-script)
 * [2.4.  在你的 SDK 流程中运用 devtool](#using-devtool-in-your-sdk-workflow)
 * [2.4.1. 用 devtool add 增加一个应用程序](#sdk-use-devtool-to-add-an-application)
