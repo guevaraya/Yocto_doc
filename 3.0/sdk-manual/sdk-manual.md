@@ -37,7 +37,7 @@ Scotty 文档服务公司<br>
   * [1.2. SDK 开发模型](#sdk-development-model)
 * [2. 使用可扩展 SDK](#第二章-使用可扩展-sdk)
   * [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
-  * [2.2. 安装可扩展 SDK](#sdk-installing-the-extensible-sdk)
+  * [2.2. 安装可扩展 SDK](#2.2. 安装可扩展 SDK)
   * [2.3. 运行可扩展 SDK 的环境配置脚本](#sdk-running-the-extensible-sdk-environment-setup-script)
   * [2.4.  在你的 SDK 流程中运用 devtool](#using-devtool-in-your-sdk-workflow)
     * [2.4.1. 用 devtool add 增加一个应用程序](#sdk-use-devtool-to-add-an-application)
@@ -189,7 +189,7 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 
 **目录结构**
 * [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
-* [2.2. 安装可扩展 SDK](#sdk-installing-the-extensible-sdk)
+* [2.2. 安装可扩展 SDK](#2.2. 安装可扩展 SDK)
 * [2.3. 运行可扩展 SDK 的环境配置脚本](#sdk-running-the-extensible-sdk-environment-setup-script)
 * [2.4.  在你的 SDK 流程中运用 devtool](#using-devtool-in-your-sdk-workflow)
 * [2.4.1. 用 devtool add 增加一个应用程序](#sdk-use-devtool-to-add-an-application)
@@ -219,9 +219,72 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 2.1. 使用可扩展 SDK 的原因以及里面有些什么?
 =====
 
-The extensible SDK provides a cross-development toolchain and libraries tailored to the contents of a specific image. You would use the Extensible SDK if you want a toolchain experience supplemented with the powerful set of devtool commands tailored for the Yocto Project environment.
+可扩展 SDK 提供提供了交叉编译环境的工具链和为特定镜像定制的库文件。如果你想拥有使用带有强大的 devltool 命令工具链的经验，而这些命令都是为 Yocto 项目环境定制的，你需要用可扩展 SDK。
 
-The installed extensible SDK consists of several files and directories. Basically, it contains an SDK environment setup script, some configuration files, an internal build system, and the devtool functionality.
+安装的可扩展 SDK 包含了几个文件和目录。基本上说，它包含 SDK 环境配置脚本，一些设置文件，一个内部编译系统以及 devtool 的功能。
+
+
+2.2. 安装可扩展 SDK
+=====
+
+You can download a tarball installer, which includes the pre-built toolchain, the runqemu script, the internal build system, devtool, and support files from the appropriate toolchain directory within the Index of Releases. Toolchains are available for several 32-bit and 64-bit architectures with the x86_64 directories, respectively. The toolchains the Yocto Project provides are based off the core-image-sato and core-image-minimal images and contain libraries appropriate for developing against that image.
+
+The names of the tarball installer scripts are such that a string representing the host system appears first in the filename and then is immediately followed by a string representing the target architecture. An extensible SDK has the string "-ext" as part of the name. Following is the general form:
+
+     poky-glibc-host_system-image_type-arch-toolchain-ext-release_version.sh
+
+     Where:
+         host_system is a string representing your development system:
+
+                    i686 or x86_64.
+
+         image_type is the image for which the SDK was built:
+
+                    core-image-sato or core-image-minimal
+
+         arch is a string representing the tuned target architecture:
+
+                    aarch64, armv5e, core2-64, i586, mips32r2, mips64, ppc7400, or cortexa8hf-neon
+
+         release_version is a string representing the release number of the Yocto Project:
+
+                    3.0, 3.0+snapshot
+            
+For example, the following SDK installer is for a 64-bit development host system and a i586-tuned target architecture based off the SDK for core-image-sato and using the current 3.0 snapshot:
+
+     poky-glibc-x86_64-core-image-sato-i586-toolchain-ext-3.0.sh
+            
+Note
+As an alternative to downloading an SDK, you can build the SDK installer. For information on building the installer, see the "Building an SDK Installer" section.
+The SDK and toolchains are self-contained and by default are installed into the poky_sdk folder in your home directory. You can choose to install the extensible SDK in any location when you run the installer. However, because files need to be written under that directory during the normal course of operation, the location you choose for installation must be writable for whichever users need to use the SDK.
+
+The following command shows how to run the installer given a toolchain tarball for a 64-bit x86 development host system and a 64-bit x86 target architecture. The example assumes the SDK installer is located in ~/Downloads/ and has execution rights.
+
+Note
+If you do not have write permissions for the directory into which you are installing the SDK, the installer notifies you and exits. For that case, set up the proper permissions in the directory and run the installer again.
+     $ ./Downloads/poky-glibc-x86_64-core-image-minimal-core2-64-toolchain-ext-2.5.sh
+     Poky (Yocto Project Reference Distro) Extensible SDK installer version 2.5
+     ==========================================================================
+     Enter target directory for SDK (default: ~/poky_sdk):
+     You are about to install the SDK to "/home/scottrif/poky_sdk". Proceed [Y/n]? Y
+     Extracting SDK..............done
+     Setting it up...
+     Extracting buildtools...
+     Preparing build system...
+     Parsing recipes: 100% |##################################################################| Time: 0:00:52
+     Initialising tasks: 100% |###############################################################| Time: 0:00:00
+     Checking sstate mirror object availability: 100% |#######################################| Time: 0:00:00
+     Loading cache: 100% |####################################################################| Time: 0:00:00
+     Initialising tasks: 100% |###############################################################| Time: 0:00:00
+     done
+     SDK has been successfully set up and is ready to be used.
+     Each time you wish to use the SDK in a new shell session, you need to source the environment setup script e.g.
+      $ . /home/scottrif/poky_sdk/environment-setup-core2-64-poky-linux
+
+            
+            
+            
+首先你需要做的事情是通过运行 *.sh 安装脚本在编译主机上安装 SDK。
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
