@@ -227,10 +227,12 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 2.2. 安装可扩展 SDK
 =====
 
-You can download a tarball installer, which includes the pre-built toolchain, the runqemu script, the internal build system, devtool, and support files from the appropriate toolchain directory within the Index of Releases. Toolchains are available for several 32-bit and 64-bit architectures with the x86_64 directories, respectively. The toolchains the Yocto Project provides are based off the core-image-sato and core-image-minimal images and contain libraries appropriate for developing against that image.
+首先你需要做的事情是通过运行 \*.sh 安装脚本在[编译主机](#hardware-build-system-term)上安装 SDK。
 
-The names of the tarball installer scripts are such that a string representing the host system appears first in the filename and then is immediately followed by a string representing the target architecture. An extensible SDK has the string "-ext" as part of the name. Following is the general form:
+你可以下载 tar 格式的安装包，它包含预编译的工具链，用于运行 QEMU 模拟器的脚本，内部编译系统，devtool 和支持文件，这些文件在发行版索引里对应的工具链目录里。工具链支持多个32位和 x86_64 目录下的64位架构体系。Yocto 项目提供的工具链是基于 core-image-sato 和 core-image-minimal 镜像，它还包含了用于开发此镜像的库文件。
 
+安装包脚本的名字的前缀代表了主机系统，接着后面代表体系架构的类型。可扩展 SDK 使用字符串“-ext”代表。下面的例子是典型：
+```
      poky-glibc-host_system-image_type-arch-toolchain-ext-release_version.sh
 
      Where:
@@ -249,7 +251,7 @@ The names of the tarball installer scripts are such that a string representing t
          release_version is a string representing the release number of the Yocto Project:
 
                     3.0, 3.0+snapshot
-            
+```
 For example, the following SDK installer is for a 64-bit development host system and a i586-tuned target architecture based off the SDK for core-image-sato and using the current 3.0 snapshot:
 
      poky-glibc-x86_64-core-image-sato-i586-toolchain-ext-3.0.sh
@@ -284,7 +286,7 @@ If you do not have write permissions for the directory into which you are instal
             
             
             
-首先你需要做的事情是通过运行 *.sh 安装脚本在编译主机上安装 SDK。
+
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
