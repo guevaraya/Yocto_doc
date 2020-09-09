@@ -68,7 +68,7 @@ Scotty 文档服务公司<br>
   * [4.2. Makefile 相关项目](#)
 * [A. 获取 SDK](#)
   * [A.1. 查找预构建的 SDK 安装程序](#)
-  * [A.2. 构建一个 SDK 安装程序](#)
+  * [A.2. 构建一个 SDK 安装程序](##sdk-building-an-sdk-installer)
   * [A.3. 解压根文件系统](#)
   * [A.4. 安装标准的 SDK 目录结构](#)
   * [A.5. 安装可扩展 SDK 的目录结构](#)
@@ -254,11 +254,13 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 ```
 
 例如，下面的 SDK 安装包是在64 位主机系统开发调测 i586 目标体系架构，用最新的 3.0 来编译出 core-imge-sato 镜像：
+```
 poky-glibc-x86_64-core-image-sato-i586-toolchain-ext-3.0.sh
-
+```
     
             
-Note
+>提示
+>可二选一的下载 SDK，也可编译 SDK 安装包。获取安装包编译的信息，可查阅[“编译安装包”](#sdk-building-an-sdk-installer)部分。
 As an alternative to downloading an SDK, you can build the SDK installer. For information on building the installer, see the "Building an SDK Installer" section.
 The SDK and toolchains are self-contained and by default are installed into the poky_sdk folder in your home directory. You can choose to install the extensible SDK in any location when you run the installer. However, because files need to be written under that directory during the normal course of operation, the location you choose for installation must be writable for whichever users need to use the SDK.
 
