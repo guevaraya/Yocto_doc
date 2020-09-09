@@ -231,30 +231,32 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 
 你可以下载 tar 格式的安装包，它包含预编译的工具链，用于运行 QEMU 模拟器的脚本，内部编译系统，devtool 和支持文件，这些文件在发行版索引里对应的工具链目录里。工具链支持多个32位和 x86_64 目录下的64位架构体系。Yocto 项目提供的工具链是基于 core-image-sato 和 core-image-minimal 镜像，它还包含了用于开发此镜像的库文件。
 
-安装包脚本的名字的前缀代表了主机系统，接着后面代表体系架构的类型。可扩展 SDK 使用字符串“-ext”代表。下面的例子是典型：
+安装包脚本的名字的前缀代表了主机系统，接着后面的字符串代表体系架构的类型。可扩展 SDK 使用字符串“-ext”代表。下面的例子是典型：
 ```
      poky-glibc-host_system-image_type-arch-toolchain-ext-release_version.sh
 
-     Where:
-         host_system is a string representing your development system:
+     源自:
+         host_system 对应的字符串代表主机开放系统的体系架构：
 
                     i686 or x86_64.
 
-         image_type is the image for which the SDK was built:
+         image_type 代表 SDK 编译出来的镜像名称：
 
                     core-image-sato or core-image-minimal
 
-         arch is a string representing the tuned target architecture:
+         arch 代表正在调测的目标架构体系：
 
                     aarch64, armv5e, core2-64, i586, mips32r2, mips64, ppc7400, or cortexa8hf-neon
 
-         release_version is a string representing the release number of the Yocto Project:
+         release_version Yocto 项目发布版本号
 
                     3.0, 3.0+snapshot
 ```
-For example, the following SDK installer is for a 64-bit development host system and a i586-tuned target architecture based off the SDK for core-image-sato and using the current 3.0 snapshot:
 
-     poky-glibc-x86_64-core-image-sato-i586-toolchain-ext-3.0.sh
+例如，下面的 SDK 安装包是在64 位主机系统开发调测 i586 目标体系架构，用最新的 3.0 来编译出 core-imge-sato 镜像：
+poky-glibc-x86_64-core-image-sato-i586-toolchain-ext-3.0.sh
+
+    
             
 Note
 As an alternative to downloading an SDK, you can build the SDK installer. For information on building the installer, see the "Building an SDK Installer" section.
