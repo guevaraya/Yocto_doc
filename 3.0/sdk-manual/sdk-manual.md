@@ -232,6 +232,7 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 你可以下载 tar 格式的安装包，它包含预编译的工具链，用于运行 QEMU 模拟器的脚本，内部编译系统，devtool 和支持文件，这些文件在发行版索引里对应的工具链目录里。工具链支持多个32位和 x86_64 目录下的64位架构体系。Yocto 项目提供的工具链是基于 core-image-sato 和 core-image-minimal 镜像，它还包含了用于开发此镜像的库文件。
 
 安装包脚本的名字的前缀代表了主机系统，接着后面的字符串代表体系架构的类型。可扩展 SDK 使用字符串“-ext”代表。下面的例子是典型：
+
 ```
      poky-glibc-host_system-image_type-arch-toolchain-ext-release_version.sh
 
@@ -259,15 +260,20 @@ poky-glibc-x86_64-core-image-sato-i586-toolchain-ext-3.0.sh
 ```
     
             
->提示
+> 提示
+>
 >可二选一的下载 SDK，也可编译 SDK 安装包。获取安装包编译的信息，可查阅[“编译安装包”](#sdk-building-an-sdk-installer)部分。
-As an alternative to downloading an SDK, you can build the SDK installer. For information on building the installer, see the "Building an SDK Installer" section.
-The SDK and toolchains are self-contained and by default are installed into the poky_sdk folder in your home directory. You can choose to install the extensible SDK in any location when you run the installer. However, because files need to be written under that directory during the normal course of operation, the location you choose for installation must be writable for whichever users need to use the SDK.
 
-The following command shows how to run the installer given a toolchain tarball for a 64-bit x86 development host system and a 64-bit x86 target architecture. The example assumes the SDK installer is located in ~/Downloads/ and has execution rights.
+SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 目录。在安装的时候你可以选择把可扩展 SDK 安装在任意地方。但是需求其文件在正常操作中确保可被写入，安装目录也对使用 SDK 的用户要有写入权限。
 
-Note
-If you do not have write permissions for the directory into which you are installing the SDK, the installer notifies you and exits. For that case, set up the proper permissions in the directory and run the installer again.
+下面的命令展示了如何运行64位x86的主机系统下构建64位x86体系架构的安装包。这个例子假定 SDK 安装包位于 `~/Download/` 并有可执行权限。
+
+>提示
+>
+>如果你对 SDK 的安装目录没有写权限，安装包会提示给你然后退出。这种情况需要你添加合适的权限然后再运行安装包。
+
+
+```
      $ ./Downloads/poky-glibc-x86_64-core-image-minimal-core2-64-toolchain-ext-2.5.sh
      Poky (Yocto Project Reference Distro) Extensible SDK installer version 2.5
      ==========================================================================
@@ -286,9 +292,11 @@ If you do not have write permissions for the directory into which you are instal
      SDK has been successfully set up and is ready to be used.
      Each time you wish to use the SDK in a new shell session, you need to source the environment setup script e.g.
       $ . /home/scottrif/poky_sdk/environment-setup-core2-64-poky-linux
+```
+            
+2.3. Running the Extensible SDK Environment Setup Script
+=====
 
-            
-            
             
 
 
