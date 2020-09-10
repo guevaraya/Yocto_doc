@@ -294,7 +294,7 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
       $ . /home/scottrif/poky_sdk/environment-setup-core2-64-poky-linux
 ```
             
-2.3. Running the Extensible SDK Environment Setup Script
+2.3. 运行可扩展 SDK 环境配置脚本
 =====
 
             
