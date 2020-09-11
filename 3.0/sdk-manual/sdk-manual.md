@@ -297,7 +297,19 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
 2.3. 运行可扩展 SDK 环境配置脚本
 =====
 
-            
+一旦你已经安装了 SDK，在实际使用 SDK 之前就必须先运行 SDK 环境配置脚本。这个配置脚本所在目录使在安装 SDK 使选择的，如果不是 poky_sdk 的默认目录就是你选择的安装目录。
+
+在运行脚本之前，需要确保对应的体系架构是我们即将要开发的。环境配置脚本以字符串“environment-setup”开头，并包含要调试的体系架构名称。例如，下面命令跳转到 SDK 安装目录然后 source 执行环境配置脚本。这个例子的配置脚本用 i586架构体系调试开发 IA架构体系。
+
+```
+     $ cd /home/scottrif/poky_sdk
+     $ source environment-setup-core2-64-poky-linux
+     SDK environment now set up; additionally you may now run devtool to perform development tasks.
+     Run devtool --help for further details.
+```
+
+运行配置脚本定义了很多环境变量，他们用来更好的使用 SDK（如：PATH，CC，LD 等等）。如果你想查看脚本所输出的所有的环境变量，研读下安装文件本身就可以了。
+
 
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
@@ -322,3 +334,6 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
 [14]: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html#sdk-extracting-the-root-filesystem
 [15]: http://wiki.qemu.org/Main_Page
 [16]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#dev-manual-qemu
+[17]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-CC
+[18]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-LD
+
