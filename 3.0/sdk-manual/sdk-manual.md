@@ -38,8 +38,8 @@ Scotty 文档服务公司<br>
 * [2. 使用可扩展 SDK](#第二章-使用可扩展-sdk)
   * [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
   * [2.2. 安装可扩展 SDK](#22-安装可扩展-sdk)
-  * [2.3. 运行可扩展 SDK 环境配置脚本](#23-运行可扩展-sdk-环境配置脚本)
-  * [2.4.  在你的 SDK 流程中运用 devtool](#using-devtool-in-your-sdk-workflow)
+  * [2.3. 运行可扩展 SDK 环境配置脚本](#23-运行可扩展-SDK-环境配置脚本)
+  * [2.4.  在你的 SDK 流程中运用 devtool](#24-在你的-SDK-流程中运用-devtool)
     * [2.4.1. 用 devtool add 增加一个应用程序](#sdk-use-devtool-to-add-an-application)
     * [2.4.2. 用 devtool modify 修改已有的组件源码](#sdk-devtool-use-devtool-modify-to-modify-the-source-of-an-existing-component)
     * [2.4.3. 用 devtool upgrade 更新来创建一个新配方，用来兼容软件的新版本](#sdk-devtool-use-devtool-upgrade-to-create-a-version-of-the-recipe-that-supports-a-newer-version-of-the-software)
@@ -190,8 +190,8 @@ SDK 可安装到任意机器上并用于开发应用程序，镜像和内核。S
 **目录结构**
 * [2.1. 为什么要使用可扩展的 SDK 以及里面有些什么](#sdk-extensible-sdk-intro)
 * [2.2. 安装可扩展 SDK](#22-安装可扩展-sdk)
-* [2.3. 运行可扩展 SDK 环境配置脚本](#23-运行可扩展-sdk-环境配置脚本)
-* [2.4.  在你的 SDK 流程中运用 devtool](#using-devtool-in-your-sdk-workflow)
+* [2.3. 运行可扩展 SDK 环境配置脚本](#23-运行可扩展-SDK-环境配置脚本)
+* [2.4.  在你的 SDK 流程中运用 devtool](#24-在你的-SDK-流程中运用-devtool)
 * [2.4.1. 用 devtool add 增加一个应用程序](#sdk-use-devtool-to-add-an-application)
 * [2.4.2. 用 devtool modify 修改已有的组件源码](#sdk-devtool-use-devtool-modify-to-modify-the-source-of-an-existing-component)
 * [2.4.3. 用 devtool upgrade 更新来创建一个新配方，用来兼容软件的新版本](#sdk-devtool-use-devtool-upgrade-to-create-a-version-of-the-recipe-that-supports-a-newer-version-of-the-software)
@@ -310,6 +310,8 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
 
 运行配置脚本定义了很多环境变量，他们用来更好的使用 SDK（如：PATH，[CC][17]，[LD][18] 等等）。如果你想查看脚本所输出的所有的环境变量，研读下安装文件本身就可以了。
 
+2.4.  在你的 SDK 流程中运用 devtool
+=====
 
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
