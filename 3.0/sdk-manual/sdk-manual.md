@@ -313,6 +313,7 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
 2.4. 在你的 SDK 流程中运用 devtool
 =====
 
+可扩展 SDK 的基石是一个名叫 devtool 的命令行工具。这个工具提供了很多有用的特性：在可扩展 SDK 里编译，测试和软件打包，也可以通过 OpenEmbedded 编译系统集成到镜像里。
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
