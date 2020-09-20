@@ -315,6 +315,13 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
 
 可扩展 SDK 的基石是一个名叫 devtool 的命令行工具。这个工具提供了很多有用的特性：在可扩展 SDK 里编译，测试和软件打包，也可以通过 OpenEmbedded 编译系统集成到镜像里。
 
+> 小贴士
+>
+>对使 devtool 的使用不局限于可扩展 SDK ，可以用 devtool 帮你容易的开发任何项目，这些项目都能编译出镜像的一部分。
+
+The devtool command line is organized similarly to Git in that it has a number of sub-commands for each function. You can run devtool --help to see all the commands.
+devtool 命令行的组织方式与 [Git][19]的子命令的功能方式很像。你可以运行 devtool --help 查看所有的命令。
+
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
 译者：[巴龙](https://github.com/guevaraya)
@@ -339,4 +346,5 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
 [16]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#dev-manual-qemu
 [17]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-CC
 [18]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-LD
+[19]: https://www.yoctoproject.org/docs/3.0/overview-manual/overview-manual.html#git
 
