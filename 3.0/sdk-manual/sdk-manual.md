@@ -319,8 +319,19 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
 >
 >对使 devtool 的使用不局限于可扩展 SDK ，可以用 devtool 帮你容易的开发任何项目，这些项目都能编译出镜像的一部分。
 
-The devtool command line is organized similarly to Git in that it has a number of sub-commands for each function. You can run devtool --help to see all the commands.
 devtool 命令行的组织方式与 [Git][19]的子命令的功能方式很像。你可以运行 devtool --help 查看所有的命令。
+> 查看 Yocto 项目参考手册的["devtool 快速参考"][20]获取 devtool 的快速参考。
+
+下面三个 devtool 的子命令提供了开发的入口点：
+* _devtool add:_ 辅助添加需要编译的软件
+* _devtool modify:_ 配置一个环境让你可以修改已有的组件源
+* _devtool upgrade:_ 更新已有的配方以便编译更新一套源文件。
+
+
+As with the build system, "recipes" represent software packages within devtool. When you use devtool add, a recipe is automatically created. When you use devtool modify, the specified existing recipe is used in order to determine where to get the source code and how to patch it. In both cases, an environment is set up so that when you build the recipe a source tree that is under your control is used in order to allow you to make changes to the source as desired. By default, new recipes and the source go into a "workspace" directory under the SDK.
+
+The remainder of this section presents the devtool add, devtool modify, and devtool upgrade workflows.
+
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
@@ -347,4 +358,5 @@ devtool 命令行的组织方式与 [Git][19]的子命令的功能方式很像�
 [17]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-CC
 [18]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-LD
 [19]: https://www.yoctoproject.org/docs/3.0/overview-manual/overview-manual.html#git
+[20]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#ref-devtool-reference
 
