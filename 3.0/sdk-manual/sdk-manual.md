@@ -327,10 +327,12 @@ devtool 命令行的组织方式与 [Git][19]的子命令的功能方式很像�
 * _devtool modify:_ 配置一个环境让你可以修改已有的组件源
 * _devtool upgrade:_ 更新已有的配方以便编译更新一套源文件。
 
+在编译系统里，“配方（recipes）”代表 devtool里的软件包。当执行 devtool add 后，一个配方被自动创建。当你执行 devtool modify 命令后，指定的现有配方用来决定从哪里获取源码以及如何打补丁。这两个情况下，配置好环境是为了让你编译想要修改的配方源码。新配方及其源码默认都在 SDK 的 “workspace” 目录下。
 
-As with the build system, "recipes" represent software packages within devtool. When you use devtool add, a recipe is automatically created. When you use devtool modify, the specified existing recipe is used in order to determine where to get the source code and how to patch it. In both cases, an environment is set up so that when you build the recipe a source tree that is under your control is used in order to allow you to make changes to the source as desired. By default, new recipes and the source go into a "workspace" directory under the SDK.
+这个段落的后面主要描述 devtool add， devtool modify 和 devtool upgrade 的执行流程。
 
-The remainder of this section presents the devtool add, devtool modify, and devtool upgrade workflows.
+2.4.1. 使用 devtool add 添加一个应用程序
+======
 
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
