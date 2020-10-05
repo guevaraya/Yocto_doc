@@ -367,4 +367,5 @@ devtool add 命令可在已有的源代码基础上生成一个配方。这个�
 [19]: https://www.yoctoproject.org/docs/3.0/overview-manual/overview-manual.html#git
 [20]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#ref-devtool-reference
 [21]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#devtool-the-workspace-layer-structure
+[22]: https://www.yoctoproject.org/docs/3.0/sdk-manual/figures/sdk-devtool-add-flow.png
 
