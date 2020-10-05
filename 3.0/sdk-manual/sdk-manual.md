@@ -333,6 +333,10 @@ devtool 命令行的组织方式与 [Git][19]的子命令的功能方式很像�
 
 2.4.1. 使用 devtool add 添加一个应用程序
 ======
+devtool add 命令可在已有的源代码基础上生成一个配方。这个命令使用了很多 devtool 的[工作目录层][21]。这个命令很灵活的帮你将源码解压到工作目录或一个特定的本地 Git 仓。如果用的是已经存在的代码就不需要解压。
+
+根据特定的需求场景，devtool add 的参数和选项形成不同的组合。下面图表展示了使用 devtool add 命令可能用到的常见开发流程：
+![sdk-devtool-add-flow][22]
 
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
@@ -361,4 +365,5 @@ devtool 命令行的组织方式与 [Git][19]的子命令的功能方式很像�
 [18]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-LD
 [19]: https://www.yoctoproject.org/docs/3.0/overview-manual/overview-manual.html#git
 [20]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#ref-devtool-reference
+[21]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#devtool-the-workspace-layer-structure
 
