@@ -339,6 +339,8 @@ devtool add 命令可在已有的源代码基础上生成一个配方。这个�
 
 ![sdk-devtool-add-flow][22]
 
+1. **生成新配方**:  流程图的顶部展示了用 devtool add 基于现有的源码生成配方的三个场景。
+In a shared development environment, it is typical for other developers to be responsible for various areas of source code. As a developer, you are probably interested in using that source code as part of your development within the Yocto Project. All you need is access to the code, a recipe, and a controlled area in which to do your work.
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
