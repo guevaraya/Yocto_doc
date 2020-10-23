@@ -348,7 +348,16 @@ devtool add 命令可在已有的源代码基础上生成一个配方。这个�
 $ devtool add recipe fetchuri
 ```
 用这个命令，devtool 解压上游源码文件到本地的 Git 仓源码目录。然后这个命令会在工作目录创建一个名叫 recipe 的配方和一个对应的 append 配方文件。如果没有提供配方名称，命令会尝试自己生成一个。
+* **中间**：图表里的中间场景也代表源码不在本地的情况。这样的话，代码同样在上游并需要解压到本地，其中一些目录不在默认的工作目录。
 
+Middle: The middle scenario in the figure also represents a situation where the source code does not exist locally. In this case, the code is again upstream and needs to be extracted to some local area - this time outside of the default workspace.
+>提示
+>
+> 如果需要，devtool 在解压的过程中总是会在本地创建一个 Git 仓。
+
+
+Note
+If required, devtool always creates a Git repository locally during the extraction.
 
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
