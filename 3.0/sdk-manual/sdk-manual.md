@@ -354,10 +354,11 @@ Middle: The middle scenario in the figure also represents a situation where the 
 >提示
 >
 > 如果需要，devtool 在解压的过程中总是会在本地创建一个 Git 仓。
+进一步说，这个例子里的第一个位置参数 srctree 定义了devtool add 命令在工作量目录之外的解压目录。它需要指定一个空目录：
+```
+$ devtool add recipe srctree fetchuri 
+```
 
-
-Note
-If required, devtool always creates a Git repository locally during the extraction.
 
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
