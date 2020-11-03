@@ -358,8 +358,8 @@ Middle: The middle scenario in the figure also represents a situation where the 
 ```
 $ devtool add recipe srctree fetchuri 
 ```
-
-
+总之，从 fetchuri 获取源码然后作为 Git 代码仓解压到 srctree 本地目录。
+在工作目录里，devtool 创建一个名称为recipe和带有append 的配方文件。
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
