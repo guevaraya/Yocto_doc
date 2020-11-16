@@ -361,14 +361,14 @@ $ devtool add recipe srctree fetchuri
 总之，从 fetchuri 获取源码然后作为 Git 代码仓解压到 srctree 本地目录。
 在工作目录里，devtool 创建一个名称为recipe和带有append 的配方文件。
 
-* **右边：** 图表右边的场景代表 srctree 在 devtool 工作目录之外提前配置的情况。
+* **右边：** 图表右边的场景代表 srctree 在 devtool 工作目录之外已提前配置的情况。
 
 下面命令创建一个名为 recipe的新配方，并能识别现有的源码：
 ```
 $ devtool add recipe srctree
 ```
-这个命令检查源码并为源码创建一个叫 recipe 的配方并把他放到工作目录。
-由于解压的源码已经存在，devtool 不需要尝试搬运源码到工作目录-仅在工作目录仅仅需要一个新配方。
+这个命令检查源码并为源码创建一个叫 recipe 的配方并将其放到工作目录。
+由于解压的源码已经存在，devtool 不需要尝试搬运源码到工作目录-仅在工作目录需要一个新配方。
 配方目录里，该命令同时创建了一个包含 *.bbappend 文件的 append 相关目录。
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
