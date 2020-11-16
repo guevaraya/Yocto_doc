@@ -367,7 +367,7 @@ $ devtool add recipe srctree fetchuri
 ```
 $ devtool add recipe srctree
 ```
-这个命令检查源码并为源码创建一个叫 recipe 的配方并将其放到工作目录。
+这个命令检查源码并为源码创建一个叫 recipe 的配方然后将其放到工作目录。
 由于解压的源码已经存在，devtool 不需要尝试搬运源码到工作目录-仅在工作目录需要一个新配方。
 配方目录里，该命令同时创建了一个包含 *.bbappend 文件的 append 相关目录。
 
