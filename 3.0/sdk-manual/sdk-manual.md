@@ -371,6 +371,22 @@ $ devtool add recipe srctree
 由于解压的源码已经存在，devtool 不需要尝试搬运源码到工作目录-仅在工作目录需要一个新配方。
 配方目录里，该命令同时创建了一个包含 *.bbappend 文件的 append 相关目录。
 
+2. **配方编辑：** 你可以用 devtool edit-recipe 命令用 $EDITOR 变量定义的编辑器修改配方文件：
+```
+$ devtool edit-recipe recipe
+```
+在编辑器里对配方的编辑修改将会在后面的构建中生效。
+3. **编译配方或重建镜像：** 下一步的动作取决于如何处理新的代码。
+如果你需要最终会将编译物移动到目标硬件的目录，那就用下面的 devtool 命令：
+```
+$ devtool build recipe
+```
+另一方面，如果你想将包含配方包的镜像从工作目录发布到设备上（例如：用于测试目录），你可以用 devtool build-image 命令：
+```
+$ devtool build-image image
+```
+5. **使用配方完成你的任务：**
+
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
 译者：[巴龙](https://github.com/guevaraya)
