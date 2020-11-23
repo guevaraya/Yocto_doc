@@ -385,6 +385,13 @@ $ devtool build recipe
 ```
 $ devtool build-image image
 ```
+4. ** 部署编译生成物： ** 当你用 devtool build 命令编译你的配方时，你可能想看到编译生成物在目标硬件上的运行效果。
+
+> 提示
+>
+> 这个步骤是假定你已经有了一个可以在 QEMU 或 实际硬件上运行的构建镜像。也假定镜像部署到了目标板上，并安装了 SSH，如果镜像运行在实际的硬件上，你也有从开发主机访问的网络权限。
+
+
 5. **使用配方完成你的任务：**
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
