@@ -391,6 +391,12 @@ $ devtool build-image image
 >
 > 这个步骤是假定你已经有了一个可以在 QEMU 或 实际硬件上运行的构建镜像。也假定镜像部署到了目标板上，并安装了 SSH，如果镜像运行在实际的硬件上，你也有从开发主机访问的网络权限。
 
+你可以用 devtool deploy-target 命令部署编译输出物到目标硬件：
+```
+$ devtool deploy-target recipe target
+```
+target 是一个作为一个 SSH 服务器运行的目标机器。
+你也可以通过 devtool build-image 命令部署编译的镜像到实际硬件。但是 devtool 不能提供特定的命令让你部署镜像到实际硬件。
 
 5. **使用配方完成你的任务：**
 
