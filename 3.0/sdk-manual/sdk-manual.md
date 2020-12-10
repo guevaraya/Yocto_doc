@@ -404,13 +404,15 @@ target 是一个作为一个 SSH 服务器运行的目标机器。
 ```
 
 >小提示
+>
 >任何你要生成的补丁必须要提交到源码目录的 Git 仓。
 
 如上所，devtool finish 移动最终的配方到它的稳定层。
 devtool finish 命令作为最终的工序，恢复标准层和上游源码的状态以便在这些区域构建配方而不是在工作目录。
 
-小提示
-当你不想继续工作，你可以用 devtool reset 命令恢复的工作区域。如果你用了这个命令，请记住源码树还是保留的。
+>小提示
+>
+>当你不想继续工作，你可以用 devtool reset 命令恢复的工作区域。如果你用了这个命令，请记住源码树还是保留的。
 
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
