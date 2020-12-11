@@ -41,7 +41,7 @@ Scotty 文档服务公司<br>
   * [2.3. 运行可扩展 SDK 环境配置脚本](#23-运行可扩展-sdk-环境配置脚本)
   * [2.4.  在你的 SDK 流程中运用 devtool](#24-在你的-sdk-流程中运用-devtool)
     * [2.4.1. 用 devtool add 增加一个应用程序](#241-使用-devtool-add-添加一个应用程序)
-    * [2.4.2. 用 devtool modify 修改已有的组件源码](#sdk-devtool-use-devtool-modify-to-modify-the-source-of-an-existing-component)
+    * [2.4.2. 用 devtool modify 修改已有的组件源码](#242-使用-devtool-modify-修改源码的已有组件)
     * [2.4.3. 用 devtool upgrade 更新来创建一个新配方，用来兼容软件的新版本](#sdk-devtool-use-devtool-upgrade-to-create-a-version-of-the-recipe-that-supports-a-newer-version-of-the-software)
   * [2.5. 进一步理解 devtool 的创建操作](##sdk-a-closer-look-at-devtool-add)
     * [2.5.1. 名称和版本号](#sdk-name-and-version)
@@ -414,10 +414,10 @@ devtool finish 命令作为最终的工序，恢复标准层和上游源码的�
 >
 >当你不想继续工作，你可以用 devtool reset 命令恢复的工作区域。如果你用了这个命令，请记住源码树还是保留的。
 
-2.4.1. 使用 devtool modify 修改源码的已有组件
+2.4.2. 使用 devtool modify 修改源码的已有组件
 ======
 
-devtool modify 命令预备如何在已有代码上的工作，在这用已有的配方来构建软件。此命令很方便的让你从上游解压源码，保持对共用此代码的其他开发者的补丁跟踪和收集。
+devtool modify 命令用来准备如何在已有代码上的工作，并在这用已有的配方来构建软件。此命令很方便的让你从上游解压源码，保持共用此代码的其他开发者的补丁跟踪和收集。
 根据你的特定需求，你可以选择 devtool modify 命令的参数和选项形成不同的组合。下面图表展示了 devtool modify 命令的不同的组合：
 ![使用 devtool modify 修改源码的已有组件][23]
 
