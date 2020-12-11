@@ -414,6 +414,12 @@ devtool finish 命令作为最终的工序，恢复标准层和上游源码的�
 >
 >当你不想继续工作，你可以用 devtool reset 命令恢复的工作区域。如果你用了这个命令，请记住源码树还是保留的。
 
+2.4.1. 使用 devtool modify 修改源码的已有组件
+======
+
+devtool modify 命令预备如何在已有代码上的工作，在这用已有的配方来构建软件。此命令很方便的让你从上游解压源码，保持对共用此代码的其他开发者的补丁跟踪和收集。
+根据你的特定需求，你可以选择 devtool modify 命令的参数和选项形成不同的组合。下面图表展示了 devtool modify 命令的不同的组合：
+![使用 devtool modify 修改源码的已有组件][23]
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
@@ -443,4 +449,4 @@ devtool finish 命令作为最终的工序，恢复标准层和上游源码的�
 [20]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#ref-devtool-reference
 [21]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#devtool-the-workspace-layer-structure
 [22]: https://www.yoctoproject.org/docs/3.0/sdk-manual/figures/sdk-devtool-add-flow.png
-
+[23]: https://www.yoctoproject.org/docs/3.0/sdk-manual/figures/sdk-devtool-modify-flow.png
