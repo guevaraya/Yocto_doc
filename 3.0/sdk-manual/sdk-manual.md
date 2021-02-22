@@ -437,6 +437,8 @@ devtool modify 命令用来如何在已有代码上做准备工作，然后用�
 $ devtool modify recipe
 ```
 
+一旦 devtool 找到 配方（recipe），devtool 用配方的 SRC_URI 变量 找到 源码和其他开发者本地补丁。
+
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
 译者：[巴龙](https://github.com/guevaraya)
