@@ -437,9 +437,9 @@ devtool modify 命令用来如何在已有代码上做准备工作，然后用�
 $ devtool modify recipe
 ```
 
-一旦 devtool 找到 配方（recipe），devtool 用配方的 SRC_URI 变量 找到 源码和其他开发者提供的本地补丁。
+一旦 devtool 找到配方（recipe），devtool 用配方的 SRC_URI 变量找到源码和其他开发者提供的本地补丁。
 
-这个场景下，参数 srctree 为空。结果，因此，devtool modify 命令的默认行为是解压源码到  SRC_URI 参数指定的本地 Git 目录。也就是说， 本地解压的源码目录是 devtool 默认工作目录。结果是该命令在工作目录配置了源码和追击附件配方文件，而配方还保留在它原来的路径。
+这个场景下，参数 srctree 为空。结果，因此，devtool modify 命令的默认行为是解压源码到  [SRC_URI][24] 参数指定的本地 Git 目录。也就是说， 本地解压的源码目录就是 devtool 默认工作目录。结果是该命令在工作目录配置了源码和附件配方文件，而配方还保留在它原来的路径。
 
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
@@ -470,3 +470,4 @@ $ devtool modify recipe
 [21]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#devtool-the-workspace-layer-structure
 [22]: https://www.yoctoproject.org/docs/3.0/sdk-manual/figures/sdk-devtool-add-flow.png
 [23]: https://www.yoctoproject.org/docs/3.0/sdk-manual/figures/sdk-devtool-modify-flow.png
+[24]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-SRC_URI
