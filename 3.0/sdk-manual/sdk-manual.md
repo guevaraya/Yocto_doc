@@ -441,6 +441,9 @@ $ devtool modify recipe
 
 这个场景下，参数 srctree 为空。结果，因此，devtool modify 命令的默认行为是解压源码到  [SRC_URI][24] 参数指定的本地 Git 目录。也就是说， 本地解压的源码目录就是 devtool 默认工作目录。结果是该命令在工作目录配置了源码和附件配方文件，而配方还保留在它原来的路径。
 
+另外，如果你有任何本地非补丁文件（例如：在 SRC_URI 语句包含 file:// 引用文件，但不包括 \*.patch/ 或 \*.diff），这个文件被拷贝到新创建源码树的一个 oe-local-files 的目录。拷贝文件到这个地方后可以让我们便捷在这修改文件。您对这些文件的任何修改和添加都会在下一次构建中体现，就像你对源码的任何修改的效果一样。
+
+
 原文: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html
 
 译者：[巴龙](https://github.com/guevaraya)
