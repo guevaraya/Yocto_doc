@@ -10,12 +10,13 @@ Yocto 文档中文翻译项目
 
 正式发布的文档：
 
-- [YP-CORE ZEUS 3.0][2]
-- [YP-CORE WARRIOR 2.7.1][2]
-- [YP-CORE WARRIOR 2.7][2]
-- [YP-CORE THUD 2.6.3][2]
-- [YP-CORE THUD 2.6.2][2]
-- [YP-CORE SUMO 2.5.3][2]
+- [YP-CORE ZEUS 3.5(dev)][2]
+- [YP-CORE WARRIOR 3.4][22]
+- [YP-CORE WARRIOR 3.3.3][23]
+- [YP-CORE WARRIOR 3.2.4][24]
+- [YP-CORE THUD 3.1.11][25]
+- [YP-CORE THUD 3.0.4][26]
+- [YP-CORE SUMO 2.7.4][27]
 可以在以上列表选择发布的文档版本。您也可在维基百科的[提示与技巧][3]页面查看最新的文档，这个文档还处于移植和开发阶段的手册。
 
 Yocto 项目® 入门 [文档归档][12]
@@ -56,7 +57,7 @@ Yocto 项目® 入门 [文档归档][12]
 原文:https://www.yoctoproject.org/docs/
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/deed.zh
-[2]: https://www.yoctoproject.org/docs/
+[2]: https://docs.yoctoproject.org/
 [3]: https://wiki.yoctoproject.org/wiki/TipsAndTricks
 [4]: software-overview/software-overview.md
 [5]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-1.jpg
@@ -76,4 +77,11 @@ Yocto 项目® 入门 [文档归档][12]
 [19]: 3.0/bitbake-user-manual/bitbake-user-manual.html
 [20]: 3.0/ref-manual/ref-manual.html
 [21]: 3.0/mega-manual/mega-manual.html
+[22]: https://docs.yoctoproject.org/3.4/
+[23]: https://docs.yoctoproject.org/3.3.3/
+[24]: https://docs.yoctoproject.org/3.2.4/
+[25]: https://docs.yoctoproject.org/3.1.11/
+[26]: https://docs.yoctoproject.org/3.0.4/
+[27]: https://docs.yoctoproject.org/2.7.4/
+
 
