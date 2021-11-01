@@ -55,7 +55,7 @@ Yocto 项目® 入门 [文档归档][12]
 |提供了Yocto 项目工具和组件的完整参考，如嵌入式开源和 Poky 的参考发行版 |提供了完整的，可检索的仅 HTML 格式的 Yocto 项目手册，这个手册（即 Meta手册）仅包含无文本的手册或指南|
 
 
-原文:https://www.yoctoproject.org/docs/
+原文:https://docs.yoctoproject.org/
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/deed.zh
 [2]: https://docs.yoctoproject.org/
