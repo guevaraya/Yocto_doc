@@ -79,11 +79,10 @@ Yocto 项目® 入门 [文档归档][12]
 [16]: 3.5/bsp-guide/README.md
 [17]: 3.5/profile-manual/README.md
 [18]: 3.5/kernel-dev/README.md
-[19]: 3.5/toaster-manual/toaster-manual.html
-[#]: 3.0/toaster-manual/README.md
-[20]: 3.5/bitbake-user-manual/README.html
-[21]: 3.5/ref-manual/README.html
-[28]: 3.5/mega-manual/README.html
+[19]: 3.5/toaster-manual/toaster-manual.md
+[20]: 3.5/bitbake-user-manual/README.md
+[21]: 3.5/ref-manual/README.md
+[28]: 3.5/mega-manual/README.md
 
 [22]: https://docs.yoctoproject.org/3.4/
 [23]: https://docs.yoctoproject.org/3.3.3/
