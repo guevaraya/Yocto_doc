@@ -68,7 +68,7 @@ Checking connectivity... done.
 
 然后转到 poky 目录下并查看现有的分支：
 ```
-$ cd poky
+$ cd ~/poky
 $ git branch -a
 .
 .
@@ -131,7 +131,7 @@ $ cd ~/poky
 
      The Yocto Project has extensive documentation about OE including a reference
      manual which can be found at:
-         http://yoctoproject.org/documentation
+         https://docs.yoctoproject.org
 
      For more information about OpenEmbedded see their website:
          http://www.openembedded.org/
@@ -143,11 +143,17 @@ $ cd ~/poky
 
      Common targets are:
          core-image-minimal
+         core-image-full-cmdline
          core-image-sato
+         core-image-weston
          meta-toolchain
          meta-ide-support
 
-     You can also run generated qemu images with a command like 'runqemu qemux86'
+     You can also run generated QEMU images with a command like 'runqemu qemux86'
+     Other commonly useful commands are:
+     - 'devtool' and 'recipetool' handle common recipe tasks
+     - 'bitbake-layers' handles common layer tasks
+     - 'oe-pkgdata-util' handles common target package tasks
  ```
  除此之外，本例子中的这个脚本创建一个[构建目录][10]，位置在[源码目录][11]的 build 下。当脚本运行后，当前的工作目录被设置为构建目录。后面当构建完成后，构建目录包含所有构建动态创建的文件。
  
@@ -157,20 +163,21 @@ __2. 检查你的本地配置文件:__ 构建环境配置了之后，一个位�
 >__提示__
 >
 >你可以用镜像显著的加速你的构建并解决获取失败问题。增加这下面几行到构建目录的 local.conf 来使用镜像下载：
->     SSTATE_MIRRORS = "\
->     file://.* http://sstate.yoctoproject.org/dev/PATH;downloadfilename=PATH \n \
->     file://.* http://sstate.yoctoproject.org/2.7/PATH;downloadfilename=PATH \n \
->     file://.* http://sstate.yoctoproject.org/3.0/PATH;downloadfilename=PATH \n \
->     "                      
-> 上面的例子展示了如何为 Yocto 项目 2.7,3.0和开发域添加 sstate 路径。有关 sstate 位置的完整索引，请参照 [http://sstate.yoctoproject.org/][12]。
+> SSTATE_MIRRORS = "\
+> file://.* http://sstate.yoctoproject.org/dev/PATH;downloadfilename=PATH \n \
+> file://.* http://sstate.yoctoproject.org/3.3.3/PATH;downloadfilename=PATH \n \
+> file://.* http://sstate.yoctoproject.org/3.4/PATH;downloadfilename=PATH \n \
+> "
+>
+> 上面的例子展示了如何为 Yocto 项目 3.3.3，3.4，和开发域添加 sstate 路径。有关 sstate 位置的完整索引，请参照 [http://sstate.yoctoproject.org/][12]。
 
 __3. 开始构建：__ 用下面的命令接着为目录机器构建一个系统镜像，本例的镜像名为 core-image-sato：
 > $ bitbake core-image-sato
-关于 bitebake 命令的信息，请参考Yocto 项目概述和概要手册的 “[Bitebake][13]”章节，或查看 BiteBak 用户手册的 “[Bitebak命令][14]”章节。
+关于 bitebake 命令的信息，请参考Yocto 项目概述和概要手册的 “[Bitebake][13]”，或查看 BiteBak 用户手册的 “[Bitebak命令][14]”章节。
 
 __4. 用 QEMU 模拟你的镜像：__ 一旦你的镜像构建后，你需要运行 QEMU，这是一个 yocto 项目自带的快速模拟器：
 ```
-     $ runqemu qemux86
+     $ runqemu qemux86-64
 ```
 如果你想学习更多关于运行 QEMU 的信息，请见Yocto 项目开发任务手册的 “[使用快速模拟器（QEMU）][15]”章节。
 
@@ -187,7 +194,7 @@ __5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-
 
 下面三步是介绍如何增加一个硬件层：
 
-1.__找到一个层：__ 已经存在很多硬件层。[Yotco 项目源码仓][16]已经有很多硬件层。这个例子增加一名叫 [meta-altera][17] 的硬件层。
+1.__找到一个层：__ 很多硬件层都是可用的。[Yotco 项目源码仓][16]已经有很多硬件层。这个例子增加一名叫 [meta-altera][17] 的硬件层。
 
 2.__克隆一个层__ 用 Git 在您的机器上制作一个本地拷贝。你可以把拷贝放到 Poky 仓的主目录里。
 ```
@@ -201,7 +208,11 @@ __5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-
      Resolving deltas: 100% (13385/13385), done.
      Checking connectivity... done.
 ```
-现在硬件层已经和其他 Poky 参考仓一块作为构建主机的元数据，它包含了所有来自 Altera（属于英特尔）的支持硬件的元数据。
+在你的构建主机上的Poky 参考仓里，与其他layer相邻目录有一个名叫 meta-altera，他包含支持 Alerra 硬件的所有的meta数据，这个归属于英特尔。
+
+>__提示__
+>
+> 现在硬件层已经和其他 Poky 参考仓一块作为构建主机的元数据，它包含了所有来自 Altera（属于英特尔）的支持硬件的元数据。
 
 3.__修改特定硬件的配置：__ 构建特定机器的[MACHINE][18]变量在 local.conf 文件中。例如，设置 MACHINE 变量为 “cyclone5”。这个配置信息就生效了：https://github.com/kraj/meta-altera/blob/master/conf/machine/cyclone5.conf。
 >__提示__
@@ -216,7 +227,8 @@ __5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-
      $ bitbake-layers add-layer ../meta-altera
      NOTE: Starting bitbake server...
      Parsing recipes: 100% |##################################################################| Time: 0:00:32
-     Parsing of 918 .bb files complete (0 cached, 918 parsed). 1401 targets, 123 skipped, 0 masked, 0 errors.
+     Parsing of 918 .bb files complete (0 cached, 918 parsed). 1401 targets, 
+     123 skipped, 0 masked, 0 errors.
  ```
 您可查看更多增加层的信息，请见“[用 bitebake-layer 脚本添加一个层][21]”章节。
 
