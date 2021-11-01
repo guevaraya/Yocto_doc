@@ -55,46 +55,55 @@ $ sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential chrp
 
 一旦你的机器按照安装说明已经完成，你需要在你的构建主机上获取一个 Poky 仓库的拷贝。用以下命令拷贝 Poky 仓。
 ``` 
-     $ git clone git://git.yoctoproject.org/poky
-     Cloning into 'poky'...
-     remote: Counting objects: 432160, done.
-     remote: Compressing objects: 100% (102056/102056), done.
-     remote: Total 432160 (delta 323116), reused 432037 (delta 323000)
-     Receiving objects: 100% (432160/432160), 153.81 MiB | 8.54 MiB/s, done.
-     Resolving deltas: 100% (323116/323116), done.
-     Checking connectivity... done.
+$ git clone git://git.yoctoproject.org/poky
+Cloning into 'poky'...
+remote: Counting
+objects: 432160, done. remote: Compressing objects: 100%
+(102056/102056), done. remote: Total 432160 (delta 323116), reused
+432037 (delta 323000) Receiving objects: 100% (432160/432160), 153.81 MiB | 8.54 MiB/s, done.
+Resolving deltas: 100% (323116/323116), done.
+Checking connectivity... done.
 ```          
-转到 poky 目录下并查看所有标签：
+转到 [正式发布wiki页面][31],选择一个正式版本（例如：honister），对应的最新的稳定发布版本或长期支持版本。
+
+然后转到 poky 目录下并查看现有的分支：
 ```
-     $ cd poky
-     $ git fetch --tags
-     $ git tag
-     1.1_M1.final
-     1.1_M1.rc1
-     1.1_M1.rc2
-     1.1_M2.final
-     1.1_M2.rc1
-        .
-        .
-        .
-     yocto-2.5
-     yocto-2.5.1
-     yocto-2.5.2
-     yocto-2.6
-     yocto-2.6.1
-     yocto-2.6.2
-     yocto-2.7
-     yocto_1.5_M5.rc8
+$ cd poky
+$ git branch -a
+.
+.
+.
+remotes/origin/HEAD -> origin/master
+remotes/origin/dunfell
+remotes/origin/dunfell-next
+.
+.
+.
+remotes/origin/gatesgarth
+remotes/origin/gatesgarth-next
+.
+.
+.
+remotes/origin/master
+remotes/origin/master-next
+.
+.
+.
  ```           
  
-例如，检出 yocto-3.0 的分支：
+例如这个例子中，需检出Honister发行版的honister分支：
 
 ```
-     $ git checkout tags/yocto-3.0 -b my-yocto-3.0
-     Switched to a new branch 'my-yocto-3.0'
+$ git checkout -t origin/honister -b my-honister
+Branch 'my-honister' set up to track remote branch 'honister' from 'origin'.
+Switched to a new branch 'my-honister'
 ```
 
-上面的 Git 检出命令创建了一个名为 my-yocto-3.0 的本地分支。这个分支的文件与 yocto 项目 yocto-3.0 的 “zeus” 开发分支的文件完全一样。
+上面的 Git 检出命令创建了一个名为 my-honister 的本地分支。这个分支的文件与 honister 发行版分支的文件完全一样。
+现在就可以在本地文件的同级目录下用下面的常规命令同步正式分支：
+```
+$ git pull
+```
 
 获取更多 Yocto 项目有关仓库的选项和信息，请见 Yocto 项目开发任务手册的[“本地 Yocto 项目源码文件”][7]章节。
 
@@ -280,5 +289,6 @@ via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoproje
 [28]: http://www.yoctoproject.org/docs/3.0.1/ref-manual/ref-manual.html#resources-links-and-related-documentation
 [29]: https://docs.yoctoproject.org/dev-manual/start.html#setting-up-to-use-windows-subsystem-for-linux-wslv2
 [30]: ../overview-manual/README.md
+[31]: https://wiki.yoctoproject.org/wiki/Releases
 
 via: https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html
