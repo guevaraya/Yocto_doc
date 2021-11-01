@@ -34,7 +34,7 @@
 + 50 GB 的剩余空间
 + 可支持的 Linux 发行版（例如：最新的发行版Fedora，openSUSE，CentOS，Debian，或 Ubuntu）。支持 Yocto 项目的 Linux 发行版列表，请见：Yocto 项目的开发任务手册的[Linux发行版][6]章节。
 + Git 1.8.3.1 以上版本
-+ tar 1.27 以上版本
++ tar 1.28 以上版本
 + Python 3.6.0 以上版本
 如果构建的主机不满足以上列表任一版本要求，你可采取一定措施构建系统确保可以使用 Yocto 项目。可参看 Yocto 项目参考手册的[GIT,Tar Python版本需求]章节获取更多信息。
 
@@ -43,16 +43,13 @@
 
 You must install essential host packages on your build host. The following command installs the host packages based on an Ubuntu distribution:
 你需要安装一些必要的主机应用。下面是在 Ubuntu 发行版上安装主机应用的命令：
-
+```
+$ sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint3 xterm python3-subunit mesa-common-dev zstd liblz4-tool
+```
 >__提示__
 >
 > 在所有兼容的 Linux 发行版上需要安装的主机应用，请见 Yocto 项目参考手册的[“构建主机的必要应用”][6]章节。
-``` 
-$ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
-     build-essential chrpath socat cpio python python3 python3-pip python3-pexpect \
-     xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev \
-     pylint3 xterm
-``` 
+
 使用 Git 克隆 Poky
 ======
 
