@@ -36,13 +36,13 @@ Yocto 项目® 入门 [文档归档][12]
 |[**YOCTO 项目概述和概念手册**][14] |[**YOCTO 项目开发任务手册**][15]  |[**YOCTO 项目板级支持包（BSP）开发指南**][16] |
 |:-|:-|:-|
 |这个手册介绍 Yocto 的概念，软件概述，常见方法（BKMs）和其他一些适合新手的更多入门信息|提供镜像和应用程序开发过程的概述|定义一个 BSP 组件的框架，以便于认知的布局&nbsp; &nbsp;|
-|[**YOCTO 项目分析和跟踪手册**][14]|[**YOCTO 项目 Linux 内核开发手册**][14] ||
+|[**YOCTO 项目分析和跟踪手册**][17]|[**YOCTO 项目 Linux 内核开发手册**][18] ||
 |展示了一套通用且有用的项目分析和跟踪方案包括他们的应用程序和对应的工具。|提供了 Yocto 项目的 Linux 内核的 Metadata 的背景信息，并介绍了在 Yocto 项目环境中直接用 Linux 内核工具的可以直接运行的常见任务。|&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;|
 
 工具手册
 ======
 
-| [**Toaster 用户手册**][14] <br> |[**Bitbake 用户手册**][15] <br>|
+| [**Toaster 用户手册**][19] <br> |[**Bitbake 用户手册**][20] <br>|
 |:---|:---|
 |Toaster 是一个基于 Bitbake 的网络接口的 Yocto 编译系统，这个手册仅说明网络接口| 提供了 Batbake 工具的用户参考手册，嵌入式开源编译系统用它来任务执行和调度工具，从而编译出镜像。|
 
@@ -50,7 +50,7 @@ Yocto 项目® 入门 [文档归档][12]
 参考手册
 ======
 
-| [**Yocto 项目参考手册**][14] <br> |[**Yocto 项目全文档集（Meta 手册）**][15] <br> |
+| [**Yocto 项目参考手册**][21] <br> |[**Yocto 项目全文档集（Meta 手册）**][28] <br> |
 |:---|:---|
 |提供了Yocto 项目工具和组件的完整参考，如嵌入式开源和 Poky 的参考发行版 |提供了完整的，可检索的仅 HTML 格式的 Yocto 项目手册，这个手册（即 Meta手册）仅包含无文本的手册或指南|
 
@@ -77,13 +77,14 @@ Yocto 项目® 入门 [文档归档][12]
 [15]: 3.5/dev-manual/README.md
 [#]: 3.0/dev-manual/dev-manual.md
 [16]: 3.5/bsp-guide/README.md
-[#]: 3.0/profile-manual/README.md
-[17]: 3.5/kernel-dev/README.md
-[18]: 3.5/toaster-manual/toaster-manual.html
+[17]: 3.5/profile-manual/README.md
+[18]: 3.5/kernel-dev/README.md
+[19]: 3.5/toaster-manual/toaster-manual.html
 [#]: 3.0/toaster-manual/README.md
-[19]: 3.5/bitbake-user-manual/README.html
-[20]: 3.5/ref-manual/README.html
-[21]: 3.5/mega-manual/README.html
+[20]: 3.5/bitbake-user-manual/README.html
+[21]: 3.5/ref-manual/README.html
+[28]: 3.5/mega-manual/README.html
+
 [22]: https://docs.yoctoproject.org/3.4/
 [23]: https://docs.yoctoproject.org/3.3.3/
 [24]: https://docs.yoctoproject.org/3.2.4/
