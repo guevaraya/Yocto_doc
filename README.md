@@ -26,14 +26,14 @@ Yocto 项目® 入门 [文档归档][12]
 
 |[![Yocto Project Quick Build][5]][9] |[![what-i-wish-id-known][6]][10] |[![what-i-wish-id-known][7]][11] |[![what-i-wish-id-known][8]][13] |
 |----|-|-|--|
-|[**YOCTO 项目快速构建 3.5**][9] <br>这个文档指导你在模拟器和实际机器上如何快速编译和运行 |[**应知应会**][10] <br> 点亮您的项目明珠，作为开发者在入手前应该知道哪些东西|[**定制系统开发环境**][11] <br>如何配置系统，然后下一步深入学习入门文档和开发手册|[**Yocto 项目应用程序和扩展程序开发工具包（ESDK）3.0**][13] <br> 对应用工程师来说，需要足够学习 Yocto 项目以便于与系统工程师有效的沟通协作|
+|[**YOCTO 项目快速构建 **][9] <br>这个文档指导你在模拟器和实际机器上如何快速编译和运行 |[**应知应会**][10] <br> 点亮您的项目明珠，作为开发者在入手前应该知道哪些东西|[**定制系统开发环境**][11] <br>如何配置系统，然后下一步深入学习入门文档和开发手册|[**Yocto 项目应用程序和扩展程序开发工具包（ESDK）**][13] <br> 对应用工程师来说，需要足够学习 Yocto 项目以便于与系统工程师有效的沟通协作|
 
 开发者手册
 ======
 
 
 
-|[**YOCTO 项目概述和概念手册 3.5**][14] |[**YOCTO 项目开发任务手册 3.0**][15]  |[**YOCTO 项目板级支持包（BSP）开发指南 3.0**][16] |
+|[**YOCTO 项目概述和概念手册 **][14] |[**YOCTO 项目开发任务手册 **][15]  |[**YOCTO 项目板级支持包（BSP）开发指南 **][16] |
 |:-|:-|:-|
 |这个手册介绍 Yocto 的概念，软件概述，常见方法（BKMs）和其他一些适合新手的更多入门信息|提供镜像和应用程序开发过程的概述|定义一个 BSP 组件的框架，以便于认知的布局&nbsp; &nbsp;|
 |[**YOCTO 项目分析和跟踪手册 3.0**][14]|[**YOCTO 项目 Linux 内核开发手册 3.0**][14] ||
@@ -42,7 +42,7 @@ Yocto 项目® 入门 [文档归档][12]
 工具手册
 ======
 
-| [**Toaster 用户手册 3.0**][14] <br> |[**Bitbake 用户手册 3.0**][15] <br>|
+| [**Toaster 用户手册**][14] <br> |[**Bitbake 用户手册**][15] <br>|
 |:---|:---|
 |Toaster 是一个基于 Bitbake 的网络接口的 Yocto 编译系统，这个手册仅说明网络接口| 提供了 Batbake 工具的用户参考手册，嵌入式开源编译系统用它来任务执行和调度工具，从而编译出镜像。|
 
@@ -50,7 +50,7 @@ Yocto 项目® 入门 [文档归档][12]
 参考手册
 ======
 
-| [**Yocto 项目参考手册 3.0**][14] <br> |[**Yocto 项目全文档集（Meta 手册） 3.0**][15] <br> |
+| [**Yocto 项目参考手册 **][14] <br> |[**Yocto 项目全文档集（Meta 手册） **][15] <br> |
 |:---|:---|
 |提供了Yocto 项目工具和组件的完整参考，如嵌入式开源和 Poky 的参考发行版 |提供了完整的，可检索的仅 HTML 格式的 Yocto 项目手册，这个手册（即 Meta手册）仅包含无文本的手册或指南|
 
@@ -72,14 +72,17 @@ Yocto 项目® 入门 [文档归档][12]
 [12]: https://www.yoctoproject.org/docs/archived-documents/
 [13]: 3.5/sdk-manual/README.md
 [#]: 3.0/sdk-manual/sdk-manual.md
-[14]: 3.0/overview-manual/overview-manual.md
-[15]: 3.0/dev-manual/dev-manual.md
-[16]: 3.0/profile-manual/profile-manual.md
-[17]: 3.0/kernel-dev/kernel-dev.md
-[18]: 3.0/toaster-manual/toaster-manual.html
-[19]: 3.0/bitbake-user-manual/bitbake-user-manual.html
-[20]: 3.0/ref-manual/ref-manual.html
-[21]: 3.0/mega-manual/mega-manual.html
+[14]: 3.5/overview-manual/README.md
+[#]: 3.0/overview-manual/overview-manual.md
+[15]: 3.5/dev-manual/README.md
+[#]: 3.0/dev-manual/dev-manual.md
+[16]: 3.5/profile-manual/README.md
+[17]: 3.5/kernel-dev/README.md
+[18]: 3.5/toaster-manual/toaster-manual.html
+[#]: 3.0/toaster-manual/README.md
+[19]: 3.5/bitbake-user-manual/README.html
+[20]: 3.5/ref-manual/README.html
+[21]: 3.5/mega-manual/README.html
 [22]: https://docs.yoctoproject.org/3.4/
 [23]: https://docs.yoctoproject.org/3.3.3/
 [24]: https://docs.yoctoproject.org/3.2.4/
