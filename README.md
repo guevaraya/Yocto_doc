@@ -82,7 +82,7 @@ Yocto 项目® 入门 [文档归档][12]
 [19]: 3.5/toaster-manual/README.md
 [20]: 3.5/bitbake-user-manual/README.md
 [21]: 3.5/ref-manual/README.md
-[28]: 3.5/mega-manual/README.md
+[28]: 3.0/mega-manual/README.md
 
 [22]: https://docs.yoctoproject.org/3.4/
 [23]: https://docs.yoctoproject.org/3.3.3/
