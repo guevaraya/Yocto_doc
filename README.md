@@ -76,7 +76,8 @@ Yocto 项目® 入门 [文档归档][12]
 [#]: 3.0/overview-manual/overview-manual.md
 [15]: 3.5/dev-manual/README.md
 [#]: 3.0/dev-manual/dev-manual.md
-[16]: 3.5/profile-manual/README.md
+[16]: 3.5/bsp-guide/README.md
+[#]: 3.0/profile-manual/README.md
 [17]: 3.5/kernel-dev/README.md
 [18]: 3.5/toaster-manual/toaster-manual.html
 [#]: 3.0/toaster-manual/README.md
