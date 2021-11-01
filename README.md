@@ -33,7 +33,7 @@ Yocto 项目® 入门 [文档归档][12]
 
 
 
-|[**YOCTO 项目概述和概念手册 3.0**][14] |[**YOCTO 项目开发任务手册 3.0**][15]  |[**YOCTO 项目板级支持包（BSP）开发指南 3.0**][16] |
+|[**YOCTO 项目概述和概念手册 3.5**][14] |[**YOCTO 项目开发任务手册 3.0**][15]  |[**YOCTO 项目板级支持包（BSP）开发指南 3.0**][16] |
 |:-|:-|:-|
 |这个手册介绍 Yocto 的概念，软件概述，常见方法（BKMs）和其他一些适合新手的更多入门信息|提供镜像和应用程序开发过程的概述|定义一个 BSP 组件的框架，以便于认知的布局&nbsp; &nbsp;|
 |[**YOCTO 项目分析和跟踪手册 3.0**][14]|[**YOCTO 项目 Linux 内核开发手册 3.0**][14] ||
@@ -70,7 +70,8 @@ Yocto 项目® 入门 [文档归档][12]
 [10]: what-i-wish-id-known/what-i-wish-id-known.md
 [11]: transitioning-to-a-custom-environment.md
 [12]: https://www.yoctoproject.org/docs/archived-documents/
-[13]: 3.0/sdk-manual/sdk-manual.md
+[13]: 3.5/sdk-manual/README.md
+[#]: 3.0/sdk-manual/sdk-manual.md
 [14]: 3.0/overview-manual/overview-manual.md
 [15]: 3.0/dev-manual/dev-manual.md
 [16]: 3.0/profile-manual/profile-manual.md
