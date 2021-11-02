@@ -261,11 +261,26 @@ __5. 退出 QEMU：__ 通过单击关机图标或在QEMU的文本框输入 CtrL-
 + __开发者视频教程：__ [Yocto 项目入门视频][24]-为不熟悉 Yocto 项目但熟悉 Linux 主机构建的用户提供了 30分钟时长的新开发者视频教程。虽然这个视频有些过时，但是对于初学者来说上面的基本概念和介绍都是有用的。
 + __Yocto 项目概述和概念手册：__ [Yocto 项目概述和概念手册][25]是一个对学习 Yocto 项目非常有用的地方。手册介绍了 Yocto 项目和其开发环境。同时也提供了 Yocto 项目有关各方面的概念信息。
 + __Yocto项目WIKI:__ [Yocto 项目WIKI][26]提供了进一步深入了解 Yocto 项目的额外信息，如发布信息，项目计划和质量信息。
-+ __Yocto项目邮件列表:__ 相关的邮件列表提供了讨论，补丁提交和公告的论坛。多个邮件列表根据大家关心的不同领域分组。查看Yocto 项目参考手册的“[邮件列表][27]”章节可获取完整的邮件列表信息。
++ __Yocto项目邮件列表:__ 相关的邮件列表提供了讨论，补丁提交和公告的论坛。多个邮件列表根据话题分组。查看Yocto 项目参考手册的“[邮件列表][27]”章节可获取完整的邮件列表信息。
 + __连接和其他文档的综合列表:__ Yocto 项目参考手册的“[链接和相关文档][28]”章节提供了所有相关链接和其他用户文档的综合列表。
 
+----
+Yocto Project®
+<docs@lists.yoctoproject.org>
 
-via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html
+此文允许被复制，分发以及或者修改此文档，但需要遵循知识共享组织发布的[共享协议2.0 UK: England & Wales][1]条款
+
+如果该手册（或其他 Yocto 项目文档）有任何可疑或问题，或需要提交新功能或修改，请发送邮件/提交补丁到 Yocto 项目文档邮件列表 docs@lists.yoctoproject.org 或登陆 [Libera的自由聊天频道][32] #yocto。
+
+----
+一个 Linux基金会的合作项目。
+Linux Foundation® 和Yocto Project®是Linux基金会的注册商标，版权所有。
+Linux® 是 Linus Torvalds 的注册商标。
+© Copyright 2010-2021， Linux 基金会 CC-BY-SA-2.0-UK 许可协议
+本文最近更新于2021年10月29日
+
+
+via: https://www.yoctoproject.org/docs/brief-yoctoprojectqs/brief-yoctoprojectqs.html
 
 译者：[guevara](https://github.com/guevaraya)
 校对：[校对者ID](https://github.com/校对者ID)
@@ -302,5 +317,6 @@ via: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoproje
 [29]: https://docs.yoctoproject.org/dev-manual/start.html#setting-up-to-use-windows-subsystem-for-linux-wslv2
 [30]: ../overview-manual/README.md
 [31]: https://wiki.yoctoproject.org/wiki/Releases
+[32]: https://libera.chat/
 
 via: https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html
