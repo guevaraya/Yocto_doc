@@ -272,12 +272,11 @@ Yocto Project®
 此文允许被复制，分发以及或者修改此文档，但需要遵循知识共享组织发布的[共享协议2.0 UK: England & Wales][1]条款
 如果该手册（或其他 Yocto 项目文档）有任何可疑或问题，或需要提交新功能或修改，请发送邮件/提交补丁到 Yocto 项目文档邮件列表 docs@lists.yoctoproject.org 或登陆 [Libera的自由聊天][32] #yocto 频道
 
-[^2]:
-一个 Linux基金会的合作项目。
-Linux Foundation® 和Yocto Project®是Linux基金会的注册商标，版权所有。
-Linux® 是 Linus Torvalds 的注册商标。
-© Copyright 2010-2021， Linux 基金会 CC-BY-SA-2.0-UK 许可协议
-本文最近更新于2021年10月29日
+[^2]: 一个 Linux基金会的合作项目。
+ Linux Foundation® 和Yocto Project®是Linux基金会的注册商标，版权所有。
+ Linux® 是 Linus Torvalds 的注册商标。
+ © Copyright 2010-2021， Linux 基金会 CC-BY-SA-2.0-UK 许可协议
+ 本文最近更新于2021年10月29日
 
 ----
 
