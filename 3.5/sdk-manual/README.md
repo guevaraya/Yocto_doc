@@ -17,7 +17,7 @@ Yocto 项目应用开发和扩展软件开发套件（eSDK）
   * [2.4.  在你的 SDK 流程中运用 devtool](extensible.md#24-在你的-sdk-流程中运用-devtool)
     * [2.4.1. 使用 devtool add 添加一个应用程序](extensible.md#241-使用-devtool-add-添加一个应用程序)
     * [2.4.2. 使用 devtool modify 修改已有的组件源码](extensible.md#242-使用-devtool-modify-修改源码的已有组件)
-    * [2.4.3. 使用 devtool upgrade 更新来创建一个新配方，用来兼容软件的新版本](extensible.md#243-用-devtool-upgrade-更新来创建一个新配方-用来兼容软件的新版本)
+    * [2.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方](extensible.md#243-使用-devtool-upgrade-来创建一个软件最新版本的配方)
   * [2.5. 进一步理解 devtool 的创建操作](extensible.md#25-进一步理解-devtool-的创建操作)
     * [2.5.1. 名称和版本号](extensible.md#251-名称和版本号)
     * [2.5.2. 依赖检查与映射](extensible.md#252-依赖检查与映射)
