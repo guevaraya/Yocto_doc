@@ -1,12 +1,5 @@
-1 介绍
-====
- 
-1.1. 介绍
-=====
-
 1.1.1. 交叉编译工具链
 ======
-
 
 1.1.2. Sysroots
 ======
@@ -14,81 +7,33 @@
 1.1.3. QEMU 模拟器
 ======
 
-
 1.2. SDK 开发模型
 ======
 
-.. SPDX-License-Identifier: CC-BY-SA-2.0-UK
+1 介绍
+====
 
-************
-Introduction
-************
-
-eSDK Introduction
+1.1 eSDK 介绍
 =================
+欢迎阅读 Yocto 项目应用开发和可扩展软件套件的 eSDK 手册。本手册主要涉及如何使用 Yocto 可扩展套件和标准SDK 来开发应用程序和镜像的相关信息。
 
-Welcome to the Yocto Project Application Development and the Extensible
-Software Development Kit (eSDK) manual. This manual
-explains how to use both the Yocto Project extensible and standard
-SDKs to develop applications and images.
+所有 SDK 的组成如下：
+* **交叉工具链**：工具链包含一个编译器，调试器和许多相关工具。
+* **库文件及其头文件，符号表**：指定镜像（例如 SDK编译的镜像匹配等）的库文件，头文件和符号表
+* **环境变量配置脚本**：这个 *.sh* 脚本文件只需要运行一次，通过定义变量和做一些使用 SDK 的准备工作来配置交叉开发的环境变量。
 
-All SDKs consist of the following:
+另外，一个可扩展 SDK 里有工具允许你容易的添加一个应用程序和镜像的库文件，修改现有组件的源码，测试目标硬件的变化，并很容易的集成一个应用层序到 [OpenEmbedded 构建系统][4]里。
 
--  *Cross-Development Toolchain*: This toolchain contains a compiler,
-   debugger, and various associated tools.
+你可以用一个 SDK 去独立的开发和测试在一些目标机器运行的代码。这些 SDK 是完全独立的。二进制程序是链接到他们本地 libc 的拷贝，这样使其对目标系统没有依赖。为了实现这点，动态加载器的指针在安装的时候配置后地址就不能动态改变了。这就是为什么有封装 populate_sdk 和 populate_sdk_ext 的分别。
 
--  *Libraries, Headers, and Symbols*: The libraries, headers, and
-   symbols are specific to the image (i.e. they match the image
-   against which the SDK was built).
+SDK 的另一个特性是用一套交叉工具链是构建任意指定的指令架构。这个特性的好处是目标硬件可以统一通过编译选项控制 gcc 编译。这些选项通过环境变量脚本配置生效并其包含在变量里，例如 [CC][5] 和 [LD][6]。这样会减少工具使用的内存占用。要知道，尽管是这样，每个目标设备仍然需要它的 sysroot 因为这些二进制是针对特定目标板的。
 
--  *Environment Setup Script*: This ``*.sh`` file, once sourced, sets up the
-   cross-development environment by defining variables and preparing for
-   SDK use.
+SDK 开发环境组成如下：
 
-Additionally, an extensible SDK has tools that allow you to easily add
-new applications and libraries to an image, modify the source of an
-existing component, test changes on the target hardware, and easily
-integrate an application into the :term:`OpenEmbedded Build System`.
+* 独立的 SDK 是指定架构的交叉编译和对应的 sysroot（目标文件和本地文件），这些都是通过 OpenEmbedded 构建系统编译处理的（例如 SDK）。交叉工具链和 sysroot 都是基于 Metadata 的配置和扩展的，这个允许在宿主机器上交叉开发目标硬件。另外，可扩展 SDK 包含了 devtool 的功能。
+* QEMU 模拟器可以允许模拟目标硬件。它不是 SDK 里的一部分。你必须单独编译和引用这个模拟器。QENU 在围绕 SDK 程序开发扮演重要的角色。
 
-You can use an SDK to independently develop and test code that is
-destined to run on some target machine. SDKs are completely
-self-contained. The binaries are linked against their own copy of
-``libc``, which results in no dependencies on the target system. To
-achieve this, the pointer to the dynamic loader is configured at install
-time since that path cannot be dynamically altered. This is the reason
-for a wrapper around the ``populate_sdk`` and ``populate_sdk_ext``
-archives.
-
-Another feature of the SDKs is that only one set of cross-compiler
-toolchain binaries are produced for any given architecture. This feature
-takes advantage of the fact that the target hardware can be passed to
-``gcc`` as a set of compiler options. Those options are set up by the
-environment script and contained in variables such as
-:term:`CC` and
-:term:`LD`. This reduces the space needed
-for the tools. Understand, however, that every target still needs its own
-sysroot because those binaries are target-specific.
-
-The SDK development environment consists of the following:
-
--  The self-contained SDK, which is an architecture-specific
-   cross-toolchain and matching sysroots (target and native) all built
-   by the OpenEmbedded build system (e.g. the SDK). The toolchain and
-   sysroots are based on a :term:`Metadata`
-   configuration and extensions, which allows you to cross-develop on
-   the host machine for the target hardware. Additionally, the
-   extensible SDK contains the ``devtool`` functionality.
-
--  The Quick EMUlator (QEMU), which lets you simulate target hardware.
-   QEMU is not literally part of the SDK. You must build and include
-   this emulator separately. However, QEMU plays an important role in
-   the development process that revolves around use of the SDK.
-
-In summary, the extensible and standard SDK share many features.
-However, the extensible SDK has powerful development tools to help you
-more quickly develop applications. Following is a table that summarizes
-the primary differences between the standard and extensible SDK types
-when considering which to build:
+总得来说，可扩展和标准的 SDK 有很多共同的特性。但是可扩展 SDK 作为强大的开发工具帮助你更快速的开发应用程序。下面的表格汇总了标准 SDK 和可扩展 SDK 之间在构建上的一些区别：
 
 +-----------------------+-----------------------+-----------------------+
 | *Feature*             | *Standard SDK*        | *Extensible SDK*      |
