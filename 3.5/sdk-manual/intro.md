@@ -183,3 +183,46 @@ You just need to follow these general steps:
 The remainder of this manual describes how to use the extensible and
 standard SDKs. There is also information in appendix form describing
 how you can build, install, and modify an SDK.
+
+
+
+[1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
+[2]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#hardware-build-system-term
+[3]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#setting-up-to-use-crops
+[4]: https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
+[5]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#hardware-build-system-term
+[6]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#required-packages-for-the-build-host
+[7]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#locating-yocto-project-source-files
+[8]: https://wiki.yoctoproject.org/wiki/Working_Behind_a_Network_Proxy
+[9]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#structure-core-script
+[10]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
+[11]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#source-directory
+[12]: http://sstate.yoctoproject.org/
+[13]: http://www.yoctoproject.org/docs/3.0/overview-manual/overview-manual.html#usingpoky-components-bitbake
+[14]: http://www.yoctoproject.org/docs/3.0/bitbake-user-manual/bitbake-user-manual.html#bitbake-user-manual-command
+[15]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#dev-manual-qemu
+[16]: http://git.yoctoproject.org/
+[17]: https://github.com/kraj/meta-altera
+[18]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-MACHINE
+[19]: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html#conf-file-step
+[20]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
+[21]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#adding-a-layer-using-the-bitbake-layers-script
+[22]: http://www.yoctoproject.org/docs/3.0.1/dev-manual/dev-manual.html#creating-a-general-layer-using-the-bitbake-layers-script
+[23]: http://www.yoctoproject.org/
+[24]: http://vimeo.com/36450321
+[25]: http://www.yoctoproject.org/docs/3.0.1/overview-manual/overview-manual.html
+[26]: https://wiki.yoctoproject.org/
+[27]: http://www.yoctoproject.org/docs/3.0.1/ref-manual/ref-manual.html#resources-mailinglist
+[28]: http://www.yoctoproject.org/docs/3.0.1/ref-manual/ref-manual.html#resources-links-and-related-documentation
+[29]: https://docs.yoctoproject.org/dev-manual/start.html#setting-up-to-use-windows-subsystem-for-linux-wslv2
+[30]: ../overview-manual/README.md
+[31]: https://wiki.yoctoproject.org/wiki/Releases
+[32]: https://libera.chat/
+
+---
+via: https://docs.yoctoproject.org/sdk-manual/intro.html
+
+译者：[guevara](https://github.com/guevaraya)
+校对：[校对者ID](https://github.com/校对者ID)
+版权所有© 2010-2019 Linux 基金会
+
