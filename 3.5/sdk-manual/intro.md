@@ -1,14 +1,12 @@
-1.1.1. 交叉编译工具链
-======
+[#]: subject: "快速构建 Yocto 项目"
+[#]: via: "https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html"
+[#]: author: "The Linux Foundation"
+[#]: collector: "guevaraya"
+[#]: translator: "guevaraya "
+[#]: reviewer: " "
+[#]: publisher: " "
+[#]: url: ""
 
-1.1.2. Sysroots
-======
-
-1.1.3. QEMU 模拟器
-======
-
-1.2. SDK 开发模型
-======
 
 1 介绍
 ====
@@ -68,6 +66,20 @@ SDK 开发环境组成如下：
        supported by default.
 .. [4] You must build and make the shared state available to extensible SDK
        users for "packages" you want to enable users to install.
+       
+       
+1.1.1. 交叉编译工具链
+======
+
+1.1.2. Sysroots
+======
+
+1.1.3. QEMU 模拟器
+======
+
+1.2. SDK 开发模型
+======
+
 
 The Cross-Development Toolchain
 -------------------------------
