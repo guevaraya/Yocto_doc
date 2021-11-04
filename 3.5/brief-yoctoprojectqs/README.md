@@ -279,7 +279,7 @@ Linux® 是 Linus Torvalds 的注册商标。
 本文最近更新于2021年10月29日
 
 ---
-via: https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html
+via: https://www.yoctoproject.org/docs/3.0/sdk-manual/sdk-manual.html#sdk-intro
 
 译者：[guevara](https://github.com/guevaraya)
 校对：[校对者ID](https://github.com/校对者ID)
