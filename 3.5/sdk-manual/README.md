@@ -60,5 +60,3 @@ Yocto 项目应用开发和扩展软件开发套件（eSDK）
   * [C.2. 添加 API 文档到标准 SDK](#)
   * 
 via:https://docs.yoctoproject.org/sdk-manual/index.html
-
-[1]： 
