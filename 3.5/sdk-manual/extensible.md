@@ -27,11 +27,11 @@
 2.4.1. 使用 devtool add 添加一个应用程序
 ======
 
-2.4.2. 使用 devtool modify 修改已有的组件源码
+2.4.2. 使用 devtool modify 修改已有组件的源码
 ======
 
 
-2.4.3. 使用 devtool upgrade 更新来创建一个新配方，用来兼容软件的新版本
+2.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方
 ======
 
 
