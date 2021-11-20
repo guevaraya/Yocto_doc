@@ -13,16 +13,16 @@
 
 1.1 eSDK 介绍
 =================
-欢迎阅读 Yocto 项目应用开发和可扩展软件套件的 eSDK 手册。本手册主要涉及如何使用 Yocto 可扩展套件和标准SDK 来开发应用程序和镜像的相关信息。
+欢迎阅读 Yocto 项目应用开发和可扩展软件套件的 eSDK 手册。本手册主要涉及如何使用 Yocto 可扩展套件和标准SDK 来开发应用程序和构建镜像的相关信息。
 
-所有 SDK 的组成如下：
-* **交叉工具链**：工具链包含一个编译器，调试器和许多相关工具。
+整个 SDK 的组成如下：
+* **交叉工具链**：工具链包含一个编译器，调试器和其他相关工具。
 * **库文件及其头文件，符号表**：指定镜像（例如 SDK编译的镜像匹配等）的库文件，头文件和符号表
 * **环境变量配置脚本**：这个 *.sh* 脚本文件只需要运行一次，通过定义变量和做一些使用 SDK 的准备工作来配置交叉开发的环境变量。
 
-另外，一个可扩展 SDK 里有工具允许你容易的添加一个应用程序和镜像的库文件，修改现有组件的源码，测试目标硬件的变化，并很容易的集成一个应用层序到 [OpenEmbedded 构建系统][4]里。
+另外，一个可扩展 SDK 里的工具允许你容易的添加一个应用程序和镜像的库文件，修改现有组件的源码，测试目标硬件的变化，并很容易的集成一个应用层序到 [OpenEmbedded 构建系统][4]里。
 
-你可以用一个 SDK 去独立的开发和测试在一些目标机器运行的代码。这些 SDK 是完全独立的。二进制程序是链接到他们本地 libc 的拷贝，这样使其对目标系统没有依赖。为了实现这点，动态加载器的指针在安装的时候配置后地址就不能动态改变了。这就是为什么有封装 populate_sdk 和 populate_sdk_ext 的分别。
+你可以用其中一个 SDK 去独立的开发和测试在一些目标机器运行的代码。这些 SDK 是完全独立的。二进制程序是链接本地 libc，这样使其对目标系统没有依赖。为了实现这点，动态加载器的指针在安装的时候配置后地址就不能动态改变了。这就是为什么有 populate_sdk 和 populate_sdk_ext 封装的分别。
 
 SDK 的另一个特性是用一套交叉工具链是构建任意指定的指令架构。这个特性的好处是目标硬件可以统一通过编译选项控制 gcc 编译。这些选项通过环境变量脚本配置生效并其包含在变量里，例如 [CC][5] 和 [LD][6]。这样会减少工具使用的内存占用。要知道，尽管是这样，每个目标设备仍然需要它的 sysroot 因为这些二进制是针对特定目标板的。
 
@@ -34,29 +34,23 @@ SDK 开发环境组成如下：
 总得来说，可扩展和标准的 SDK 有很多共同的特性。但是可扩展 SDK 作为强大的开发工具帮助你更快速的开发应用程序。下面的表格汇总了标准 SDK 和可扩展 SDK 之间在构建上的一些区别：
 
 
-| *Feature*             | *Standard SDK*        | *Extensible SDK*      |
+| *特性*             | *标准 SDK*        | *可扩展 SDK*      |
 |-|-|-|
-| Toolchain             | Yes                   | Yes <sup>1</sup>              |
-| Debugger              | Yes                   | Yes <sup>1</sup>      |
-| Size                  | 100+ MBytes           | 1+ GBytes (or 300+  <br>MBytes for minimal <br>w/toolchain)    |
+| 交叉工具链             | 是                   |是 <sup>①</sup>              |
+| 调试器              | 是                   |是 <sup>①</sup>      |
+| 大小                 | 100+MB    | 1+ GB (或迷你工具链 300+MB )    |
 | ``devtool``           | No                    | Yes                   |
-| Build Images          | No                    | Yes                   |
-| Updateable            | No                    | Yes                   |
+| 编译镜像          | No                    | Yes                   |
+| 可更新            | No                    | Yes                   |
 | Managed Sysroot <sup>2</sup>  | No                    | Yes                   |
 | Installed Packages    | No  <sup>3</sup>              | Yes  <sup>4</sup>              |
 | Construction          | Packages              | Shared State          |
 
-1. Extensible SDK contains the toolchain and debugger if :term:`SDK_EXT_TYPE`
-       is "full" or :term:`SDK_INCLUDE_TOOLCHAIN` is "1", which is the default.
-2. Sysroot is managed through the use of ``devtool``. Thus, it is less
-       likely that you will corrupt your SDK sysroot when you try to add
-       additional libraries.
-3. You can add runtime package management to the standard SDK but it is not
-       supported by default.
-4. You must build and make the shared state available to extensible SDK
-       users for "packages" you want to enable users to install.
-       
-       
+① 如果SDK_EXT_TYPE 等于 “full” 或者 SDK_INCLUDE_TOOLCHAIN 等于 “1”的时候（默认值），可扩展 SDK 就包含了交叉链和调试器。
+② Sysroot 是通过 devltool 来管理的。因此如果你尝试添加额外的库，极小概率会损坏 SDK 的sysroot。
+③ 你可以添加运行时包管理到标准 SDK，这个默认是不支持的。
+④ 你必须为想要安装 “包” 的用户构建和编译共享模式变量给可扩展 SDK 的用户。
+
 1.1.1. 交叉编译工具链
 ======
 
