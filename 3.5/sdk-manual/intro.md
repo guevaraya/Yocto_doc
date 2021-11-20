@@ -33,38 +33,27 @@ SDK 开发环境组成如下：
 
 总得来说，可扩展和标准的 SDK 有很多共同的特性。但是可扩展 SDK 作为强大的开发工具帮助你更快速的开发应用程序。下面的表格汇总了标准 SDK 和可扩展 SDK 之间在构建上的一些区别：
 
-+-----------------------+-----------------------+-----------------------+
-| *Feature*             | *Standard SDK*        | *Extensible SDK*      |
-+=======================+=======================+=======================+
-| Toolchain             | Yes                   | Yes [1]_              |
-+-----------------------+-----------------------+-----------------------+
-| Debugger              | Yes                   | Yes [1]_              |
-+-----------------------+-----------------------+-----------------------+
-| Size                  | 100+ MBytes           | 1+ GBytes (or 300+    |
-|                       |                       | MBytes for minimal    |
-|                       |                       | w/toolchain)          |
-+-----------------------+-----------------------+-----------------------+
-| ``devtool``           | No                    | Yes                   |
-+-----------------------+-----------------------+-----------------------+
-| Build Images          | No                    | Yes                   |
-+-----------------------+-----------------------+-----------------------+
-| Updateable            | No                    | Yes                   |
-+-----------------------+-----------------------+-----------------------+
-| Managed Sysroot [2]_  | No                    | Yes                   |
-+-----------------------+-----------------------+-----------------------+
-| Installed Packages    | No  [3]_              | Yes  [4]_             |
-+-----------------------+-----------------------+-----------------------+
-| Construction          | Packages              | Shared State          |
-+-----------------------+-----------------------+-----------------------+
 
-.. [1] Extensible SDK contains the toolchain and debugger if :term:`SDK_EXT_TYPE`
+| *Feature*             | *Standard SDK*        | *Extensible SDK*      |
+|-|-|-|
+| Toolchain             | Yes                   | Yes <sup>1</sup>              |
+| Debugger              | Yes                   | Yes <sup>1</sup>      |
+| Size                  | 100+ MBytes           | 1+ GBytes (or 300+  <br>MBytes for minimal <br>w/toolchain)    |
+| ``devtool``           | No                    | Yes                   |
+| Build Images          | No                    | Yes                   |
+| Updateable            | No                    | Yes                   |
+| Managed Sysroot <sup>2</sup>  | No                    | Yes                   |
+| Installed Packages    | No  <sup>3</sup>              | Yes  <sup>4</sup>              |
+| Construction          | Packages              | Shared State          |
+
+1. Extensible SDK contains the toolchain and debugger if :term:`SDK_EXT_TYPE`
        is "full" or :term:`SDK_INCLUDE_TOOLCHAIN` is "1", which is the default.
-.. [2] Sysroot is managed through the use of ``devtool``. Thus, it is less
+2. Sysroot is managed through the use of ``devtool``. Thus, it is less
        likely that you will corrupt your SDK sysroot when you try to add
        additional libraries.
-.. [3] You can add runtime package management to the standard SDK but it is not
+3. You can add runtime package management to the standard SDK but it is not
        supported by default.
-.. [4] You must build and make the shared state available to extensible SDK
+4. You must build and make the shared state available to extensible SDK
        users for "packages" you want to enable users to install.
        
        
