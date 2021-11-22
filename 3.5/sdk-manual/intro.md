@@ -47,7 +47,7 @@ SDK 开发环境组成如下：
 |结构方式|安装包|共享状态|
 
 <sub>
-① 如果SDK_EXT_TYPE 等于 “full” 或者 SDK_INCLUDE_TOOLCHAIN 等于 “1”的时候（默认值），可扩展 SDK 包含交叉链和调试器。<br>
+① 如果[SDK_EXT_TYPE][7] 等于 “full” 或者 [SDK_INCLUDE_TOOLCHAIN][8] 等于 “1”的时候（默认值），可扩展 SDK 包含交叉链和调试器。<br>
 ② Sysroot 是通过 devltool 来管理的。因此如果你尝试添加额外的库，会有小概率损坏 SDK 的sysroot。<br>
 ③ 你可以添加运行时包管理到标准 SDK，这个默认是不支持的。<br>
 ④ 你必须为想要安装 “包” 的用户构建和编译共享模式变量给可扩展 SDK 的用户。<br>
@@ -56,63 +56,25 @@ SDK 开发环境组成如下：
 
 1.1.1. 交叉编译工具链
 ======
+[交叉开发工具链][9]包含交叉编译器，交叉链接器和交叉调试器，这些用来开发目标硬件的用户应用程序。另外，对于可扩展 SDK，工具链也内置了`devtool` 功能。这样工具链可通过运行 SDK 安装脚本来创建，或通过[构建目录][10]的 metadata 配置或目标设备的扩展组件来创建。交叉工具链与对应的目标设备 sysroot 才能工作。
 
 1.1.2. Sysroots
 ======
+宿主和目标板的 sysroot 包含所依赖的头文件和库文件，它们最终生成的二进制文件将运行在在目标架构上。目标板的 sysroot 通过 OpenEmbedded 构建系统编译到目标版本的根文件系统镜像里，使用的 metadata 的配置和构建交叉工具链的配置一样。
 
 1.1.3. QEMU 模拟器
 ======
+QEMU 模拟器可以模拟应用程序或镜像在你的目标硬件设备上运行。QEMU不属于SDK但如果你做了以下事情会自动被安装：
 
-1.2. SDK 开发模型
+* 通过克隆 poky 的Git仓创建了 [Source 目录][11]并 source 了环境变量的配置脚本
+* 下载了 Yocto 项目发行包并解压到 Source 目录同时 source 了环境变量的配置脚本
+* 安装了交叉工具链的tar包并 source 了环境变量的配置脚本
+* 
+1.2 SDK 开发模型
 ======
+从本质上说，SDK 的开发过程概括如下：
 
-
-The Cross-Development Toolchain
--------------------------------
-
-The :term:`Cross-Development Toolchain` consists
-of a cross-compiler, cross-linker, and cross-debugger that are used to
-develop user-space applications for targeted hardware; in addition,
-the extensible SDK comes with built-in ``devtool``
-functionality. This toolchain is created by running a SDK installer
-script or through a :term:`Build Directory` that is based on
-your metadata configuration or extension for your targeted device. The
-cross-toolchain works with a matching target sysroot.
-
-Sysroots
---------
-
-The native and target sysroots contain needed headers and libraries for
-generating binaries that run on the target architecture. The target
-sysroot is based on the target root filesystem image that is built by
-the OpenEmbedded build system and uses the same metadata configuration
-used to build the cross-toolchain.
-
-The QEMU Emulator
------------------
-
-The QEMU emulator allows you to simulate your hardware while running
-your application or image. QEMU is not part of the SDK but is
-automatically installed and available if you have done any one of
-the following:
-
--  cloned the ``poky`` Git repository to create a
-   :term:`Source Directory` and sourced the environment setup script.
-
--  downloaded a Yocto Project release and unpacked it to
-   create a Source Directory and sourced the environment setup
-   script.
-
--  installed the cross-toolchain tarball and
-   sourced the toolchain's setup environment script.
-
-SDK Development Model
-=====================
-
-Fundamentally, the SDK fits into the development process as follows:
-
-.. image:: figures/sdk-environment.png
-   :align: center
+![SDK环境变量][18]
 
 The SDK is installed on any machine and can be used to develop applications,
 images, and kernels. An SDK can even be used by a QA Engineer or Release
@@ -173,37 +135,24 @@ how you can build, install, and modify an SDK.
 
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
-[2]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#hardware-build-system-term
-[3]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#setting-up-to-use-crops
-[4]: https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
-[5]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#hardware-build-system-term
-[6]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#required-packages-for-the-build-host
-[7]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#locating-yocto-project-source-files
-[8]: https://wiki.yoctoproject.org/wiki/Working_Behind_a_Network_Proxy
-[9]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#structure-core-script
-[10]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
-[11]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#source-directory
-[12]: http://sstate.yoctoproject.org/
-[13]: http://www.yoctoproject.org/docs/3.0/overview-manual/overview-manual.html#usingpoky-components-bitbake
-[14]: http://www.yoctoproject.org/docs/3.0/bitbake-user-manual/bitbake-user-manual.html#bitbake-user-manual-command
-[15]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#dev-manual-qemu
-[16]: http://git.yoctoproject.org/
-[17]: https://github.com/kraj/meta-altera
-[18]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#var-MACHINE
-[19]: https://www.yoctoproject.org/docs/3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.html#conf-file-step
-[20]: http://www.yoctoproject.org/docs/3.0/ref-manual/ref-manual.html#build-directory
-[21]: http://www.yoctoproject.org/docs/3.0/dev-manual/dev-manual.html#adding-a-layer-using-the-bitbake-layers-script
-[22]: http://www.yoctoproject.org/docs/3.0.1/dev-manual/dev-manual.html#creating-a-general-layer-using-the-bitbake-layers-script
-[23]: http://www.yoctoproject.org/
-[24]: http://vimeo.com/36450321
-[25]: http://www.yoctoproject.org/docs/3.0.1/overview-manual/overview-manual.html
-[26]: https://wiki.yoctoproject.org/
-[27]: http://www.yoctoproject.org/docs/3.0.1/ref-manual/ref-manual.html#resources-mailinglist
-[28]: http://www.yoctoproject.org/docs/3.0.1/ref-manual/ref-manual.html#resources-links-and-related-documentation
-[29]: https://docs.yoctoproject.org/dev-manual/start.html#setting-up-to-use-windows-subsystem-for-linux-wslv2
-[30]: ../overview-manual/README.md
-[31]: https://wiki.yoctoproject.org/wiki/Releases
-[32]: https://libera.chat/
+[2]: http://www.yoctoproject.org/documentation
+[3]: https://wiki.yoctoproject.org/wiki/Releases
+[4]: https://docs.yoctoproject.org/ref-manual/terms.html#term-OpenEmbedded-Build-System
+[5]: https://docs.yoctoproject.org/ref-manual/variables.html#term-CC
+[6]: https://docs.yoctoproject.org/ref-manual/variables.html#term-LD
+[7]: https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_EXT_TYPE
+[8]: https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_INCLUDE_TOOLCHAIN
+[9]: https://docs.yoctoproject.org/ref-manual/terms.html#term-Cross-Development-Toolchain
+[10]: https://docs.yoctoproject.org/ref-manual/terms.html#term-Build-Directory
+[11]: https://docs.yoctoproject.org/ref-manual/terms.html#term-Source-Directory
+[12]: https://docs.yoctoproject.org/sdk-manual/using.html#installing-the-sdk
+[13]: https://downloads.yoctoproject.org/releases/yocto/yocto-3.4/machines/
+[14]: https://downloads.yoctoproject.org/releases/yocto/yocto-3.4/machines/qemu
+[15]: https://docs.yoctoproject.org/sdk-manual/appendix-obtain.html#extracting-the-root-filesystem
+[16]: https://wiki.qemu.org/Main_Page
+[17]: https://docs.yoctoproject.org/dev-manual/qemu.html
+[18]: https://docs.yoctoproject.org/_images/sdk-environment.png
+
 
 ---
 via: https://docs.yoctoproject.org/sdk-manual/intro.html
