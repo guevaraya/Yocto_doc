@@ -76,62 +76,24 @@ QEMU 模拟器可以模拟应用程序或镜像在你的目标硬件设备上运
 
 ![SDK环境变量][18]
 
-The SDK is installed on any machine and can be used to develop applications,
-images, and kernels. An SDK can even be used by a QA Engineer or Release
-Engineer. The fundamental concept is that the machine that has the SDK
-installed does not have to be associated with the machine that has the
-Yocto Project installed. A developer can independently compile and test
-an object on their machine and then, when the object is ready for
-integration into an image, they can simply make it available to the
-machine that has the Yocto Project. Once the object is available, the
-image can be rebuilt using the Yocto Project to produce the modified
-image.
+SDK 可安装到任意机器上并可用于开发应用程序，镜像和内核。SDK 甚至可被 QA 工程师或版本工程师使用。本质上说已经安装 SDK 的机器就没有必要和已安装 Yocto 项目的机器是两回事。一个开发者可以独立的编译和测试机器上的对象，然后当这个对象可以准备要集成到镜像里的时候，就可以在安装了Yocto工程的机器上很容易的构建。一旦这个对象可用了，镜像就可以直接用 Ycoto 项目重新生成新镜像。
 
-You just need to follow these general steps:
+你只需参照下面这些步骤：
 
-1. *Install the SDK for your target hardware:* For information on how to
-   install the SDK, see the ":ref:`sdk-manual/using:installing the sdk`"
-   section.
+1. **为你的目标硬件安装 SDK：** 关于如何安装SDK的信息，请查看[安装 SDK ][12]部分
+2. **下载或编译目标镜像：** Yocto 项目支持多个目标体系架构，并有多个预编译内核镜像和文件系统镜像。
 
-2. *Download or Build the Target Image:* The Yocto Project supports
-   several target architectures and has many pre-built kernel images and
-   root filesystem images.
+如果你将要在目标硬件上开发应用程序，要到 [machines][13] 下载目录选择一个目标机型目录来下载内核镜像和根文件系统。下载目录包含用于在实际硬件的开发支持。例如，目录里包含 `.hddimg` 文件将内核镜像的文件系统，启动加载器等的合成到一起。请确保获取的文件是你开发过程中专门需要的。
 
-   If you are going to develop your application on hardware, go to the
-   :yocto_dl:`machines </releases/yocto/yocto-&DISTRO;/machines/>` download area and choose a
-   target machine area from which to download the kernel image and root
-   filesystem. This download area could have several files in it that
-   support development using actual hardware. For example, the area
-   might contain ``.hddimg`` files that combine the kernel image with
-   the filesystem, boot loaders, and so forth. Be sure to get the files
-   you need for your particular development process.
+如果你正在开发应用程序然后在 QEMU 模拟器上 运行和测试，请到  [machines/qemu][14] 目录下载。从这目录进入选择你要的目标体系架构（例如：qemux86_64 对应英特尔® 64位架构的）。下载内核，根文件系统和过程所需其他的文件。
 
-   If you are going to develop your application and then run and test it
-   using the QEMU emulator, go to the
-   :yocto_dl:`machines/qemu </releases/yocto/yocto-&DISTRO;/machines/qemu>` download area. From this
-   area, go down into the directory for your target architecture (e.g.
-   ``qemux86_64`` for an Intel-based 64-bit architecture). Download the
-   kernel, root filesystem, and any other files you need for your
-   process.
+> 提示
+>
+> 使用 QEMU 根文件系统，你需要解压它。查看[“解压根文件系统”][15]部分获取关于如何解压根文件系统的信息.
 
-   .. note::
+3. **开发和测试应用程序：** 这时，你需要有工具开发你的应用程序。如果你需要独立安装和使用 QEMU 模拟器，你可以去 [QEMU 主页][16]下载和学习关于模拟器。查看 Yocto 项目开发任务手册的[“快速使用模拟器（QEMU）”][17]章节获取在 Yocto 项目使用 QEMU 的相关信息。
 
-      To use the root filesystem in QEMU, you need to extract it. See the
-      ":ref:`sdk-manual/appendix-obtain:extracting the root filesystem`"
-      section for information on how to do this extraction.
-
-3. *Develop and Test your Application:* At this point, you have the
-   tools to develop your application. If you need to separately install
-   and use the QEMU emulator, you can go to `QEMU Home
-   Page <https://wiki.qemu.org/Main_Page>`__ to download and learn about
-   the emulator. See the ":doc:`/dev-manual/qemu`" chapter in the
-   Yocto Project Development Tasks Manual for information on using QEMU
-   within the Yocto Project.
-
-The remainder of this manual describes how to use the extensible and
-standard SDKs. There is also information in appendix form describing
-how you can build, install, and modify an SDK.
-
+本手册余下部分主要描述如何使用可扩展和标准的 SDK。这些信息也在附录的表格里，主要是关于如何编译，安装和修改 SDK。
 
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/
