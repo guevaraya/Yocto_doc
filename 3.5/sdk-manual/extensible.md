@@ -2,13 +2,13 @@
 2 使用可扩展 SDK
 ====
 
-这一章介绍了可扩展 SDK 以及如何安装它。详细内容包含 SDK的组成部分，如何安装它，并概要介绍 devtool 功能展示。可扩展 SDK 使其很容易的添加一个新的应用程序和库文件到镜像，修改现有组件的源码，在目标硬件验证测试，作为附件可轻松集成到 [OpenEmbedded 的编译系统](#build-system-term)上。
+这一章介绍了可扩展 SDK 以及如何安装它。详细内容包含 SDK的组成部分，如何安装它，并概要介绍 devtool 功能展示。可扩展 SDK 使其很容易的添加一个新的应用程序和库文件到镜像，修改现有组件的源码，在目标硬件验证测试，作为附件可轻松集成到 [OpenEmbedded 的编译系统](#../ref-manual/terms.md#嵌入式编译系统openembedded-build-system)上。
 
 >提示
 >
->要比较可扩展 SDK 和标准 SDK 的主要特性，请查看[“介绍”](#sdk-manual-intro)部分。
+>要比较可扩展 SDK 和标准 SDK 的主要特性，请查看[“介绍”](#intro.md#1-介绍)部分。
 
-除过通过 devtool 使用其功能外，你可以直接使用工具链，例如从 Makefile 到 Autotools。请查看[“直接使用 SDK 工具链”](#sdk-working-projects)章节获取更多信息。
+除过通过 devtool 使用其功能外，你可以直接使用工具链，例如从 Makefile 到 Autotools。请查看[“直接使用 SDK 工具链”](#working-projects.md#使用-sdk-的交叉工具链目录)章节获取更多信息。
 
 2.1. 为什么要使用可扩展的 SDK 以及里面有些什么
 =====
@@ -21,7 +21,7 @@
 2.2. 安装可扩展 SDK
 =====
 
-首先你需要做的事情是通过运行 \*.sh 安装脚本在[编译主机](#hardware-build-system-term)上安装 SDK。
+首先你需要做的事情是通过运行 \*.sh 安装脚本在[编译主机](#terms.md#build-host)上安装 SDK。
 
 你可以下载 tar 格式的安装包，它包含预编译的工具链，用于运行 QEMU 模拟器的脚本，内部编译系统，devtool 和配套文件，这些文件在发行版索引对应的工具链目录里。工具链支持多个32位和 x86_64 目录下的64位架构体系。Yocto 项目提供的工具链是基于 core-image-sato 和 core-image-minimal 镜像，它还包含了用于开发此镜像的库文件。
 
