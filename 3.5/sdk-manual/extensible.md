@@ -247,8 +247,30 @@ $ devtool modify recipe srctree
 >
 > 你不能用 URL 地址作为devtool命令的 srctree 参数
 
+和所有提取动作一样，命令用配方的SRC_URI 参数确定本地源码文件和任意补丁文件。非补丁文件被拷贝到先创建的源码树下的 oe-local-files 目录。
+一旦文件被找到，命令默认解压他们到 srctree 目录。
+在工作区，devtool 为配方创建 append 文件。配方还继续保持在原有的位置但源码文件解压到用srctree提供的目录里。
 
-2.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方
+* **右边**：图中右边的场景代表源码目录已经存在的情况，它存在于前面 devtool 工作区之外的展开的Git目录。在这个例子中，配方也可能存在于它自身的layer之外的目录。
+下面命令告诉devtool要用配方，用“-n”选项代表源码不需要解压，用 srctree 指定之前目录已经展开的源码文件：
+```
+$ devtool modify -n recipe srctree
+```
+如果 oe-local-files 子目录存在，它包含了非补丁文件，则它是有用的文件。另外，如果子目录不存在，你可以运行 devtool finish 后，任何在配方同目录的非补丁文件会被移除因为devtool会认为这些文件需要删除。
+一旦 devtool modify 命令执行，它会为 devtool 工作区的配方创建一个 append 文件。配方和源码保持在它们原有的位置。
+2. **编辑源码**：一旦你使用了 devtool modify 命令，你可以任意的修改源码文件，可以用任何你喜欢的编辑器修改和保存你的源码。
+3. **编译配方或重新编译镜像**：下一步的动作就是如何使用新代码。
+如果你最后需要将输出物放到目标硬件上，用下面命令：
+```
+$ devtool build recipe
+```
+另外，如果你想将现编的包含配方包的镜像里放到设备里（例如：为了测试验证），你可以用 devtool build-image 命令：
+```
+$ devtool build-image image
+```
+4. **部署编译输出物**：
+5. **用配方完成你的工作**：
+6.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方
 ======
 
 
