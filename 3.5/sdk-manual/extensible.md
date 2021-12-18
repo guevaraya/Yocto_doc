@@ -102,7 +102,7 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
      Run devtool --help for further details.
 ```
 
-运行配置脚本定义了很多环境变量，他们可以更好的使用 SDK（如：PATH，[CC][../ref-manual/variables.md#cc]，[LD][../ref-manual/variables.md#cc] 等等）。如果你想查看脚本所输出的所有环境变量，研读下安装文件本身就可以了。
+运行配置脚本定义了很多环境变量，他们可以更好的使用 SDK（如：PATH，[CC](../ref-manual/variables.md#cc)，[LD](../ref-manual/variables.md#cc) 等等）。如果你想查看脚本所输出的所有环境变量，研读下安装文件本身就可以了。
 
 2.4. 在你的 SDK 流程中运用 devtool
 =====
@@ -113,7 +113,7 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
 >
 >对 devtool 的使用不局限于可扩展 SDK ，可以用 devtool 帮你容易的开发任何项目，这些项目都能编译出镜像的一部分。
 
-devtool 命令行的组织方式与 [Git][../overview-manual/development-environment.md#git]的子命令的功能方式很像。你可以运行 devtool --help 查看所有的命令。
+devtool 命令行的组织方式与 [Git](../overview-manual/development-environment.md#git)的子命令的功能方式很像。你可以运行 devtool --help 查看所有的命令。
 > 查看 Yocto 项目参考手册的["devtool 快速参考"](../ref-manual/devtool-reference.md#7-devtool-快速参考)获取 devtool 的快速参考。
 
 下面三个 devtool 的子命令提供了开发的入口点：
@@ -127,11 +127,11 @@ devtool 命令行的组织方式与 [Git][../overview-manual/development-environ
 
 2.4.1. 使用 devtool add 添加一个应用程序
 ======
-devtool add 命令可在已有的源代码基础上生成一个配方。这个命令对很多 devtool 所生成的[工作目录的结构层][21]都很有用。这个命令很灵活的帮你将源码解压到工作目录或一个特定的本地 Git 仓。如果用的是已经存在的代码就不需要解压。
+devtool add 命令可在已有的源代码基础上生成一个配方。这个命令对很多 devtool 所生成的[工作目录的Layer结构](../ref-manual/devtool-reference.md#72-工作目录的layer结构)都很有用。这个命令很灵活的帮你将源码解压到工作目录或一个特定的本地 Git 仓。如果用的是已经存在的代码就不需要解压。
 
 根据特定的需求场景，devtool add 的参数和选项形成不同的组合。下面图表展示了使用 devtool add 命令可能用到的常见开发流程：
 
-![sdk-devtool-add-flow][22]
+![sdk-devtool-add-flow][2]
 
 1. **生成新配方**:  流程图的顶部展示了用 devtool add 基于现有的源码生成配方的三个场景。
 
@@ -213,7 +213,7 @@ devtool finish 命令作为最终的工序，恢复标准层和上游源码的�
 devtool modify 命令用来如何在已有代码上做准备工作，然后用已有的配方来构建软件。此命令很方便的让你从上游解压源码，保持对其跟踪并收集从其他开发者来的补丁文件。
 根据你的特定需求，你可以选择 devtool modify 命令的参数和选项形成不同的组合。下面图表展示了 devtool modify 命令的不同组合：
 
-![使用 devtool modify 修改源码的已有组件][23]
+![使用 devtool modify 修改源码的已有组件][3]
 
 1. **准备修改源码**： 流程图最上面展示了三个应用场景：我们可以用 devtool modify 命令在源码文件做一些准备工作。每个场景有以下前提假设：
 * 配方在 devtool 的本地工作目录的外部层（layer）已经存在。
@@ -232,7 +232,7 @@ $ devtool modify recipe
 
 一旦 devtool 找到配方（recipe），devtool 通过配方的 SRC_URI 变量找到源码和其他开发者提供的本地补丁。
 
-这个场景下，参数 srctree 为空。因此，devtool modify 命令的默认行为是解压源码到 [SRC_URI][24] 参数指定的本地 Git 目录。也就是说，本地解压的源码目录就是 devtool 默认工作目录。结果是该命令在工作目录配置了源码和附件配方文件，而配方还保留在它原来的路径。
+这个场景下，参数 srctree 为空。因此，devtool modify 命令的默认行为是解压源码到 [SRC_URI][4] 参数指定的本地 Git 目录。也就是说，本地解压的源码目录就是 devtool 默认工作目录。结果是该命令在工作目录配置了源码和附件配方文件，而配方还保留在它原来的路径。
 
 另外，如果你有任何本地非补丁文件（例如：在 SRC_URI 语句包含 file:// 引用文件，但不包括 \*.patch/ 或 \*.diff），这个文件被拷贝到新创建源码树的一个 oe-local-files 的目录。拷贝文件到这个地方后可以让我们便捷在这修改文件。您对这些文件的任何修改和添加都会在下一次构建中体现，就像你对源码的任何修改的效果一样。
 
@@ -291,7 +291,12 @@ $ devtool modify recipe
 2.9. 实现更新一个已安装的可扩展 SDK
 ======
 
+via:https://docs.yoctoproject.org/sdk-manual/extensible.html
+
+
 2.10 创建一个带附加组件的衍生 SDK
 ======
 [1]: https://downloads.yoctoproject.org/releases/yocto/yocto-3.4.1/toolchain/
-
+[2]: https://docs.yoctoproject.org/_images/sdk-devtool-add-flow.png
+[3]: https://docs.yoctoproject.org/_images/sdk-devtool-modify-flow.png
+[4]: https://docs.yoctoproject.org/ref-manual/variables.html#term-SRC_URI
