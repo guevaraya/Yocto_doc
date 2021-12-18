@@ -21,9 +21,9 @@
 2.2. 安装可扩展 SDK
 =====
 
-首先你需要做的事情是通过运行 \*.sh 安装脚本在[编译主机](terms.md#build-host)上安装 SDK。
+首先你需要做的事情是通过运行 \*.sh 安装脚本在[编译主机](../ref-manual/terms.md#build-host)上安装 SDK。
 
-你可以下载 tar 格式的安装包，它包含预编译的工具链，用于运行 QEMU 模拟器的脚本，内部编译系统，devtool 和配套文件，这些文件在发行版索引对应的工具链目录里。[工具链](1)支持多个32位和 x86_64 目录下的64位架构体系。Yocto 项目提供的工具链是基于 core-image-sato 和 core-image-minimal 镜像，它还包含了用于开发此镜像的库文件。
+你可以下载 tar 格式的安装包，它包含预编译的工具链，用于运行 QEMU 模拟器的脚本，内部编译系统，devtool 和配套文件，这些文件在发行版索引对应的工具链目录里。[工具链][1]持多个32位和 x86_64 目录下的64位架构体系。Yocto 项目提供的工具链是基于 core-image-sato 和 core-image-minimal 镜像，它还包含了用于开发此镜像的库文件。
 
 安装包脚本的名字的前缀代表了主机系统，接着后面的字符串代表体系架构的类型。可扩展 SDK 使用字符串“-ext”代表。下面的例子是典型：
 
@@ -114,7 +114,7 @@ SDK 和工具链都是内置的，默认都被安装在用户目录的 poky_sdk 
 >对 devtool 的使用不局限于可扩展 SDK ，可以用 devtool 帮你容易的开发任何项目，这些项目都能编译出镜像的一部分。
 
 devtool 命令行的组织方式与 [Git][../overview-manual/development-environment.md#git]的子命令的功能方式很像。你可以运行 devtool --help 查看所有的命令。
-> 查看 Yocto 项目参考手册的["devtool 快速参考"][20]获取 devtool 的快速参考。
+> 查看 Yocto 项目参考手册的["devtool 快速参考"](../ref-manual/devtool-reference.md#7-devtool-快速参考)获取 devtool 的快速参考。
 
 下面三个 devtool 的子命令提供了开发的入口点：
 * _devtool add:_ 辅助添加需要编译的软件
