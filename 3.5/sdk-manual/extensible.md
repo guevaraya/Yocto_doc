@@ -238,6 +238,15 @@ $ devtool modify recipe
 
 * **中间**: 在上图中间的场景代表源码不在本地的情况。该场景下，代码也需要从上游获取并以 Git 仓形式解压到本地目录。该场景下的配方也在本地工作目录之外对应的 layer 里。
 
+下面命令告诉 devtool 会用到那个配方，这个场景明确了工作目录之外的外部源码文件的本地位置：
+```
+$ devtool modify recipe srctree
+```
+
+> 提示
+>
+> 你不能用 URL 地址作为devtool命令的 srctree 参数
+
 
 2.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方
 ======
