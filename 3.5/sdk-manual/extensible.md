@@ -236,6 +236,9 @@ $ devtool modify recipe
 
 另外，如果你有任何本地非补丁文件（例如：在 SRC_URI 语句包含 file:// 引用文件，但不包括 \*.patch/ 或 \*.diff），这个文件被拷贝到新创建源码树的一个 oe-local-files 的目录。拷贝文件到这个地方后可以让我们便捷在这修改文件。您对这些文件的任何修改和添加都会在下一次构建中体现，就像你对源码的任何修改的效果一样。
 
+* **中间**: 在上图中间的场景代表源码不在本地的情况。该场景下，代码也需要从上游获取并以 Git 仓形式解压到本地目录。该场景下的配方也在本地工作目录之外对应的 layer 里。
+
+
 2.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方
 ======
 
@@ -291,11 +294,15 @@ $ devtool modify recipe
 2.9. 实现更新一个已安装的可扩展 SDK
 ======
 
-via:https://docs.yoctoproject.org/sdk-manual/extensible.html
-
 
 2.10 创建一个带附加组件的衍生 SDK
 ======
+
+
+via:https://docs.yoctoproject.org/sdk-manual/extensible.html
+
+
+
 [1]: https://downloads.yoctoproject.org/releases/yocto/yocto-3.4.1/toolchain/
 [2]: https://docs.yoctoproject.org/_images/sdk-devtool-add-flow.png
 [3]: https://docs.yoctoproject.org/_images/sdk-devtool-modify-flow.png
