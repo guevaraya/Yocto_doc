@@ -298,9 +298,19 @@ $ devtool finish recipe layer
 
 2.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方
 ======
+devtool upgrade 命令更新已有的配方为上游较新的版本。整个软件的生命周期里，配方不停的经历上游发布商的版本更新。你可以通过devtool upgrade 流程确保你使用的配方与最新的上游软件是匹配的。
+> 提示
+> 
+> 有多个方法可以更新配方，devtool upgrade只是其中之一。你可以在 Yocto 项目开发任务手册的[更新配方][5]段落阅读更新配方的所有方法。
+devtool upgrade 命令可很方便的指定源码版本，版本管理类型，代码展开位置或devtool的[Layer结构的工作区][6]，任何[Fetchers][7]可以支持的源码格式
+下面命令展示了devtool upgrade 命令常见的开发流程：
+![sdk-devtool-upgrade-flow][8]
+1. **初始化更新**：流程顶部展示了devtool upgrade的典型场景。包含下面几个条件:
+* 配方存在于devtool工作区之外的本地layer。
+* 新版本的源码位置由配方里的SRC_URI指定（例如：新版本的tar包或在上游的Git仓）
 
-
-2.5. 进一步理解 devtool 的创建操作
+2. 
+3.5. 进一步理解 devtool 的创建操作
 =====
 
 
@@ -364,3 +374,7 @@ via:https://docs.yoctoproject.org/sdk-manual/extensible.html
 [2]: https://docs.yoctoproject.org/_images/sdk-devtool-add-flow.png
 [3]: https://docs.yoctoproject.org/_images/sdk-devtool-modify-flow.png
 [4]: https://docs.yoctoproject.org/ref-manual/variables.html#term-SRC_URI
+[5]: https://docs.yoctoproject.org/dev-manual/common-tasks.html#upgrading-recipes
+[6]: https://docs.yoctoproject.org/ref-manual/devtool-reference.html#devtool-the-workspace-layer-structure
+[7]: https://docs.yoctoproject.org/bitbake/bitbake-user-manual/bitbake-user-manual-fetching.html#fetchers
+[8]: https://docs.yoctoproject.org/_images/sdk-devtool-upgrade-flow.png
