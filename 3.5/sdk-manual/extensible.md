@@ -258,7 +258,9 @@ $ devtool modify -n recipe srctree
 ```
 如果 oe-local-files 子目录存在，它包含了非补丁文件，则它是有用的文件。另外，如果子目录不存在，你可以运行 devtool finish 后，任何在配方同目录的非补丁文件会被移除因为devtool会认为这些文件需要删除。
 一旦 devtool modify 命令执行，它会为 devtool 工作区的配方创建一个 append 文件。配方和源码保持在它们原有的位置。
+
 2. **编辑源码**：一旦你使用了 devtool modify 命令，你可以任意的修改源码文件，可以用任何你喜欢的编辑器修改和保存你的源码。
+
 3. **编译配方或重新编译镜像**：下一步的动作就是如何使用新代码。
 如果你最后需要将输出物放到目标硬件上，用下面命令：
 ```
@@ -281,7 +283,8 @@ $ devtool deloy-target recipe target
 你当然也可以用其他的方法（devtool build-image）部署镜像到实际设备。devtool 不提供定制命令来部署镜像到实际硬件上。
 
 5. **用配方完成你的工作**：
-6.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方
+
+2.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方
 ======
 
 
