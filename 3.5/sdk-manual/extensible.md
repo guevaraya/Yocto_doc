@@ -268,7 +268,18 @@ $ devtool build recipe
 ```
 $ devtool build-image image
 ```
-4. **部署编译输出物**：
+4. **部署编译输出物**：如果你用devtool build 命令编译配方，你肯定想知道编译出来能不能在目标硬件上执行。
+
+>提示
+>
+> 这一步假定前面编译的镜像已经在QEMU或实际的硬件上运行。同时全部部署在了目标设备上，ssh 已经被安装在镜像里，如果镜像运行在实际的硬件上，你需要有开发机器的网络存取权限。
+你可以用 devtool deloy-target 命令部署你的输出物到目标设备上：
+```
+$ devtool deloy-target recipe target
+```
+目标机器运行着 SSH 服务。
+你当然也可以用其他的方法（devtool build-image）部署镜像到实际设备。devtool 不提供定制命令来部署镜像到实际硬件上。
+
 5. **用配方完成你的工作**：
 6.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方
 ======
