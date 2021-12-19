@@ -282,7 +282,19 @@ $ devtool deloy-target recipe target
 目标机器运行着 SSH 服务。
 你当然也可以用其他的方法（devtool build-image）部署镜像到实际设备。devtool 不提供定制命令来部署镜像到实际硬件上。
 
-5. **用配方完成你的工作**：
+5. **用配方完成你的工作**：devtool finish 创建本地 Git 仓的 commit 对应的patch,基于原有配方更新（基于指定的目标Layer创建.bbapend 文件），然后重置配方确保原有的配方在工作区能正常编译。
+```
+$ devtool finish recipe layer
+```
+>提示
+>
+> 在执行devtool finish命令之前任何你想要的修改必须保存和提交到本地Git仓
+
+因为没必要移动配方，devtool finish 命令要么更新原有的Layer的原始配方要么在新Layer创建一个新的.bbappend 文件。在devtool finish命令执行过程中任何你在 oe-local-files 目录的操作被保留在配方的原始文件里。
+当你最终执行了devtool finish命令，标准Layer的状态和上有代码被恢复以便你可以从这些区域编译配方而不是工作区。
+>提示
+>
+> 你可以用devtool reset命令将你不需要的工作内容丢掉。如果你确定要用这个命令，请将源码提前保存好。
 
 2.4.3. 使用 devtool upgrade 来创建一个软件最新版本的配方
 ======
