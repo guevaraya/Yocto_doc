@@ -302,6 +302,7 @@ devtool upgrade 命令更新已有的配方为上游较新的版本。整个软�
 > 提示
 > 
 > 有多个方法可以更新配方，devtool upgrade只是其中之一。你可以在 Yocto 项目开发任务手册的[更新配方][5]段落阅读更新配方的所有方法。
+
 devtool upgrade 命令可很方便的指定源码版本，版本管理类型，代码展开位置或devtool的[Layer结构的工作区][6]，任何[Fetchers][7]可以支持的源码格式
 下面命令展示了devtool upgrade 命令常见的开发流程：
 ![sdk-devtool-upgrade-flow][8]
