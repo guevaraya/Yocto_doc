@@ -360,10 +360,25 @@ $ devtool finish recipe layer
 
 2.5. 进一步理解 devtool add操作
 =====
-
+devtool add 命令根据提供的源码自动创建一个配方。目前，该命令支持以下编译方式：
+* Autotools（autoconf和automake）
+* CMake
+* Scons
+* qmake
+* 常见的Makefile
+* 单独kernel内核模块
+* 二进制打包（例如：-b选项）
+* Node.js模块
+* 用setuptools和disutils的Python模块
+除过二进制包，对源码文件的构建方法取决于源码里的文件类型。例如，如果源码里有CMakefiles.txt,则源码被对应认为用CMake构建的。
+>提示
+>
+> 大部分情况下，你需要编辑自动生成的配方文件使其得到正确的构建。典型的，你需要多次编译和来回编译直到配方成功构建。一旦配方可以构建，我们尽可能在目标设备上迭代测试。
+该段落后门将详细介绍配方的每一部分是如何生成。根据工具的配置，devtool相应的设置新创建的配方名称。
 
 2.5.1. 名称和版本号
 ======
+如果你在命令行没有指定名称和版本号，devtool add用源码树的几个metadata来确定被编译软件的名称和版本。
 
 2.5.2. 依赖检查与映射
 =======
