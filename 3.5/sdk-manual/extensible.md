@@ -399,7 +399,7 @@ RDEPENDA:${PN} += "dependency1 dependency2 ..."
 
 2.5.3. 许可证检查
 ======
-devtool add 命令会尝试确认你添加的软件是否允许在常见的开业许可证下分发。如果可以，命令就会设置 [LICENSE][10] 为相应的值。你一定要仔细检查这个命令行中的这个值，与要编译的软件中的文档或源码要匹配，如果有必要，及时更新 [LICENSE][10] 的值。
+devtool add 命令会尝试确认你添加的软件是否允许在常见的开源许可证下分发。如果可以，命令就会设置 [LICENSE][10] 为相应的值。你一定要仔细检查这个命令生成的这个值，要与编译的软件中的文档或源码匹配，如果有必要，及时更新 [LICENSE][10] 的值。
 
 2.5.4. 增加只用 Makefile 编译的软件
 ======
@@ -456,3 +456,4 @@ via:https://docs.yoctoproject.org/sdk-manual/extensible.html
 [7]: https://docs.yoctoproject.org/bitbake/bitbake-user-manual/bitbake-user-manual-fetching.html#fetchers
 [8]: https://docs.yoctoproject.org/_images/sdk-devtool-upgrade-flow.png
 [9]: https://docs.yoctoproject.org/ref-manual/variables.html#term-DEPENDS
+[10]: https://docs.yoctoproject.org/ref-manual/variables.html#term-LICENSE
