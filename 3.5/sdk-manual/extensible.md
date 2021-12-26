@@ -400,9 +400,13 @@ RDEPENDA:${PN} += "dependency1 dependency2 ..."
 2.5.3. 许可证检查
 ======
 devtool add 命令会尝试确认你添加的软件是否允许在常见的开源许可证下分发。如果可以，命令就会设置 [LICENSE][10] 为相应的值。你一定要仔细检查这个命令生成的这个值，要与编译的软件中的文档或源码匹配，如果有必要，及时更新 [LICENSE][10] 的值。
+devtool add 命令同时设置 [LIC_FILES_CHECSUM][11] 的值来代表所有文件的许可证信息。要记住许可证的声明经常出现在源码或文档的前面。而在这个情况下，命令无法识别这些许可证的语句，如果存在许可证的话，你可能需要修改 [LIC_FILES_CHECSUM][11] 变量来指定可能存在这些声明。设置[LIC_FILES_CHECSUM][11]对三方软件来说非常重要。为了将有通过流程来确保上游配方的新版本能更新到正确的许可证。任何许可证的变化都可以被检测到的，当你检测许可证的时候将会收到一个错误提示。
+如果devtool add 命令不能确定许可证信息，devtool 可设置 [LICENSE][10] 为 “Closed” 而[LIC_FILES_CHECSUM][11]设置为空。这种改法即使在所有的情况下可能不对但可以不影响开发调试。你需要根据你构建的软件的文档和源码确定实际合适的许可证。
 
-2.5.4. 增加只用 Makefile 编译的软件
+2.5.4. 增加 Makefile-Only 编译的软件
 ======
+使用 Make 编译的方法对私有和开源软件是很场景。不幸的是，Makefile 经常没有考虑交叉编译。这样，devtool add 经常不能确保 Makefile 能够正确的编译。例如，常常需要明确的将gcc用[CC][12]替代。经常在交叉编译环境中，gcc作为编译主机的编译器，交叉编译器有时会命名为 arm-poky-linux-gnueabi-gcc同时还需要一些参数（比如指定目标机器的相关sysroot）。
+当需要编写 Makefile-Only 软件，需要注意以下事项：
 
 2.5.5. 添加本机工具
 ======
@@ -457,3 +461,5 @@ via:https://docs.yoctoproject.org/sdk-manual/extensible.html
 [8]: https://docs.yoctoproject.org/_images/sdk-devtool-upgrade-flow.png
 [9]: https://docs.yoctoproject.org/ref-manual/variables.html#term-DEPENDS
 [10]: https://docs.yoctoproject.org/ref-manual/variables.html#term-LICENSE
+[11]: https://docs.yoctoproject.org/ref-manual/variables.html#term-LIC_FILES_CHKSUM
+[12]: https://docs.yoctoproject.org/ref-manual/variables.html#term-CC
