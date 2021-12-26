@@ -22,7 +22,7 @@ Yocto 项目应用开发和扩展软件开发套件（eSDK）
     * [2.5.1. 名称和版本号](extensible.md#251-名称和版本号)
     * [2.5.2. 依赖检查与映射](extensible.md#252-依赖检查与映射)
     * [2.5.3. 许可证检查](extensible.md#253-许可证检查)
-    * [2.5.4. 增加只用 Makefile 编译的软件](extensible.md#254-增加只用-Makefile-编译的软件)
+    * [2.5.4. 增加 Makefile-only 编译的软件](extensible.md#254-增加-makefile-only-编译的软件)
     * [2.5.5. 添加本机工具](extensible.md#255-添加本机工具)
     * [2.5.6. 添加 Node.js 模块](extensible.md#256-添加-Nodejs-模块)
   * [2.6. 如何使用配方 Recipes](extensible.md#26-如何使用配方-Recipes)
