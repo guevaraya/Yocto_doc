@@ -414,12 +414,13 @@ devtool add 命令同时设置 [LIC_FILES_CHECSUM][11] 的值来代表所有文�
 当需要编写 Makefile-Only 软件，需要注意以下事项：
 * 可能需要通过用变量的形式修改Makefile而不是直接硬编码指定这些工具链如gcc或g++
 * Make运行的这些环境需要用标准的变量,要与SDK的环境配置脚本相同的环境变量（如：[CC][12]，[CXX][13]等等）。一个简单的查看这些变量的方法就是在配方里运行 devtool build 命令然后查看oe-logs/run.do_compile文件。这个文件的最上面可以看到所涉及的环境变量列表。我们可以查看这些环境变量的值。
-* 如果 Makefile 用“=”设置了变量的默认值，这个默认值会覆盖环境变量，最终环境无法生效。遇到这种情况，你可以修改Makefile将默认用“?=”赋值，也可以在make命令行中强制赋值。要是像在命令行强制赋值，需要在配方里增加变量 EXTRA_OEMAKE  和 PACKAGECONFIG_CONFARGS。这儿有一个使用 EXTRA_OEMAKE 变量的例子：
+* 如果 Makefile 用“=”设置了变量的默认值，这个默认值会覆盖环境变量，最终环境无法生效。遇到这种情况，你可以修改Makefile将默认用“?=”赋值，也可以在make命令行中强制赋值。要是像在命令行强制赋值，需要在配方里增加变量 [EXTRA_OEMAKE][14]  和 [PACKAGECONFIG_CONFARGS][15]。这儿有一个使用 [EXTRA_OEMAKE][14] 变量的例子：
 ```
 EXTRA_OEMAKE += "'CC=${CC}' 'CXX=${CXX}'"
 ```
 上面的例子中，变量里包含了空格变量的要用单引号括起来，而最终这些所需变量需要传递给编译器。
-* 
+* 在Makefile里的硬编码的路径在交叉编译环境经常会出问题。这是确实存在的，因为这些硬编码路径常常指向构建主机的位置。而它有可能是只读的，也有可能给交叉编译过程引入错误，这是由于他们是在构建主机上定制的而不是目标设备上。给Makefile打补丁添加变量的前缀或用其他变量替代来解决这类问题。
+* 有时Makefile运行特定目标相关（target-specific ） 的命令如ldconfig。这些情况下，你需要对Makefile打补丁移除这些命令。
 
 2.5.5. 添加本机工具
 ======
@@ -477,3 +478,5 @@ via:https://docs.yoctoproject.org/sdk-manual/extensible.html
 [11]: https://docs.yoctoproject.org/ref-manual/variables.html#term-LIC_FILES_CHKSUM
 [12]: https://docs.yoctoproject.org/ref-manual/variables.html#term-CC
 [13]: https://docs.yoctoproject.org/ref-manual/variables.html#term-CXX
+[14]: https://docs.yoctoproject.org/ref-manual/variables.html#term-EXTRA_OEMAKE
+[15]: https://docs.yoctoproject.org/ref-manual/variables.html#term-PACKAGECONFIG_CONFARGS
