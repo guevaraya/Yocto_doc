@@ -9,8 +9,7 @@ Yocto 文档中文翻译项目
 
 
 正式发布的文档：
-
-- [YP-CORE ZEUS 3.5(dev)][2]
+- [YP-CORE Nanbield 4.3.3][28]
 - [YP-CORE WARRIOR 3.4][22]
 - [YP-CORE WARRIOR 3.3.3][23]
 - [YP-CORE WARRIOR 3.2.4][24]
@@ -20,7 +19,10 @@ Yocto 文档中文翻译项目
 
 可以在以上列表选择发布的文档版本。您也可在维基百科的[提示与技巧][3]页面查看最新的文档，部分文档还处于移植和开发阶段的手册。
 
-Yocto 项目® 入门 [文档归档][12]
+[![已翻译][31]][30]
+[![翻译中][29]][30]
+
+Yocto 项目® 入门 
 ======
 <font color=#00ffff size=3> 如果您还没有准备好，建议首先阅读[软件概述][4]。然后再回到此页面 </font>
 
@@ -90,5 +92,8 @@ Yocto 项目® 入门 [文档归档][12]
 [25]: https://docs.yoctoproject.org/3.1.11/
 [26]: https://docs.yoctoproject.org/3.0.4/
 [27]: https://docs.yoctoproject.org/2.7.4/
-
-
+[28]: https://docs.yoctoproject.org/4.3.3
+[29]: sources/translating.svg
+[30]: https://docs.yoctoproject.org/4.3.3
+[31]: sources/translated.svg
+[32]: sources/untranslated.svg

@@ -2,17 +2,22 @@
 =======
 
 ![Yocto 软件概述][1]
-Yocto 项目是一个开源协作项目，旨在帮助开发者创建一个类 Linux 系统的嵌入式产品，不用关心硬件架构信息。该项目提供一套灵活的工具和空间，全世界的嵌入式开发者可以分享技术，软件仓库，构建配置和为嵌入式设备创建的定制 Linux 镜像的优秀经验。
+Yocto 项目是一个开源协作项目，旨在帮助开发者创建一个类 Linux 系统的嵌入式产品，不用关心硬件架构信息。该项目提供一套灵活的工具和空间，全世界的嵌入式开发者可以共享科技，软件技术，构建配置已经创建为定制 Linux 和嵌入式软件镜像的优秀经验。
 
-该项目提供了一套硬件适配和软件仓库的交付标准，允许软件的配置和构建可替代。这个工具允许用户可维护性和可伸缩性的构建和支持多个硬件平台和软件的定制化。
+该项目提供了一套硬件适配和软件仓库的交付标准，有利于软件的配置和构建的交流互通。这让硬件提供商和使用者围绕软件生态良性互动。这个工具也允许用户可维护性和可伸缩性的构建和支持多个硬件平台和软件的定制化。
 
 从历史经验看，大多项目都是从 [嵌入式开源项目][2] 共同成长起来的，其构建系统和元数据都是从嵌入式开源项目中衍生出来的。
 
-Yocto 项目的组装，维护和验证是其三个关键的开发要素。
+Yocto 项目的组装，维护有几个关键的开发要素。
 
-+ 1.  一套基础使嵌入式 Linux 出色的完成工作，包括自动构建和测试工具，单板适配和许可证遵循的处理，用于定制基于 嵌入式 Linux 操作系统的组件信息。
-+ 2.  一个嵌入式参考发行版（名叫 Poky）
-+ 3. 开源嵌入式构建系统与 [嵌入式开源项目][2] 一起维护。
+1. OpenEmbedded 构建系统 与OpenEmbedded-Core 和 BitBake组成的 OpenEmbedded项目共同维护运营 
+1. 用于测试的参考/示例嵌入式Linux配置（名叫 Poky）
+1. 通过我们的自动编译Buildbot提供广泛的测试基础设施
+1. 使嵌入式Linux流畅运行的集成工具
+    * 自动编译和测试工具
+    * 板级支持定义和通信的标准和处理
+    * 相关安全工具和许可证兼容，在SPDX的支持软件清单
+ 
 
 
 在 Yocto 项目旗下 有很多不同的开源组件和工具。
@@ -23,7 +28,7 @@ Poky 是一个参考的嵌入式操作系统实例，它构建了一个包含编
 ![Yocto 构建][3]
 
 
-层模板 - 定制化的关键
+层模型 - 定制化的关键
 ======
 
 Yocto 项目拥有一个为嵌入式和物联网 Linux 构建的开发模板，这使它区别于其他简单的构建系统，这被称为层模板。
@@ -102,7 +107,7 @@ via:https://www.yoctoproject.org/software-overview/
 
 [1]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-overview.png
 [2]: http://openembedded.org/
-[3]: https://www.yoctoproject.org/wp-content/uploads/2018/02/yp-diagram-details.png
+[3]: https://www.yoctoproject.org/wp-content/uploads/sites/32/2023/10/Yocto-Tech-Overview-Graphic.svg
 [4]: https://www.yoctoproject.org/software-overview/layers/
 [5]: http://layers.openembedded.org/
 [6]: https://www.yoctoproject.org/software-overview/layers/bsps/
