@@ -94,6 +94,6 @@ Yocto 项目® 入门
 [27]: https://docs.yoctoproject.org/2.7.4/
 [28]: https://docs.yoctoproject.org/4.3.3
 [29]: sources/translating.svg
-[30]: https://docs.yoctoproject.org/4.3.3
+[30]: overview-manual/overview-manual.md
 [31]: sources/translated.svg
 [32]: sources/untranslated.svg
