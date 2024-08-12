@@ -13,15 +13,19 @@ Yocto 文档中文翻译项目
 - [YP-CORE unable(dev)][2]
 - [YP-CORE WARRIOR 4.3][22]
 - [YP-CORE WARRIOR 4.0.20][23]
+- [YP-CORE SUMO 4.0.16][33]
 - [YP-CORE WARRIOR 3.2.4][24]
 - [YP-CORE THUD 3.1.33][25]
 - [YP-CORE THUD 3.0.4][26]
-- [YP-CORE SUMO 2.7.4][27]
-- [YP-CORE SUMO 2.7.4][28]
+- [YP-CORE SUMO 5.0.2][27]
+- [YP-CORE SUMO 5.0.999][34]
 
 可以在以上列表选择发布的文档版本。您也可在维基百科的[提示与技巧][3]页面查看最新的文档，部分文档还处于移植和开发阶段的手册。
 
-Yocto 项目® 入门 [文档归档][12]
+[![已翻译][31]][30]
+[![翻译中][29]][30]
+
+Yocto 项目® 入门 
 ======
 <font color=#00ffff size=3> 如果您还没有准备好，建议首先阅读[软件概述][4]。然后再回到此页面 </font>
 
@@ -90,8 +94,10 @@ Yocto 项目® 入门 [文档归档][12]
 [24]: https://docs.yoctoproject.org/3.2.4/
 [25]: https://docs.yoctoproject.org/3.1.13/
 [26]: https://docs.yoctoproject.org/3.0.4/
-[27]: https://docs.yoctoproject.org/2.7.4/
+[27]: https://docs.yoctoproject.org/5.0.2/
 [28]: https://docs.yoctoproject.org/4.3.3/
-[29]: https://docs.yoctoproject.org/4.0.16/
-
-
+[29]: sources/translating.svg
+[30]: overview-manual/overview-manual.md
+[31]: sources/translated.svg
+[32]: sources/untranslated.svg
+[33]: https://docs.yoctoproject.org/4.0.16/
