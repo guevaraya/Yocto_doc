@@ -1,4 +1,14 @@
-入门指南: Yocto 项目® 概述
+**目录**
+<!-- GFM-TOC -->
+* [1. 入门指南](#getting-started)
+* [2. 层模型](#layer-model)
+* [3. 组件和工具](#components-tools)
+* [4. 术语引用](#terms-of-reference)
+* [5. 基本的流程图-](#general-workflow)
+* [6. 开发环境](#dev-environment)
+* [7. 嵌入式参考发行版](#poky)
+* [8. Yocto项目特性](#features)
+<a id="getting-started">入门指南: Yocto 项目® 概述</a>
 =======
 
 ![Yocto 软件概述][1]
@@ -23,7 +33,7 @@ Poky 是一个参考的嵌入式操作系统实例，它构建了一个包含编
 ![Yocto 构建][3]
 
 
-层模板 - 定制化的关键
+<a id="layer-model">层模型 - 定制化的关键</a>
 ======
 
 Yocto 项目拥有一个为嵌入式和物联网 Linux 构建的开发模板，这使它区别于其他简单的构建系统，这被称为层模板。
@@ -38,7 +48,8 @@ Yocto 项目拥有一个为嵌入式和物联网 Linux 构建的开发模板，�
 
 Yocto 项目成员组织可以提供关于特定板级支持包的信息。请访问 [Yocto 项目成员的板级支持包页面][6]获取详情。
 
-Yocto 项目维护的组件和工具
+
+<a id="components-tools">Yocto 项目维护的组件和工具</a>
 ======
 
 ![Yocto 组件][7]
@@ -47,7 +58,7 @@ Yocto 有一套组件和工具来维护和更新实际的项目。这些组件�
 
 [更多关于组件和工具][7]
 
-名称参考解释
+<a id="terms-of-reference">名称参考解释</a>
 =====
 + __配置文件（Configurations）：__ 这个文件保存全局变量的定义，用户变量的定义和硬件配置信息。它会告诉构建系统如何构建以及适配指定平台的镜像。
 + __配方（Recipes）：__ 最常见的元数据。一个配方将包含配置列表和任务（指令），它是用来构建二进制镜像的构建包。一个配方描述如何获取源码以及需要打那些补丁。配方也描述了库和其他配方依赖关系，还有配置信息和兼容性选项。这些配置文件都保存在层中。
@@ -64,9 +75,8 @@ Yocto 有一套组件和工具来维护和更新实际的项目。这些组件�
 + __镜像（Image）：__ 一个二进制形式的 Linux 发行版（操作系统）镜像被装载到一个设备上。
 
 
-基本的流程图- 他是如何运行的
+<a id="general-workflow">基本的流程图- 他是如何运行的</a>
 ====== 
-
 
 ![流程图][9]
 + 首先，开发者指定体系架构，开源协议，补丁和配置等信息。
@@ -79,7 +89,11 @@ Yocto 有一套组件和工具来维护和更新实际的项目。这些组件�
 
 当使用 Yocto 工程的时候，这个流程图根据你实际使用的组件和工具会有变化。
 
-嵌入式参考发行版（Poky）
+<a id="dev-environment">开发环境-主机配置</a>
+======
+大部分开发者使用Linux作为开发主机可详见 [Yocto 工程快速构建][13]
+
+<a id="poky">嵌入式参考发行版（Poky）</a>
 ======
 “Poky” 是 Yocto 项目的参考发行版或参考系统集。它包含了编译系统（Bitbake和嵌入式开源核心组件）和一套用来编译发行版的数据集。
 
@@ -87,7 +101,7 @@ Yocto 有一套组件和工具来维护和更新实际的项目。这些组件�
 
 [更多关于参考发行版][11]
 
-Yocto 项目特性
+<a id="features">Yocto 项目特性</a>
 ======
 
 除了固有的特性外，Yocto 项目有一些特性在一个或多个发布版本中扩展和体现。更进一步的功能特性在 “readme” 文件与正式版本和工具一同发布。它提供了高级的特性概述，包含最近三个版本的特性和通用特性。
@@ -112,4 +126,4 @@ via:https://www.yoctoproject.org/software-overview/
 [10]: https://www.yoctoproject.org/wp-content/uploads/2018/02/os-logos.png
 [11]: https://www.yoctoproject.org/software-overview/reference-distribution/
 [12]: https://github.com/guevaraya/Yocto_doc/blob/master/software-overview/features.md
-
+[12]: latest/brief-yoctoprojectqs/README.md

@@ -10,13 +10,14 @@ Yocto 文档中文翻译项目
 
 正式发布的文档：
 
-- [YP-CORE ZEUS 3.5(dev)][2]
-- [YP-CORE WARRIOR 3.4][22]
-- [YP-CORE WARRIOR 3.3.3][23]
+- [YP-CORE unable(dev)][2]
+- [YP-CORE WARRIOR 4.3][22]
+- [YP-CORE WARRIOR 4.0.20][23]
 - [YP-CORE WARRIOR 3.2.4][24]
-- [YP-CORE THUD 3.1.11][25]
+- [YP-CORE THUD 3.1.33][25]
 - [YP-CORE THUD 3.0.4][26]
 - [YP-CORE SUMO 2.7.4][27]
+- [YP-CORE SUMO 2.7.4][28]
 
 可以在以上列表选择发布的文档版本。您也可在维基百科的[提示与技巧][3]页面查看最新的文档，部分文档还处于移植和开发阶段的手册。
 
@@ -58,18 +59,18 @@ Yocto 项目® 入门 [文档归档][12]
 原文:https://docs.yoctoproject.org/
 
 [1]: https://creativecommons.org/licenses/by-sa/2.0/uk/deed.zh
-[2]: https://docs.yoctoproject.org/
+[2]: https://docs.yoctoproject.org/dev/
 [3]: https://wiki.yoctoproject.org/wiki/TipsAndTricks
 [4]: software-overview/software-overview.md
 [5]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-1.jpg
 [6]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-2.jpg
 [7]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-3.jpg
 [8]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-4.jpg
-[9]: 3.5/brief-yoctoprojectqs/README.md 
+[9]: 5.0.2/brief-yoctoprojectqs/README.md 
 [#]: 3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.md
 [10]: what-i-wish-id-known/what-i-wish-id-known.md
 [11]: transitioning-to-a-custom-environment.md
-[12]: https://www.yoctoproject.org/docs/archived-documents/
+[12]: https://docs.yoctoproject.org/releases.html#outdated-release-manuals
 [13]: 3.5/sdk-manual/README.md
 [#]: 3.0/sdk-manual/sdk-manual.md
 [14]: 3.5/overview-manual/README.md
@@ -84,11 +85,13 @@ Yocto 项目® 入门 [文档归档][12]
 [21]: 3.5/ref-manual/README.md
 [28]: 3.0/mega-manual/README.md
 
-[22]: https://docs.yoctoproject.org/3.4/
-[23]: https://docs.yoctoproject.org/3.3.3/
+[22]: https://docs.yoctoproject.org/4.3/
+[23]: https://docs.yoctoproject.org/4.0.20
 [24]: https://docs.yoctoproject.org/3.2.4/
-[25]: https://docs.yoctoproject.org/3.1.11/
+[25]: https://docs.yoctoproject.org/3.1.13/
 [26]: https://docs.yoctoproject.org/3.0.4/
 [27]: https://docs.yoctoproject.org/2.7.4/
+[28]: https://docs.yoctoproject.org/4.3.3/
+[29]: https://docs.yoctoproject.org/4.0.16/
 
 
