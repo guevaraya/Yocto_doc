@@ -29,9 +29,9 @@ Yocto 项目® 入门
 ======
 <font color=#00ffff size=3> 如果您还没有准备好，建议首先阅读[软件概述][4]。然后再回到此页面 </font>
 
-|[![Yocto Project Quick Build][5]][9] |[![what-i-wish-id-known][6]][10] |[![what-i-wish-id-known][7]][11] |[![what-i-wish-id-known][8]][13] |
-|----|-|-|--|
-|[**YOCTO 项目快速构建**][9] <br>这个文档指导你在模拟器和实际机器上如何快速编译和运行 |[**应知应会**][10] <br> 点亮您的项目明珠，作为开发者在入手前应该知道哪些东西|[**定制系统开发环境**][11] <br>如何配置系统，然后下一步深入学习入门文档和开发手册|[**Yocto 项目应用程序和扩展程序开发工具包（ESDK）**][13] <br> 对应用工程师来说，需要足够学习 Yocto 项目以便于与系统工程师有效的沟通协作|
+|[![Yocto Project Quick Build][5]][9] |[![what-i-wish-id-known][6]][10] |[![transitioning-to-a-custom-environment][7]][11] |[![what-i-wish-id-known][8]][13] |
+|:---:|:---:|:---:|:---:|
+|[**Yocto快速构建**][9] <br>主要是指导在模拟器和实际机器上如何快速编译和运行 |[**应知 应会**][10] <br> 点亮您的项目明珠，作为开发者在入手前应该知道哪些东西|[**定制开发环境**][11] <br>如何配置系统，然后下一步深入学习入门文档和开发手册|[**开发工具包（ESDK）**][12] <br> 对应用工程师来说，需要足够学习 Yocto 项目以便于与系统工程师有效的沟通协作|
 
 开发者手册
 ======
@@ -66,17 +66,16 @@ Yocto 项目® 入门
 [2]: https://docs.yoctoproject.org/dev/
 [3]: https://wiki.yoctoproject.org/wiki/TipsAndTricks
 [4]: software-overview/software-overview.md
-[5]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-1.jpg
-[6]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-2.jpg
-[7]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-3.jpg
-[8]: https://www.yoctoproject.org/wp-content/uploads/2017/08/docs-new-block-4.jpg
+[5]: sources/quick_build.png
+[6]: sources/what_i_wish_know.png
+[7]: sources/customized.png
+[8]: sources/extend_sdk.png
 [9]: 5.0.2/brief-yoctoprojectqs/README.md 
 [#]: 3.0/brief-yoctoprojectqs/brief-yoctoprojectqs.md
 [10]: what-i-wish-id-known/what-i-wish-id-known.md
-[11]: transitioning-to-a-custom-environment.md
-[12]: https://docs.yoctoproject.org/releases.html#outdated-release-manuals
-[13]: 3.5/sdk-manual/README.md
-[#]: 3.0/sdk-manual/sdk-manual.md
+[11]: latest/transitioning-to-a-custom-environment.md
+[12]: 5.0.2/sdk-manual/index.md
+[13]: 5.0.2/ref-manual/ref-manual.md
 [14]: 3.5/overview-manual/README.md
 [#]: 3.0/overview-manual/overview-manual.md
 [15]: 3.5/dev-manual/README.md
