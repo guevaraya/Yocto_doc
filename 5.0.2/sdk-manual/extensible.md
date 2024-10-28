@@ -303,7 +303,37 @@ devtool finish 命令作为最终的工序，恢复标准层和上游源码的�
       一旦源码文件被确认，devtool命令默认加压到``srctree``
       devtool 为菜谱（``recipe``）创建一个追加文件。菜谱（``recipe``）保持在原生的位置但源码解压到指定的 srctree 目录。
 
-   * **右边**：
+   * **右边**：图表中右边的场景为源码已经以 Git 仓库的形式在 ``devtool``的工作目录外面存在。这个例子中，菜谱（recipe)也在本地自己的layer里。
+   
+      下面命令告诉``devtool``菜谱名（recipe)，使用“-n”参数代表源码不需要解压，直接使用``srctree``指令源码文件：
+      ```
+      $ devtool mdify -n recipe srctree
+      ``` 
+      如果``oe-local-files``子目录存在，并且它包含了非补丁源码和相关文件。但是当你执行``devtool finish``命令后，子目录不复存在，配方(recipe)里的非补丁文件被移除，因为被删除的文件仅对``devtool``是可见的。
+      一旦``devtool modify``命令执行完成，它仅仅为配方``devtool``在工作区创建一个append文件。配方(recipe)和源码在原始路径依然存在。
+2. **编辑源码**: 一旦执行了``devtool modify``命令，就可以对源码进行任意修改。可以使用任何编辑器修改源码并保存起来。
+3. **构建配方（recipe）或重新编译镜像：** 下一步如何操作取决于用新的代码做什么。
+      
+      如果最终将生成物放到目标硬件中，可用下面``devtool``命令：
+      ```
+      $ devtool build recipe
+      ``` 
+      另一方面，如果你希望工作目录的配方（recipe)生产的文件打包到镜像里，并快速的部署到设备里（测试目的），可以使用命令``devtool build-image``:
+      ```
+      $ devtool build-image image
+      ```
+4. **部署构建结果**：当用``devtool build``命令构建配方（recipe),你可能很想知道在目标硬件程序运行结果。
+   > 小贴士
+   > 
+   > 这个步骤前提的是在QEMU运行或实际硬件运行的程序镜像已经准备好。并且目标硬件开发环境已经准备好，镜像的SSH安装到位同时通过网络可以从开发机器中上传下载文件。
+
+   使用``devtool deploy-target``命令部署构建的生成物到目标硬件：
+   ```
+   $ devtool deploy-target recipe target
+   ```
+   目标开发板运行着一个SSH服务器。
+   当然你可使用``devtool build-image``来采用其他方法部署到实际硬件。``devtool``不提供特定命令来实现不是镜像到目标板。
+5. **收尾相关配方（recipe）的工作**
 
 原文: https://docs.yoctoproject.org/5.0.2/sdk-manual/extensible.html
 
